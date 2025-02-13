@@ -17,8 +17,7 @@ function Banner() {
     return (
         <motion.div onClick={() => { setClose(!close) }} animate={close ? hide : show} className="text-center block break-words cursor-pointer px-5 py-2 bg-[#800000] text-white ">
             <h1 className="text-sm">
-                🗒️ Remember everything and tackle any project with your notes,
-                tasks, and schedule all in one place.
+                🌐 Welcome to our website! Discover amazing content, connect with others, and stay updated with the latest trends.
             </h1>
         </motion.div>
     );
