@@ -24,9 +24,9 @@ function Header() {
                             {link.name}
                         </Link>
                     ))}
-                    <button className='bg-[#800000] transition-all active:scale-90 cursor-pointer rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color '>
-                       Get Counseling
-                    </button>
+                    <Link to="/contact" className='bg-[#800000] transition-all active:scale-90 cursor-pointer rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color '>
+                        Get Counseling
+                    </Link>
                 </nav>
                 <div className="md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-black cursor-pointer focus:outline-none">
@@ -36,15 +36,15 @@ function Header() {
             </div>
 
             {isOpen && (
-                <nav className="md:hidden bg-white p-4 mt-2 space-y-2 rounded shadow-md">
+                <nav className="md:hidden bg-white flex  justify-center flex-col p-4 mt-2 space-y-2 rounded shadow-md">
                     {links.map((link) => (
-                        <Link key={link.name} to={link.link} onClick={() => { setIsOpen(false) }} className={`block text-black font-semibold hover:text-gray-700 py-2 px-4 rounded hover:bg-gray-100 ${isActive(link.link) ? 'underline' : ''}`}>
+                        <Link key={link.name} to={link.link} onClick={() => { setIsOpen(false) }} className={`block text-black font-semibold hover:text-gray-700 py-2 px-4 rounded hover:bg-gray-100 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
                             {link.name}
                         </Link>
                     ))}
-                    <button className='bg-[#800000] cursor-pointer border-dark border rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5'>
-                        Get Started
-                    </button>
+                    <Link to="/contact" onClick={() => { setIsOpen(false) }} className='bg-[#800000] mt-4 cursor-pointer border-dark border rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5'>
+                        Get Counseling
+                    </Link>
                 </nav>
             )}
         </header>

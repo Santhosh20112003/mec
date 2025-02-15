@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Carousel = () => {
   const autoSlide = true;
@@ -58,12 +59,12 @@ const Carousel = () => {
             } ${index === (currentIndex - 1 + slides.length) % slides.length && direction === 'right' ? '-translate-x-full' : ''}`}
           >
             <img src={slide.image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
+            <div className="absolute inset-0 bg-black/30 pt-12 bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
               <h2 className="text-3xl md:text-5xl font-bold">{slide.heading}</h2>
               <p className="mt-4 text-lg md:text-xl">{slide.paragraph}</p>
-              <a href={slide.link} className="mt-6 bg-[#800000] hover:bg-[#a00000] text-white font-semibold py-3 px-6 rounded-lg">
+              <Link to={slide.link} className="mt-6 bg-[#800000] hover:bg-[#a00000] text-white font-semibold py-3 px-6 rounded-lg">
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         ))}
