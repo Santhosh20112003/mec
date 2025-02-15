@@ -18,12 +18,15 @@ function Header() {
                         alt="Workflow"
                     />
                 </Link>
-                <nav className="hidden md:flex space-x-6">
+                <nav className="hidden md:flex md:items-center space-x-6">
                     {links.map((link) => (
                         <Link key={link.name} to={link.link} className={`text-black font-semibold hover:text-gray-700 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
                             {link.name}
                         </Link>
                     ))}
+                    <button className='bg-[#800000] transition-all active:scale-90 cursor-pointer rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color '>
+                       Get Counseling
+                    </button>
                 </nav>
                 <div className="md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-black cursor-pointer focus:outline-none">
@@ -39,6 +42,9 @@ function Header() {
                             {link.name}
                         </Link>
                     ))}
+                    <button className='bg-[#800000] cursor-pointer border-dark border rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5'>
+                        Get Started
+                    </button>
                 </nav>
             )}
         </header>
