@@ -12,8 +12,8 @@ function Home() {
         <div className="">
             <Carousel />
             <About />
-            <Service />
             <Locations />
+            <Service />
             <Gallery />
             <References />
             <Links />

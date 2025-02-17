@@ -225,7 +225,7 @@ function SearchOfDegree() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setCurrentPage(1); // Reset to the first page on search
+        setCurrentPage(1); 
     };
 
     const indexOfLastDegree = currentPage * degreesPerPage;
