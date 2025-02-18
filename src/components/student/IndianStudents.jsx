@@ -3,7 +3,7 @@ import React from 'react';
 function IndianStudents() {
     return (
         <section className="text-gray-600 body-font">
-            <div className="container px-5 py-12 mx-auto">
+            <div className="py-12 ">
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#800000]">Guide for Indian Students</h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
