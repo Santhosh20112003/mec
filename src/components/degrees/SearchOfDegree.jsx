@@ -15,192 +15,166 @@ function SearchOfDegree() {
     const [filteredDegrees, setFilteredDegrees] = useState([]);
     const degreesPerPage = 6;
 
-    const sampleDegrees = [
+    const Degrees = [
         {
-            title: 'Bachelor of Science in Computer Engineering',
+            title: 'B.Sc. in Hotel and Catering Management',
             type: 'bachelors',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'hospitality',
+            image: 'https://placehold.co/600x400',
+            desc: "This course provides students with comprehensive knowledge and skills required for the hospitality and catering industry. It covers areas such as food and beverage management, hospitality operations, and event planning. Graduates can pursue careers in hotels, resorts, restaurants, and catering companies."
         },
         {
-            title: 'Bachelor of Arts in Culinary Arts',
+            title: 'B.Sc. in Maritime Operations',
             type: 'bachelors',
-            field: 'culinary',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'maritime studies',
+            image: 'https://placehold.co/600x400',
+            desc: "This course focuses on the management and operational aspects of maritime activities. Students learn about navigation, cargo handling, maritime law, and safety procedures. Graduates can work in shipping companies, ports, maritime organizations, and logistics firms."
         },
         {
-            title: 'Master of Science in Environmental Science',
-            type: 'masters',
-            field: 'environmental science',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Doctor of Philosophy in Philosophy',
-            type: 'phd',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Fine Arts in Animation',
+            title: 'B.Sc. in Hotel and Catering Management (Lateral Entry)',
             type: 'bachelors',
-            field: 'arts',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 2,
+            field: 'hospitality',
+            image: 'https://placehold.co/600x400',
+            desc: "This lateral entry course is designed for students with a relevant diploma or equivalent qualification. It provides advanced knowledge in hospitality and catering management, covering topics such as food production, hospitality marketing, and customer service. Graduates can advance their careers in the hospitality industry."
         },
         {
-            title: 'Master of Business Administration (MBA)',
-            type: 'masters',
-            field: 'business',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Fine Arts in Graphic Design',
+            title: 'B.Sc. in Biotechnology',
             type: 'bachelors',
-            field: 'arts',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'biotechnology',
+            image: 'https://placehold.co/600x400',
+            desc: "This course offers an in-depth understanding of the principles and applications of biotechnology. It includes subjects like genetics, molecular biology, bioinformatics, and industrial biotechnology. Graduates can pursue careers in research, pharmaceuticals, agriculture, and environmental science."
         },
         {
-            title: 'Master of Arts in Education',
-            type: 'masters',
-            field: 'education',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Science in Data Science',
+            title: 'B.Sc. in Visual Communication',
             type: 'bachelors',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'mass communication',
+            image: 'https://placehold.co/600x400',
+            desc: "This course explores the various forms of visual media and communication. Students learn about graphic design, photography, video production, and digital media. Graduates can work in advertising agencies, media companies, publishing houses, and film production studios."
         },
         {
-            title: 'Master of Science in Artificial Intelligence',
-            type: 'masters',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Science in Nursing',
+            title: 'B.Sc. in Computer Science',
             type: 'bachelors',
-            field: 'healthcare',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'computer science',
+            image: 'https://placehold.co/600x400',
+            desc: "This course covers the fundamentals of computer science, including programming, algorithms, data structures, and software development. Students also study topics like artificial intelligence, cybersecurity, and database management. Graduates can pursue careers in software engineering, IT consulting, and system administration."
         },
         {
-            title: 'Master of Public Health',
-            type: 'masters',
-            field: 'healthcare',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Arts in Psychology',
+            title: 'B.Sc. in Microbiology',
             type: 'bachelors',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'microbiology',
+            image: 'https://placehold.co/600x400',
+            desc: "This course focuses on the study of microorganisms and their roles in various environments. Students learn about microbial physiology, genetics, immunology, and pathogenic microbiology. Graduates can work in healthcare, pharmaceuticals, food industry, and environmental science."
         },
         {
-            title: 'Master of Science in Environmental Engineering',
-            type: 'masters',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Doctor of Philosophy in Psychology',
-            type: 'phd',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Science in Mechanical Engineering',
+            title: 'B.Sc. in Biochemistry',
             type: 'bachelors',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'biochemistry',
+            image: 'https://placehold.co/600x400',
+            desc: "This course provides a thorough understanding of the chemical processes and substances that occur within living organisms. It includes topics like enzymology, metabolism, molecular biology, and structural biology. Graduates can pursue careers in research, biotechnology, healthcare, and pharmaceuticals."
         },
         {
-            title: 'Master of Science in Chemical Engineering',
-            type: 'masters',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Doctor of Philosophy in Environmental Science',
-            type: 'phd',
-            field: 'environmental science',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Arts in Sociology',
+            title: 'B.Sc. in Nursing',
             type: 'bachelors',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 4,
+            field: 'nursing',
+            image: 'https://placehold.co/600x400',
+            desc: "This course trains students in the principles and practices of nursing. It covers subjects like anatomy, physiology, pharmacology, and patient care. Graduates can work as registered nurses in hospitals, clinics, community health centers, and nursing homes."
         },
         {
-            title: 'Master of Arts in International Relations',
-            type: 'masters',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Science in Software Engineering',
+            title: 'B.Sc. in Operation Theatre and Anesthesia Technology',
             type: 'bachelors',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'medical technology',
+            image: 'https://placehold.co/600x400',
+            desc: "This course focuses on the technical and procedural aspects of operation theatre and anesthesia technology. Students learn about surgical instruments, anesthesia techniques, patient monitoring, and infection control. Graduates can work in hospitals, surgical centers, and healthcare facilities."
         },
         {
-            title: 'Master of Science in Cybersecurity',
-            type: 'masters',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Arts in Journalism',
+            title: 'B.Sc. in Aviation',
             type: 'bachelors',
-            field: 'arts',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'aviation',
+            image: 'https://placehold.co/600x400',
+            desc: "This course covers the fundamentals of aviation, including aerodynamics, aircraft systems, aviation safety, and flight operations. Students also learn about aviation management and air traffic control. Graduates can pursue careers as pilots, aviation managers, and airport operations specialists."
         },
         {
-            title: 'Master of Fine Arts in Creative Writing',
-            type: 'masters',
-            field: 'arts',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Business Administration',
+            title: 'B.Sc (Hons) in Agriculture',
             type: 'bachelors',
-            field: 'business',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 2,
+            field: 'agriculture',
+            image: 'https://placehold.co/600x400',
+            desc: "This course provides comprehensive knowledge of agricultural practices and technologies. It includes subjects like crop science, soil science, agricultural economics, and agribusiness management. Graduates can work in agricultural research, farming, agribusiness, and government agencies."
         },
         {
-            title: 'Master of Science in Finance',
-            type: 'masters',
-            field: 'business',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Doctor of Philosophy in Business Administration',
-            type: 'phd',
-            field: 'business',
-            image: 'https://placehold.co/600x400'
-        },
-        {
-            title: 'Bachelor of Science in Civil Engineering',
+            title: 'B.Sc. in Computer Science with Artificial Intelligence and Machine Learning',
             type: 'bachelors',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            mode: 'Full Time',
+            duration: 3,
+            field: 'computer science',
+            image: 'https://placehold.co/600x400',
+            desc: "This course focuses on computer science with a specialization in artificial intelligence and machine learning. Students learn about machine learning algorithms, neural networks, data analysis, and AI applications. Graduates can pursue careers in AI development, data science, and machine learning engineering."
         },
         {
-            title: 'Master of Science in Electrical Engineering',
-            type: 'masters',
-            field: 'engineering',
-            image: 'https://placehold.co/600x400'
+            title: 'B.Sc. in Radiology and Imaging Technology',
+            type: 'bachelors',
+            mode: 'Full Time',
+            duration: 2,
+            field: 'medical technology',
+            image: 'https://placehold.co/600x400',
+            desc: "This course trains students in the techniques and technologies used in medical imaging. It includes subjects like radiographic techniques, imaging equipment, radiation safety, and diagnostic imaging. Graduates can work as radiologic technologists in hospitals, diagnostic centers, and healthcare facilities."
         },
         {
-            title: 'Master of Arts in Philosophy',
-            type: 'masters',
-            field: 'humanities',
-            image: 'https://placehold.co/600x400'
-        }
+            title: 'B.Sc. in Cardiac Care Technology',
+            type: 'bachelors',
+            mode: 'Full Time',
+            duration: 4,
+            field: 'medical technology',
+            image: 'https://placehold.co/600x400',
+            desc: "This course provides knowledge and skills related to cardiac care and technology. Students learn about cardiovascular anatomy, cardiac diagnostics, patient care, and cardiovascular interventions. Graduates can work in cardiac care units, hospitals, and cardiovascular clinics."
+        },
+        {
+            title: 'B.Sc. in Aeronautical Science',
+            type: 'bachelors',
+            mode: 'Full Time',
+            duration: 3,
+            field: 'aeronautical',
+            image: 'https://placehold.co/600x400',
+            desc: "This course focuses on the science and technology behind the design and operation of aircraft. It covers subjects like aerodynamics, aircraft systems, flight mechanics, and aerospace materials. Graduates can pursue careers in aerospace engineering, aviation, and defense."
+        },
+        {
+            title: 'B.Sc. in Optometry',
+            type: 'bachelors',
+            mode: 'Full Time',
+            duration: 3,
+            field: 'optometry',
+            image: 'https://placehold.co/600x400',
+            desc: "This course trains students in the field of optometry, including the diagnosis and treatment of eye disorders. It covers subjects like ocular anatomy, visual science, clinical optometry, and contact lens practice. Graduates can work as optometrists in eye clinics, hospitals, and optical centers."
+        },
     ];
+    
 
     useEffect(() => {
         const filterDegrees = () => {
-            const filtered = sampleDegrees.filter(degree => {
+            const filtered = Degrees.filter(degree => {
                 const matchesSearchTerm = degree.title.toLowerCase().includes(searchTerm.toLowerCase());
                 const matchesFilters = Object.keys(selectedFilters).some(filter => selectedFilters[filter] && degree.type === filter);
                 return matchesSearchTerm && matchesFilters;
@@ -225,7 +199,7 @@ function SearchOfDegree() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setCurrentPage(1); 
+        setCurrentPage(1);
     };
 
     const indexOfLastDegree = currentPage * degreesPerPage;
