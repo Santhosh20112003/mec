@@ -50,12 +50,17 @@ function SearchOfDegree() {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    const totalPages = Math.ceil(filteredDegrees.length / degreesPerPage);
+    const maxPageButtons = 5;
+    const startPage = Math.floor((currentPage - 1) / maxPageButtons) * maxPageButtons + 1;
+    const endPage = Math.min(startPage + maxPageButtons - 1, totalPages);
+
     return (
-        <section className="text-gray-600 body-font">
+        <section className="text-gray-600 body-font bg-gray-50">
             <div className="container mx-auto px-5 py-12">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-[#800000]">Search for Degrees</h1>
-                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Find the perfect degree program that suits your interests and career goals. Use the filters below to narrow down your search.</p>
+                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Find the perfect degree program that suits your interests and career goals. Use the filters below to narrow down your search.</p>
                 </div>
                 <form onSubmit={handleSubmit} className="flex flex-col items-center">
                     <div className="mb-4 w-full max-w-lg flex">
@@ -121,14 +126,14 @@ function SearchOfDegree() {
                                 </div>
                             )}
                         </div>
-                        <button type="submit" className=" ms-6 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#800000] hover:bg-[#600000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]">
+                        <button type="submit" className="ms-6 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#800000] hover:bg-[#600000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]">
                             Search
                         </button>
                     </div>
                 </form>
                 <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {currentDegrees.map((degree, index) => (
-                        <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
+                        <div key={index} className="p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
                             <img src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
                             <h2 className="text-xl font-bold text-[#800000]">{degree.title}</h2>
                             <p className="mt-2 text-gray-700">{degree.field}</p>
@@ -148,18 +153,18 @@ function SearchOfDegree() {
                                 <path fillRule="evenodd" d="M12.293 4.293a1 1 0 010 1.414L8.414 10l3.879 3.879a1 1 11-1.414 1.414l-4.586-4.586a1 1 0 010-1.414l4.586-4.586a1 1 01-1.414 0z" clipRule="evenodd" />
                             </svg>
                         </button>
-                        {[...Array(Math.ceil(filteredDegrees.length / degreesPerPage)).keys()].map(number => (
+                        {Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map(number => (
                             <button
-                                key={number + 1}
-                                onClick={() => paginate(number + 1)}
-                                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === number + 1 ? 'bg-[#800000] text-white' : 'bg-white text-gray-700'} border-gray-300 hover:bg-gray-50`}
+                                key={number}
+                                onClick={() => paginate(number)}
+                                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === number ? 'bg-[#800000] text-white' : 'bg-white text-gray-700'} border-gray-300 hover:bg-gray-50`}
                             >
-                                {number + 1}
+                                {number}
                             </button>
                         ))}
                         <button
                             onClick={() => paginate(currentPage + 1)}
-                            disabled={currentPage === Math.ceil(filteredDegrees.length / degreesPerPage)}
+                            disabled={currentPage === totalPages}
                             className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                         >
                             <span className="sr-only">Next</span>
