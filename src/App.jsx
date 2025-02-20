@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Header from "./components/common/Header";
 import Home from "./components/Home";
@@ -7,8 +7,15 @@ import Contact from "./components/Contact";
 import Footer from "./components/common/Footer";
 import Banner from "./components/common/Banner";
 import Students from "./components/Students";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    Aos.init({
+      disable: 'mobile'
+    });
+  }, []);
   return (
     <Router>
       <div className="">
