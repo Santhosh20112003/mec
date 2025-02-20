@@ -8,7 +8,7 @@ function Locations() {
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Discover the excellence and diversity of Indian universities. Each image captures the essence of our vibrant academic communities and the superiority of Indian engineers.</p>
             </div>
             <section className="bg-white rounded-md mb-6">
-                <div className="py-12 px-5 lg:px-12">
+                <div className="py-6 lg:py-12 px-5 lg:px-12">
                     <div className="lg:flex justify-between gap-6 lg:items-center">
                         <div className="grid w-full grid-cols-1 gap-6 lg:w-[70%] md:grid-cols-2">
                             <div className="space-y-3">
@@ -41,9 +41,8 @@ function Locations() {
                     </div>
                 </div>
             </section>
-
             <section className="bg-white rounded-md">
-                <div className="py-12 px-5 lg:px-12">
+                <div className="py-6 lg:py-12 px-5 lg:px-12">
                     <div className="lg:flex justify-between gap-10 lg:items-center">
                         <div className="hidden lg:flex  lg:justify-start">
                             <img className="w-[24rem] h-[18rem]  shadow-md hover:brightness-100 brightness-90 transition-all flex-shrink-0 object-cover rounded-4xl" src="https://media.licdn.com/dms/image/v2/C4D1BAQH0_UeKoteJyA/company-background_10000/company-background_10000/0/1583221367975?e=2147483647&v=beta&t=KQigaftmL6HB9UnpqDg84muDKht9JV3XEw9vHodQiv8" alt="Indian University" />
