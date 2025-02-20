@@ -145,7 +145,7 @@ function Contact1() {
                                 </div>
                                 <div className="sm:col-span-2">
                                     <label className="block text-sm font-medium text-gray-700">Councelling Context</label>
-                                    <textarea name="message" placeholder="Enter your councelling context" value={formData.message} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" rows="2" required></textarea>
+                                    <textarea name="message" placeholder="Enter your councelling context" value={formData.message} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" rows="3" required></textarea>
                                 </div>
                                 <div className="sm:col-span-2">
                                     <div className="flex items-start">
