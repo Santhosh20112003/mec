@@ -3,8 +3,8 @@ import React from 'react';
 function About() {
     return (
         <section className="text-gray-600 body-font bg-white">
-            <div className="container mx-auto flex px-10 py-24 lg:py-12 md:flex-row flex-col items-center">
-                <div data-aos="fade-right" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <div className="container mx-auto flex px-10 py-12 md:py-24 lg:py-12 md:flex-row flex-col items-center">
+                <div data-aos="fade-right" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 md:mb-0">
                     <img className="object-cover object-center rounded-lg shadow-lg" alt="about" src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
                 </div>
                 <div className="lg:flex-grow md:w-1/2 md:pl-16 flex flex-col mt-4 md:text-left items-center text-center">

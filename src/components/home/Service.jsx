@@ -14,7 +14,7 @@ function Service() {
                     </div>
                 </div>
                 <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div data-aos="fade-up" class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-52 overflow-hidden">
                             <img alt="content" class="object-cover object-center h-full w-full" src="https://cdn.mos.cms.futurecdn.net/HFUAjfbamNhbM8dsNSQW3D-970-80.jpg.webp" />
                         </div>
@@ -26,7 +26,7 @@ function Service() {
                             </svg>
                         </a>
                     </div>
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div data-aos="fade-up" data-aos-delay="300" class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-64 overflow-hidden">
                             <img alt="content" class="object-cover object-center h-full w-full" src="https://images.squarespace-cdn.com/content/v1/61cc66f9e8f1cb7928c32c66/ec53e184-bc09-4bcb-b27d-4953ad6771a5/ARTS-SCIENCES.jpg" />
                         </div>
@@ -38,7 +38,7 @@ function Service() {
                             </svg>
                         </a>
                     </div>
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div data-aos="fade-up" data-aos-delay="600" class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-52 overflow-hidden">
                             <img alt="content" class="object-cover object-center h-full w-full" src="https://images.moneycontrol.com/static-mcnews/2018/06/WHAT-A-PhD-IS-AND-WHAT-IT-IS-NOT-770x433.jpg" />
                         </div>

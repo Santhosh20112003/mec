@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Degrees } from '../data';
+import { TbFilterSearch } from 'react-icons/tb';
+import { HiMiniXMark } from 'react-icons/hi2';
 
 function SearchOfDegree() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -56,31 +58,31 @@ function SearchOfDegree() {
     const endPage = Math.min(startPage + maxPageButtons - 1, totalPages);
 
     return (
-        <section className="text-gray-600 body-font bg-gray-50">
+        <section className="text-gray-600 body-font bg-[#800000]/5">
             <div className="container mx-auto px-5 py-12">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-[#800000]">Search for Degrees</h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Find the perfect degree program that suits your interests and career goals. Use the filters below to narrow down your search.</p>
                 </div>
                 <form onSubmit={handleSubmit} className="flex flex-col items-center">
-                    <div className="mb-4 w-full max-w-lg flex">
+                    <div className="mb-4 w-full max-w-3xl flex">
                         <input
                             type="text"
-                            placeholder="Search for degrees..."
+                            placeholder="🔍 Search for degrees, masters, diploma, certification.."
                             value={searchTerm}
                             onChange={handleSearchChange}
-                            className="w-full p-2 border border-gray-300 rounded-l-md focus:border-[#800000] focus:ring-[#800000]"
+                            className="w-full p-2 px-3  border-s-[1px] border-y-[1px] border-[#800000]/40 bg-white rounded-l-md focus:border-[#800000] focus:ring-[#800000]"
                         />
                         <div className="relative">
                             <button
                                 type="button"
                                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                                className="p-2 border border-gray-300 bg-white rounded-r-md focus:outline-none"
+                                className="p-3 border-y-[1px] border-e-[1px] border-[#800000] bg-[#800000] rounded-r-md focus:outline-none"
                             >
-                                Filters
+                                {!dropdownOpen ? <TbFilterSearch className='text-lg text-white' /> : <HiMiniXMark className='text-lg text-white' />}
                             </button>
                             {dropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                                <div className="absolute right-0 mt-2 w-48 bg-white border border-[#800000]/40 rounded-md shadow-lg z-10">
                                     <div className="p-4 grid grid-cols-1 gap-4">
                                         <label className="flex items-center">
                                             <input
@@ -88,7 +90,7 @@ function SearchOfDegree() {
                                                 name="bachelors"
                                                 checked={selectedFilters.bachelors}
                                                 onChange={handleFilterChange}
-                                                className="form-checkbox h-4 w-4 text-[#800000] border-gray-300 rounded"
+                                                className="form-checkbox h-4 w-4 text-[#800000] accent-[#800000]  rounded"
                                             />
                                             <span className="ml-2 text-gray-700">Bachelors</span>
                                         </label>
@@ -98,7 +100,7 @@ function SearchOfDegree() {
                                                 name="masters"
                                                 checked={selectedFilters.masters}
                                                 onChange={handleFilterChange}
-                                                className="form-checkbox h-4 w-4 text-[#800000] border-gray-300 rounded"
+                                                className="form-checkbox h-4 w-4 text-[#800000] accent-[#800000]  rounded"
                                             />
                                             <span className="ml-2 text-gray-700">Masters</span>
                                         </label>
@@ -108,7 +110,7 @@ function SearchOfDegree() {
                                                 name="diploma"
                                                 checked={selectedFilters.diploma}
                                                 onChange={handleFilterChange}
-                                                className="form-checkbox h-4 w-4 text-[#800000] border-gray-300 rounded"
+                                                className="form-checkbox h-4 w-4 text-[#800000] accent-[#800000] rounded"
                                             />
                                             <span className="ml-2 text-gray-700">Diploma</span>
                                         </label>
@@ -118,7 +120,7 @@ function SearchOfDegree() {
                                                 name="certification"
                                                 checked={selectedFilters.certification}
                                                 onChange={handleFilterChange}
-                                                className="form-checkbox h-4 w-4 text-[#800000] border-gray-300 rounded"
+                                                className="form-checkbox h-4 w-4 text-[#800000] accent-[#800000] rounded"
                                             />
                                             <span className="ml-2 text-gray-700">Certification</span>
                                         </label>
@@ -126,18 +128,18 @@ function SearchOfDegree() {
                                 </div>
                             )}
                         </div>
-                        <button type="submit" className="ms-6 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#800000] hover:bg-[#600000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]">
+                        {/* <button type="submit" className="ms-6 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#800000] hover:bg-[#600000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]">
                             Search
-                        </button>
+                        </button> */}
                     </div>
                 </form>
                 <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {currentDegrees.map((degree, index) => (
-                        <div key={index} className="p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                        <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
                             <img src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
-                            <h2 className="text-xl font-bold text-[#800000]">{degree.title}</h2>
-                            <p className="mt-2 text-gray-700">{degree.field}</p>
-                            <p className="mt-1 text-sm text-gray-500">{degree.type.charAt(0).toUpperCase() + degree.type.slice(1)}</p>
+                            <h2 className="text-xl line-clamp-1 font-bold text-[#800000]">{degree.title}</h2>
+                            <p className="mt-1 text-sm font-semibold text-gray-700">{degree.type.charAt(0).toUpperCase() + degree.type.slice(1)}</p>
+                            <p className="mt-1 break-all line-clamp-2 leading-5 text-gray-500 text-sm">{degree.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -157,7 +159,7 @@ function SearchOfDegree() {
                             <button
                                 key={number}
                                 onClick={() => paginate(number)}
-                                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === number ? 'bg-[#800000] text-white' : 'bg-white text-gray-700'} border-gray-300 hover:bg-gray-50`}
+                                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === number ? 'bg-[#800000] text-white ' : 'bg-white text-gray-700'} border-gray-300 `}
                             >
                                 {number}
                             </button>

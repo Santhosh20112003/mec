@@ -19,24 +19,24 @@ function Gallery() {
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Discover the beauty and diversity of our global campuses through our gallery. Each image captures the essence of our vibrant academic communities.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 mx-auto md:grid-cols-4">
-                <div className="relative group col-span-2 row-span-2 md:col-start-3 md:row-start-1">
-                    <img src="https://www.pagalguy.com/wp-content/uploads/2018/10/FF19963065D94D19.jpg" alt="University 1" className="w-full h-full hover:brightness-75 transition-all rounded shadow-sm max-h-[21rem] dark:bg-gray-500 aspect-square" />
+                <div data-aos="fade-up" className="relative group col-span-2 row-span-2 md:col-start-3 md:row-start-1">
+                    <img src="https://www.pagalguy.com/wp-content/uploads/2018/10/FF19963065D94D19.jpg" alt="University 1" className="w-full h-full hover:brightness-75 object-cover transition-all rounded shadow-sm max-h-[21rem] dark:bg-gray-500 aspect-square" />
                     <div className="absolute top-0 right-0 bg-[#800000] text-white text-xs font-semibold px-2 py-1 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity">
                         Indian Institute of Science
                     </div>
                 </div>
                 {images.map((image, index) => (
-                    <div key={index} className="relative group">
-                        <img src={image.src} alt={image.name} className="w-full h-full hover:brightness-75 transition-all rounded shadow-sm max-h-40 dark:bg-gray-500 aspect-square" />
+                    <div data-aos="fade-up" data-aos-delay={index*100} key={index} className="col-span-2 md:col-span-1 relative group">
+                        <img src={image.src} alt={image.name} className="w-full h-full hover:brightness-75 transition-all object-cover rounded shadow-sm max-h-40 dark:bg-gray-500 aspect-square" />
                         <div className="absolute top-0 right-0 bg-[#800000] text-white text-xs font-semibold px-2 py-1 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity">
                             {image.name}
                         </div>
                     </div>
                 ))}
-                <div className="relative group col-span-2 row-span-2 md:col-start-1 md:row-start-3">
-                    <img src="https://wallpaperaccess.com/full/9411643.jpg" alt="University 10" className="w-full h-full hover:brightness-75 transition-all rounded shadow-sm max-h-[21rem] dark:bg-gray-500 aspect-square" />
+                <div data-aos="fade-up" data-aos-delay={100} className="relative group col-span-2 row-span-2 md:col-start-1 md:row-start-3">
+                    <img src="https://wallpaperaccess.com/full/9411643.jpg" alt="University 10" className="w-full h-full object-cover hover:brightness-75 transition-all rounded shadow-sm max-h-[21rem] dark:bg-gray-500 aspect-square" />
                     <div className="absolute top-0 right-0 bg-[#800000] text-white text-xs font-semibold px-2 py-1 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity">
-                    IIT Roorkee
+                        IIT Roorkee
                     </div>
                 </div>
             </div>

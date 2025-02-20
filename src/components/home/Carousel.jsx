@@ -93,13 +93,13 @@ const Carousel = () => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 hidden md:block cursor-pointer left-4 transform -translate-y-1/2 bg-[#212121] hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute top-1/2 hidden md:block cursor-pointer left-4 transform -translate-y-1/2 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
         onClick={prevSlide}
       >
         <FaArrowLeft size={20} />
       </button>
       <button
-        className="absolute top-1/2 hidden md:block cursor-pointer right-4 transform -translate-y-1/2 bg-[#212121] hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute top-1/2 hidden md:block cursor-pointer right-4 transform -translate-y-1/2 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
         onClick={nextSlide}
       >
         <FaArrowRight size={20} />
@@ -108,13 +108,13 @@ const Carousel = () => {
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-[#800000]' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-[#800000]' : 'bg-[#800000]/5'}`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>
       <button
-        className="absolute bottom-4 left-4 bg-[#212121] hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute bottom-4 left-4 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
         onClick={togglePlayPause}
       >
         {isPlaying ? <FaPause size={16} /> : <FaPlay size={16} />}
