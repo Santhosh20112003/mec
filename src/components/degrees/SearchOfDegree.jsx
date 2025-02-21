@@ -20,7 +20,6 @@ function SearchOfDegree() {
     const [currentPage, setCurrentPage] = useState(1);
     const [filteredDegrees, setFilteredDegrees] = useState([]);
     const [dialogOpen, setDialogOpen] = useState(false);
-    const [contactOpen, setContactOpen] = useState(false);
     const [selectedDegree, setSelectedDegree] = useState(null);
     const degreesPerPage = 6;
 
@@ -66,10 +65,6 @@ function SearchOfDegree() {
     const handleDialogOpen = (degree) => {
         setSelectedDegree(degree);
         setDialogOpen(true);
-    };
-
-    const handleContactOpen = () => {
-        setContactOpen(true);
     };
 
     const indexOfLastDegree = currentPage * degreesPerPage;
