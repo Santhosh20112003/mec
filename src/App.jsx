@@ -9,6 +9,7 @@ import Banner from "./components/common/Banner";
 import Students from "./components/Students";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Contact2 from "./components/ContactMain";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/list-of-degrees" element={<ListOfDegrees />} />
           <Route path="/students" element={<Students />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/:id" element={<Contact2 />} />
         </Routes>
         <Footer />
       </div>

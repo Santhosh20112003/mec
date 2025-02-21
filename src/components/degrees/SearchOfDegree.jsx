@@ -85,7 +85,7 @@ function SearchOfDegree() {
 
     return (
         <section className="text-gray-600 body-font bg-[#800000]/5">
-            <div className="container mx-auto px-5 py-12">
+            <div className=" mx-auto px-5 py-12">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-[#800000]">Search for Degrees</h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Find the perfect degree program that suits your interests and career goals. Use the filters below to narrow down your search.</p>
@@ -128,7 +128,7 @@ function SearchOfDegree() {
                         </div>
                     </div>
                 </form>
-                <div className="container md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
+                <div className=" md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
                     {currentDegrees.map((degree, index) => (
                         <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
                             <img src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
@@ -139,7 +139,7 @@ function SearchOfDegree() {
                                 <button type='button' onClick={() => handleDialogOpen(degree)} className="p-2 cursor-pointer active:scale-90 transition-all px-3 font-medium rounded-md shadow-sm text-xs bg-[#800000] text-white ">
                                     View Details
                                 </button>
-                                <Link to="/contact" onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
+                                <Link to={`/contact/${window.btoa(degree?.id)}`} onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
                                     Consult now
                                 </Link>
                             </span>
@@ -212,7 +212,7 @@ function SearchOfDegree() {
                                         {selectedDegree.desc}
                                     </p>
                                     <span className="flex items-center justify-center md:justify-start gap-5">
-                                        <Link to="/contact" onClick={() => { window.screenY(0); }} className="inline-flex active:scale-95 transition-all items-center px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-[#800000] focus:outline-none">
+                                        <Link to={`/contact/${window.btoa(selectedDegree?.id)}`} onClick={() => { window.screenY(0); }} className="inline-flex active:scale-95 transition-all items-center px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-[#800000] focus:outline-none">
                                             <i className="fa-arrow-up-right-from-square fas text-sm"></i>{" "}
                                             &nbsp; Consult Now
                                         </Link>

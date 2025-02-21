@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Country, State, City } from 'country-state-city';
 import toast, { Toaster } from 'react-hot-toast';
+import {Degrees} from "../data";
 
-function Contact1() {
+function Contact1({ id }) {
+    const data = Degrees[atob(id)];
     const countries = Country.getAllCountries();
     const [selectedCountry, setSelectedCountry] = useState('');
     const [states, setStates] = useState([]);
@@ -15,19 +17,19 @@ function Contact1() {
         state: '',
         city: '',
         phone: '',
-        message: '',
+        message: `Hi im consulting regarding ${data.title} - ${data.field}`,
         consent: false,
         contactConsent: false,
     });
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (selectedCountry) {
             const countryStates = State.getStatesOfCountry(selectedCountry);
             setStates(countryStates);
         }
     }, [selectedCountry]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (selectedState) {
             const stateCities = City.getCitiesOfState(selectedCountry, selectedState);
             setCities(stateCities);
@@ -44,6 +46,7 @@ function Contact1() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Add validation logic here
         const nameRegex = /^[A-Za-z]+$/;
         const phoneRegex = /^\d{10}$/;
 
@@ -67,13 +70,14 @@ function Contact1() {
             return;
         }
 
+        // Submit the form
         e.target.submit();
     };
 
     return (
         <section className="py-12 bg-[#800000]/5">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">  
-                <div className="grid grid-cols-1 place-content-center gap-12">
+            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 place-content-center gap-12">  {/* lg:grid-cols-2 */}
                     <div className="bg-white p-10 shadow rounded-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-[#800000] mb-6">Get Counselling Today!</h2>
                         <form onSubmit={handleSubmit} action="https://formsubmit.co/0b4ee2cd42a0e78f61eb1715e33bb409" method="POST">
@@ -173,10 +177,16 @@ function Contact1() {
                             </div>
                         </form>
                     </div>
+                    {/* <div className="hidden lg:block">
+                        <img src="https://ik.imagekit.io/vituepzjm/MEC/Telecommuting-rafiki.svg?updatedAt=1739639612715" alt="Contact Us" className="w-full h-full object-cover" />
+                    </div> */}
                 </div>
             </div>
 
-            <Toaster position="top-center" reverseOrder={false} />
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
         </section>
     );
 }
