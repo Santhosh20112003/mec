@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 function Hero() {
     return (
@@ -13,7 +14,7 @@ function Hero() {
                         Embark on a journey to study architecture abroad and gain a global perspective on design and construction. Our programs offer unique opportunities to learn from renowned architects and experience diverse architectural styles. Enhance your skills and broaden your horizons with our comprehensive degree programs.
                     </p>
                     <div className="flex justify-center">
-                        <button className="inline-flex text-white bg-[#800000] border-0 py-2 px-6 focus:outline-none hover:bg-[#600000] rounded text-lg">Learn More</button>
+                        <HashLink to="#search-degree" className="inline-flex text-white bg-[#800000] border-0 py-2 px-6 focus:outline-none hover:bg-[#600000] rounded text-lg">Search Yours</HashLink>
                     </div>
                 </div>
             </div>

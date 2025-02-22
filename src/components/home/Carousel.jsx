@@ -108,7 +108,7 @@ const Carousel = () => {
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-[#800000]' : 'bg-[#800000]/5'}`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-white/70' : 'bg-[#800000]/5'}`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

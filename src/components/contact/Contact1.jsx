@@ -72,7 +72,7 @@ function Contact1() {
 
     return (
         <section className="py-12 bg-[#800000]/5">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">  
+            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 place-content-center gap-12">
                     <div className="bg-white p-10 shadow rounded-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-[#800000] mb-6">Get Counselling Today!</h2>

@@ -4,7 +4,6 @@ import { Degrees } from '../data';
 import { TbFilterSearch } from 'react-icons/tb';
 import { HiMiniXMark } from 'react-icons/hi2';
 import * as Dialog from "@radix-ui/react-dialog";
-import Contact1 from '../contact/Contact1';
 import { Link } from 'react-router-dom';
 
 function SearchOfDegree() {
@@ -79,8 +78,8 @@ function SearchOfDegree() {
     const endPage = Math.min(startPage + maxPageButtons - 1, totalPages);
 
     return (
-        <section className="text-gray-600 body-font bg-[#800000]/5">
-            <div className=" mx-auto px-5 py-12">
+        <section id="search-degree" className="text-gray-600 body-font bg-[#800000]/5">
+            <div className="mx-auto px-5 py-12">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-[#800000]">Search for Degrees</h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Find the perfect degree program that suits your interests and career goals. Use the filters below to narrow down your search.</p>
@@ -123,7 +122,7 @@ function SearchOfDegree() {
                         </div>
                     </div>
                 </form>
-                <div className=" md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
+                <div className="md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
                     {currentDegrees.map((degree, index) => (
                         <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
                             <img src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
