@@ -6,16 +6,16 @@ function Gallery() {
         { src: "https://ik.imagekit.io/vituepzjm/MEC/Universities/anna-uni?updatedAt=1740160767110", name: "Anna University" },
         { src: "https://college4u.in/wp-content/uploads/2019/07/vitvellorec4u.in_.jpg", name: "Vellore Institute of Technology" },
         { src: "https://www.jnu.ac.in/main/sites/files/jnu/styles/ow_large_feature/public/admin-build.jpg?itok=RyROwWxv", name: "Jawaharlal Nehru University" },
-        { src: "https://ik.imagekit.io/vituepzjm/MEC/Universities/2b7f1364-6c18-4b8d-a208-0aac26b4f5fe.jpg?updatedAt=1739900240952", name: "McGill University" },
+        { src: "https://www.guidanceforever.org/wp-content/uploads/2023/10/sathyabama-institute-of-science-and-technology-chennai-featured.jpg", name: "Sathyabama University" },
         { src: "https://www.sastra.edu/images/sastra/newbuildingAUG15.jpg", name: "Sastra University" },
-        { src: "https://ik.imagekit.io/vituepzjm/MEC/Universities/Fall-visit5.jpg?updatedAt=1739900298316", name: "Heidelberg University" },
-        { src: "https://ik.imagekit.io/vituepzjm/MEC/Universities/Aula-der-Universit_C3_A4t-G_C3_B6ttingen.jpg?updatedAt=1739900327893", name: "Georg August University" },
+        { src: "https://images.shiksha.com/mediadata/images/1719317026phpTmdOdl.jpeg", name: "SRM University" },
+        { src: "https://qs-igauge.blr1.cdn.digitaloceanspaces.com/image2.jpg", name: "VELS University" },
     ];
 
     return (
         <section className="py-12 px-5 lg:px-12">
             <div className="text-center mb-12">
-                <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Top Universities across the World</h1>
+                <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Top Universities in INDIA</h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Discover the beauty and diversity of our global campuses through our gallery. Each image captures the essence of our vibrant academic communities.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 mx-auto md:grid-cols-4">

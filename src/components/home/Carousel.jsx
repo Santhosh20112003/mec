@@ -6,7 +6,7 @@ const Carousel = () => {
   const slides = [
     {
       image: "https://study-eu.s3.eu-west-1.amazonaws.com/uploads/image/path/283/wide_fullhd_webp_hungary-budapest.webp",
-      heading: "Explore Top Universities",
+      heading: "Explore Prestigious Universities",
       paragraph: "Discover the best universities around the world and find the perfect fit for your education.",
       link: "/list-of-degrees"
     },

@@ -10,7 +10,7 @@ function Service() {
                     </div>
                     <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
                         <h1 class="sm:w-2/5 text-[#800000] font-medium title-font text-2xl mb-2 sm:mb-0">Explore Our Diverse Streams</h1>
-                        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Dive into our comprehensive programs designed to cater to various fields of interest. Whether you're into engineering, arts, or pursuing a PhD, we have something for everyone.</p>
+                        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Dive into our comprehensive programs designed to cater to various fields of interest. Whether you're into engineering, arts, medical, we have something for everyone.</p>
                     </div>
                 </div>
                 <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
@@ -40,10 +40,10 @@ function Service() {
                     </div>
                     <div data-aos="fade-up" data-aos-delay="600" class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-52 overflow-hidden">
-                            <img alt="content" class="object-cover object-center h-full w-full" src="https://images.moneycontrol.com/static-mcnews/2018/06/WHAT-A-PhD-IS-AND-WHAT-IT-IS-NOT-770x433.jpg" />
+                            <img alt="content" class="object-cover object-center h-full w-full" src="https://ik.imagekit.io/vituepzjm/MEC/thumb-1920-1330529.png?updatedAt=1740325770487" />
                         </div>
-                        <h2 class="text-xl font-medium title-font text-[#800000] mt-5">PhD Stream</h2>
-                        <p class="text-base leading-relaxed mt-2">Pursue your passion for research with our PhD stream. Work with experienced mentors and contribute to groundbreaking discoveries in your field of study.</p>
+                        <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Medical Stream</h2>
+                        <p class="text-base leading-relaxed mt-2">Embark on a journey in the Medical stream to make a difference in healthcare. Our programs offer in-depth knowledge and practical skills to prepare you for a rewarding career in the medical field.</p>
                         <a class="text-[#800000] inline-flex items-center mt-3">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
