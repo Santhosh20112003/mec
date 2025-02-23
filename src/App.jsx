@@ -10,6 +10,9 @@ import Students from "./components/Students";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Contact2 from "./components/ContactMain";
+import Engineering from "./components/details/Engineering";
+import Medical from "./components/details/Medical";
+import ArtsAndScience from "./components/details/ArtsAndScience";
 
 function App() {
   useEffect(() => {
@@ -25,6 +28,9 @@ function App() {
         <Routes>
           <Route path="" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/medical" element={<Medical />} />
+          <Route path="/arts-and-science" element={<ArtsAndScience />} />
           <Route path="/list-of-degrees" element={<ListOfDegrees />} />
           <Route path="/students" element={<Students />} />
           <Route path="/contact" element={<Contact />} />

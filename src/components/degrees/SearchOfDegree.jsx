@@ -5,6 +5,7 @@ import { TbFilterSearch } from 'react-icons/tb';
 import { HiMiniXMark } from 'react-icons/hi2';
 import * as Dialog from "@radix-ui/react-dialog";
 import { Link } from 'react-router-dom';
+import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr';
 
 function SearchOfDegree() {
     const { degreeType } = useParams();
@@ -145,12 +146,10 @@ function SearchOfDegree() {
                         <button
                             onClick={() => paginate(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                            className="relative inline-flex items-center px-3 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                         >
                             <span className="sr-only">Previous</span>
-                            <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fillRule="evenodd" d="M12.293 4.293a1 1 010 1.414L8.414 10l3.879 3.879a1 1 11-1.414 1.414l-4.586-4.586a1 1 010-1.414l4.586-4.586a1 1 01-1.414 0z" clipRule="evenodd" />
-                            </svg>
+                            <GrLinkPrevious className='text-[#800]' />
                         </button>
                         {Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map(number => (
                             <button
@@ -164,12 +163,10 @@ function SearchOfDegree() {
                         <button
                             onClick={() => paginate(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                            className="relative inline-flex items-center px-3 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                         >
                             <span className="sr-only">Next</span>
-                            <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fillRule="evenodd" d="M7.707 15.707a1 1 010-1.414L11.586 10 7.707 6.121a1 1 01-1.414-1.414l4.586 4.586a1 1 010 1.414l-4.586 4.586a1 1 01-1.414 0z" clipRule="evenodd" />
-                            </svg>
+                            <GrLinkNext className='text-[#800]' />
                         </button>
                     </nav>
                 </div>

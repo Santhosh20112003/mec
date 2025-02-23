@@ -6,7 +6,7 @@ function Hero() {
         <section className="text-gray-600 body-font">
             <div className=" flex px-5 md:px-12 md:py-24 py-12 md:flex-row flex-col items-center">
                 <div data-aos="zoom-in" className="lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img className="object-cover object-center rounded" alt="degree architecture" src="https://ik.imagekit.io/vituepzjm/MEC/4.png" />
+                    <img className="object-cover object-center rounded" alt="degree architecture" src="https://ik.imagekit.io/vituepzjm/MEC/Insight%20(2).png?updatedAt=1740333925497" />
                 </div>
                 <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-[#800000]">Study Your Degree Abroad</h1>

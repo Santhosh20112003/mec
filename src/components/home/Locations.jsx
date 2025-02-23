@@ -48,7 +48,7 @@ function Locations() {
                 <div className="py-6 lg:py-12 px-5 lg:px-12">
                     <div className="lg:flex justify-between gap-10 lg:items-center">
                         <div data-aos="fade-up" className="hidden lg:flex  lg:justify-start">
-                            <img className="w-[24rem] h-[18rem]  shadow-md hover:brightness-100 brightness-90 transition-all flex-shrink-0 object-cover rounded-4xl" src="https://media.licdn.com/dms/image/v2/C4D1BAQH0_UeKoteJyA/company-background_10000/company-background_10000/0/1583221367975?e=2147483647&v=beta&t=KQigaftmL6HB9UnpqDg84muDKht9JV3XEw9vHodQiv8" alt="Indian University" />
+                            <img className="w-[24rem] h-[18rem]  shadow-md hover:brightness-100 brightness-90 transition-all flex-shrink-0 object-cover rounded-4xl" src="https://ik.imagekit.io/vituepzjm/MEC/isro?updatedAt=1740332021271" alt="Indian University" />
                         </div>
                         <div className="grid w-full grid-cols-1 gap-6 lg:w-[70%] md:grid-cols-2">
                             <div className="space-y-3">
@@ -67,13 +67,10 @@ function Locations() {
 
                             <div className="space-y-3">
                                 <span className="inline-block p-3 text-[#800000] bg-[#800000]/10 rounded-xl">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                                    </svg>
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='size-6' xmlns="http://www.w3.org/2000/svg"><path d="M.408 15.13a2 2 0 0 1 .59-2.642L17.038 1.33a1.999 1.999 0 0 1 2.85.602l2.828 4.644a2 2 0 0 1-.851 2.847l-17.762 8.43a2 2 0 0 1-2.59-.807Zm5.263-4.066 1.987 3.44 8.712-4.135-2.857-4.76Zm12.06-1.34.001-.001 3.49-1.656a.498.498 0 0 0 .212-.712l-2.826-4.644a.503.503 0 0 0-.713-.151l-3.148 2.19Zm-13.295 2.2L1.854 13.72a.5.5 0 0 0-.147.66l1.105 1.915a.5.5 0 0 0 .648.201l2.838-1.347ZM17.155 22.87a.75.75 0 0 0 .226-1.036l-4-6.239a.75.75 0 0 0-.941-.278l-2.75 1.25a.75.75 0 0 0-.318.274l-3.25 4.989a.75.75 0 0 0 1.256.819l3.131-4.806.51-.232v5.64a.75.75 0 1 0 1.5 0v-6.22l3.6 5.613a.75.75 0 0 0 1.036.226Z"></path></svg>
                                 </span>
 
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize">Cutting-Edge Facilities</h1>
+                                <h1 className="text-xl font-semibold text-gray-700 capitalize">Practical Laboratories</h1>
 
                                 <p className="text-gray-500">
                                     Indian universities are equipped with cutting-edge facilities and state-of-the-art laboratories, providing students with the best environment to learn and innovate.

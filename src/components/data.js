@@ -12,7 +12,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'hospitality',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Hotel%20and%20Catering%20Management.jpeg',
         desc: "This course provides students with comprehensive knowledge and skills required for the hospitality and catering industry. It covers areas such as food and beverage management, hospitality operations, and event planning. Graduates can pursue careers in hotels, resorts, restaurants, and catering companies."
     },
     {
@@ -22,7 +22,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'maritime studies',
-        image: 'https://placehold.co/600x400',
+        image:"https://ik.imagekit.io/vituepzjm/MEC/degrees/Marine%20Engineering.jpg?updatedAt=1740318143902",
         desc: "This course focuses on the management and operational aspects of maritime activities. Students learn about navigation, cargo handling, maritime law, and safety procedures. Graduates can work in shipping companies, ports, maritime organizations, and logistics firms."
     },
     {
@@ -32,7 +32,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 2,
         field: 'hospitality',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Hotel%20and%20Catering%20Management.jpeg',
         desc: "This lateral entry course is designed for students with a relevant diploma or equivalent qualification. It provides advanced knowledge in hospitality and catering management, covering topics such as food production, hospitality marketing, and customer service. Graduates can advance their careers in the hospitality industry."
     },
     {
@@ -42,7 +42,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'biotechnology',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Biotechnology'.jpg",
         desc: "This course offers an in-depth understanding of the principles and applications of biotechnology. It includes subjects like genetics, molecular biology, bioinformatics, and industrial biotechnology. Graduates can pursue careers in research, pharmaceuticals, agriculture, and environmental science."
     },
     {
@@ -52,7 +52,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'mass communication',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Visual%20Communication.jpg',
         desc: "This course explores the various forms of visual media and communication. Students learn about graphic design, photography, video production, and digital media. Graduates can work in advertising agencies, media companies, publishing houses, and film production studios."
     },
     {
@@ -62,7 +62,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Computer%20Science.jpg',
         desc: "This course covers the fundamentals of computer science, including programming, algorithms, data structures, and software development. Students also study topics like artificial intelligence, cybersecurity, and database management. Graduates can pursue careers in software engineering, IT consulting, and system administration."
     },
     {
@@ -72,7 +72,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'microbiology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Microbiology.jpg',
         desc: "This course focuses on the study of microorganisms and their roles in various environments. Students learn about microbial physiology, genetics, immunology, and pathogenic microbiology. Graduates can work in healthcare, pharmaceuticals, food industry, and environmental science."
     },
     {
@@ -82,7 +82,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'biochemistry',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Biochemistry.webp',
         desc: "This course provides a thorough understanding of the chemical processes and substances that occur within living organisms. It includes topics like enzymology, metabolism, molecular biology, and structural biology. Graduates can pursue careers in research, biotechnology, healthcare, and pharmaceuticals."
     },
     {
@@ -92,7 +92,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'nursing',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Nursing.jpg',
         desc: "This course trains students in the principles and practices of nursing. It covers subjects like anatomy, physiology, pharmacology, and patient care. Graduates can work as registered nurses in hospitals, clinics, community health centers, and nursing homes."
     },
     {
@@ -102,7 +102,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Operation%20Theatre%20and%20Anesthesia%20Technology.jpg',
         desc: "This course focuses on the technical and procedural aspects of operation theatre and anesthesia technology. Students learn about surgical instruments, anesthesia techniques, patient monitoring, and infection control. Graduates can work in hospitals, surgical centers, and healthcare facilities."
     },
     {
@@ -112,7 +112,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'aviation',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Aviation.jpg?updatedAt=1740318133880',
         desc: "This course covers the fundamentals of aviation, including aerodynamics, aircraft systems, aviation safety, and flight operations. Students also learn about aviation management and air traffic control. Graduates can pursue careers as pilots, aviation managers, and airport operations specialists."
     },
     {
@@ -122,7 +122,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 2,
         field: 'agriculture',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/(Hons)%20in%20Agriculture.webp?updatedAt=1740318135691',
         desc: "This course provides comprehensive knowledge of agricultural practices and technologies. It includes subjects like crop science, soil science, agricultural economics, and agribusiness management. Graduates can work in agricultural research, farming, agribusiness, and government agencies."
     },
     {
@@ -132,7 +132,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Computer%20Science%20with%20Artificial%20Intelligence%20and%20Machine%20Learning'.jpg?updatedAt=1740318141148",
         desc: "This course focuses on computer science with a specialization in artificial intelligence and machine learning. Students learn about machine learning algorithms, neural networks, data analysis, and AI applications. Graduates can pursue careers in AI development, data science, and machine learning engineering."
     },
     {
@@ -142,7 +142,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 2,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Radiology%20and%20Imaging%20Technology.jpg?updatedAt=1740318150126',
         desc: "This course trains students in the techniques and technologies used in medical imaging. It includes subjects like radiographic techniques, imaging equipment, radiation safety, and diagnostic imaging. Graduates can work as radiologic technologists in hospitals, diagnostic centers, and healthcare facilities."
     },
     {
@@ -152,7 +152,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Cardiac%20Care%20Technology.jpg?updatedAt=1740318136289',
         desc: "This course provides knowledge and skills related to cardiac care and technology. Students learn about cardiovascular anatomy, cardiac diagnostics, patient care, and cardiovascular interventions. Graduates can work in cardiac care units, hospitals, and cardiovascular clinics."
     },
     {
@@ -162,7 +162,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'aeronautical',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Aeronautical%20Science'.jpg?updatedAt=1740318138788",
         desc: "This course focuses on the science and technology behind the design and operation of aircraft. It covers subjects like aerodynamics, aircraft systems, flight mechanics, and aerospace materials. Graduates can pursue careers in aerospace engineering, aviation, and defense."
     },
     {
@@ -172,7 +172,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'optometry',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Optometry',.jpg?updatedAt=1740318148982",
         desc: "This course trains students in the field of optometry, including the diagnosis and treatment of eye disorders. It covers subjects like ocular anatomy, visual science, clinical optometry, and contact lens practice. Graduates can work as optometrists in eye clinics, hospitals, and optical centers."
     },
     {
@@ -182,7 +182,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'psychology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Psychology.jpg?updatedAt=1740318150555',
         desc: "This course explores human behavior, cognition, and mental health. Students learn about psychological theories, research methods, and counseling techniques. Graduates can work in mental health services, counseling, human resources, and research fields."
     },
     {
@@ -192,7 +192,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Biocomputing.jpg?updatedAt=1740318138626',
         desc: "This course integrates biology with computational sciences, focusing on bioinformatics, genetic analysis, and data-driven biological research. Graduates can pursue careers in biotechnology, pharmaceuticals, and research institutions."
     },
     {
@@ -202,7 +202,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Clinical%20Nutrition.webp?updatedAt=1740318139544',
         desc: "This course covers human nutrition, diet planning, and medical nutrition therapy. Students learn about food science, metabolic disorders, and community nutrition. Graduates can work as dietitians, nutritionists, or in healthcare settings."
     },
     {
@@ -212,7 +212,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Animation.jpg?updatedAt=1740318135805',
         desc: "This course covers the principles and techniques of animation, including 2D/3D animation, visual storytelling, and special effects. Graduates can work in film, gaming, advertising, and digital media industries."
     },
     {
@@ -222,7 +222,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Computer%20Science%20in%20Cyber%20Security'.webp?updatedAt=1740318141448",
         desc: "This course focuses on information security, ethical hacking, network defense, and data protection. Graduates can work as cybersecurity analysts, penetration testers, and security consultants."
     },
     {
@@ -232,7 +232,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Information%20Technology.jpg?updatedAt=1740318144375',
         desc: "This course covers software development, networking, database management, and IT infrastructure. Graduates can work in IT support, software engineering, and systems administration."
     },
     {
@@ -242,7 +242,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'medical',
-        image: 'https://placehold.co/600x400',
+        image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Neuro%20Electrophysiology'.jpg?updatedAt=1740318147283",
         desc: "This course focuses on diagnosing and monitoring neurological disorders using electrophysiological techniques. Graduates can work in hospitals, research labs, and neurology clinics."
     },
     {
@@ -252,7 +252,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'medical',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Medical%20Record%20Sciences.jpg?updatedAt=1740318148301',
         desc: "This course teaches medical documentation, healthcare data management, and coding systems. Graduates can work in hospitals, insurance firms, and health informatics."
     },
     {
@@ -262,7 +262,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'medical technology',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Medical%20Lab%20Technology.webp?updatedAt=1740318147237',
         desc: "This course covers clinical laboratory techniques, diagnostic testing, and pathology. Graduates can work in hospitals, diagnostic labs, and research institutions."
     },
     {
@@ -272,7 +272,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'aeronautical',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Aircraft%20Maintenance.jpg?updatedAt=1740318139798',
         desc: "This course covers aircraft maintenance procedures, aviation safety, and mechanical systems. Graduates can work as aircraft maintenance engineers in airlines and aerospace companies."
     },
     {
@@ -282,7 +282,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'food science',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Food%20Service%20Management%20and%20Applied%20Nutrition.png?updatedAt=1740318144634',
         desc: "This course focuses on food service operations, nutrition science, and dietetics. Graduates can work in healthcare, hospitality, and food industries."
     },
     {
@@ -292,7 +292,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'medical',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Accident%20and%20Emergency%20Care.jpg?updatedAt=1740318134715',
         desc: "This course trains students in emergency medical response, trauma care, and life-saving procedures. Graduates can work in hospitals, ambulances, and disaster management teams."
     },
     {
@@ -302,7 +302,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'computer science',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Information%20Technology.jpg?updatedAt=1740318144375',
         desc: "This course covers ethical hacking, forensic investigation, and cybercrime analysis. Graduates can work in law enforcement, IT security, and forensic consultancy."
     },
     {
@@ -312,7 +312,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'medical',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Respiratory%20Therapy.jpg?updatedAt=1740318150721',
         desc: "This course trains students in pulmonary care, critical care, and oxygen therapy. Graduates can work in hospitals, ICUs, and respiratory clinics."
     },
     {
@@ -322,7 +322,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 3,
         field: 'yoga',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Yoga.avif?updatedAt=1740318156107',
         desc: "This course covers yoga philosophy, asanas, and therapeutic yoga. Graduates can work as yoga instructors, wellness coaches, and therapists."
     },
     {
@@ -332,7 +332,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'engineering',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Marine%20Engineering.jpg?updatedAt=1740318143902',
         desc: 'Marine Engineering involves the design, maintenance, and operation of marine vessels and structures. It covers areas like shipbuilding, naval architecture, and offshore engineering. Graduates can pursue careers in the maritime, shipping, and defense industries.'
     },
     {
@@ -342,7 +342,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'engineering',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Computer%20Science.jpg?updatedAt=1740318141230',
         desc: 'Computer Science and Engineering focuses on programming, algorithms, database management, networking, and artificial intelligence. Graduates can work as software developers, system analysts, or cybersecurity experts in IT and tech industries.'
     },
     {
@@ -352,7 +352,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'engineering',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Mechanical%20Engineering.jpg?updatedAt=1740318145431',
         desc: 'Mechanical Engineering covers the design, analysis, and manufacturing of mechanical systems. It includes subjects like thermodynamics, robotics, and automotive engineering. Career opportunities exist in manufacturing, aerospace, and automation sectors.'
     },
     {
@@ -362,7 +362,7 @@ export const Degrees = [
         mode: 'Full Time',
         duration: 4,
         field: 'engineering',
-        image: 'https://placehold.co/600x400',
+        image: 'https://ik.imagekit.io/vituepzjm/MEC/degrees/Electronics%20and%20Communication%20Engineering.jpg?updatedAt=1740318142646',
         desc: 'This course focuses on electronic circuits, communication systems, and signal processing. It provides skills for careers in telecommunications, embedded systems, and consumer electronics industries.'
     },
     {
