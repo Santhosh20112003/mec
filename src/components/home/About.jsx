@@ -9,10 +9,10 @@ function About() {
                 </div>
                 <div className="lg:flex-grow md:w-1/2 text-sm md:pl-16 flex flex-col mt-4 md:text-left items-center text-center">
                     <h2 className="lg:text-3xl text-lg break-words lg:text-start text-center w-full mb-4 font-medium text-[#800000]">Mayilon Educational Consultancy</h2>
-                    <p className="mb-4 leading-relaxed text-gray-700">
+                    <p className="mb-4 leading-relaxed text-gray-900">
                         Welcome to MEC, your trusted partner in educational excellence. We are dedicated to providing comprehensive guidance and support to students aspiring to study at top universities in India and around the world. Our mission is to empower students with the knowledge and resources they need to achieve their academic and career goals.
                     </p>
-                    <p className="mb-4 leading-relaxed text-gray-700">
+                    <p className="mb-4 leading-relaxed text-gray-900">
                         At MEC, we believe in the power of education to transform lives. Our team of experienced counselors and educators is committed to helping you navigate the complex process of college admissions, course selection, and career planning. We offer personalized counseling sessions, detailed information about universities and courses, and ongoing support throughout your educational journey.
                     </p>
                     {/* <p className="mb-4 leading-relaxed text-gray-700">

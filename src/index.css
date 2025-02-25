@@ -7,3 +7,8 @@
 *{
     scroll-behavior: smooth !important;
 }
+
+::selection {
+    background-color: #800000;
+    color: #fff;
+}

@@ -35,15 +35,15 @@ function DegreeOverview() {
 
     return (
         <section className="bg-[#800000]/5 py-12">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className=" px-4 sm:px-6 lg:px-8">
                 {/* <div className="text-center mb-12">
                     <h1 className="text-4xl font-semibold text-[#800000]">Degree Overview</h1>
                     <p className="text-gray-700 mt-4">Explore the variety of courses we offer across different fields and categories.</p>
                 </div> */}
 
                 <div className="lg:ps-6 text-center lg:text-left mb-6">
-                    <h1 className="text-4xl font-semibold lg:underline underline-offset-4 text-[#800000]">Degree Overview</h1>
-                    <p className="text-gray-700 mt-4">Explore the variety of courses we offer across different fields and categories.</p>
+                    <h1 className="text-4xl font-semibold lg:underline underline-offset-4 text-[#800000]">Courses Overview</h1>
+                    <p className="text-gray-900 mt-4">Explore the variety of courses we offer across different fields and categories.</p>
                 </div>
 
                 {/* <div class="flex flex-col px-6">
@@ -82,7 +82,7 @@ function DegreeOverview() {
                                                     <div className="mt-2 ml-4">
                                                         <ul className="list-disc list-inside">
                                                             {Degrees.filter(degree => degree.type === category && degree.field === field).map(degree => (
-                                                                <li key={degree.id} className="text-gray-700 text-sm lg:text-base mb-1">{degree.title} - <Link to={`/contact/${btoa(Degrees.indexOf(degree))}`} className='hover:underline'>consult</Link></li>
+                                                                <li key={degree.id} className="text-gray-900 text-sm lg:text-base mb-1">{degree.title} - <Link to={`/contact/${btoa(Degrees.indexOf(degree))}`} className='hover:underline'>consult</Link></li>
                                                             ))}
                                                         </ul>
                                                     </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Service() {
     return (
-        <section class="text-gray-600 body-font">
+        <section class="text-gray-900 body-font">
             <div class=" lg:px-12 px-5 lg:py-12 py-24 mx-auto">
                 <div class="flex flex-col">
                     <div class="h-1 bg-gray-200 rounded overflow-hidden">
@@ -15,9 +15,9 @@ function Service() {
                     </div>
                 </div>
                 <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                    <div data-aos="fade-up" class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-52 overflow-hidden">
-                            <img alt="content" class="object-cover object-center h-full w-full" src="https://cdn.mos.cms.futurecdn.net/HFUAjfbamNhbM8dsNSQW3D-970-80.jpg.webp" />
+                            <img alt="content" data-aos="fade-up" class="object-cover object-center h-full w-full" src="https://cdn.mos.cms.futurecdn.net/HFUAjfbamNhbM8dsNSQW3D-970-80.jpg.webp" />
                         </div>
                         <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Engineering Stream</h2>
                         <p class="text-base leading-relaxed mt-2">Join our Engineering stream to innovate and create solutions for real-world problems. Our curriculum is designed to provide hands-on experience and industry exposure.</p>
@@ -27,9 +27,9 @@ function Service() {
                             </svg>
                         </Link>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300" class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-64 overflow-hidden">
-                            <img alt="content" class="object-cover object-center h-full w-full" src="https://images.squarespace-cdn.com/content/v1/61cc66f9e8f1cb7928c32c66/ec53e184-bc09-4bcb-b27d-4953ad6771a5/ARTS-SCIENCES.jpg" />
+                            <img data-aos="fade-up" data-aos-delay="300" alt="content" class="object-cover object-center h-full w-full" src="https://images.squarespace-cdn.com/content/v1/61cc66f9e8f1cb7928c32c66/ec53e184-bc09-4bcb-b27d-4953ad6771a5/ARTS-SCIENCES.jpg" />
                         </div>
                         <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Arts and Science Stream</h2>
                         <p class="text-base leading-relaxed mt-2">Our Arts and Science stream offers a blend of creativity and analytical thinking. Explore various disciplines and develop a well-rounded skill set.</p>
@@ -39,9 +39,9 @@ function Service() {
                             </svg>
                         </Link>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="600" class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-52 overflow-hidden">
-                            <img alt="content" class="object-cover object-center h-full w-full" src="https://ik.imagekit.io/vituepzjm/MEC/thumb-1920-1330529.png?updatedAt=1740325770487" />
+                            <img data-aos="fade-up" data-aos-delay="600" alt="content" class="object-cover object-center h-full w-full" src="https://ik.imagekit.io/vituepzjm/MEC/thumb-1920-1330529.png?updatedAt=1740325770487" />
                         </div>
                         <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Medical Stream</h2>
                         <p class="text-base leading-relaxed mt-2">Embark on a journey in the Medical stream to make a difference in healthcare. Our programs offer in-depth knowledge and practical skills to prepare you for a rewarding career in the medical field.</p>

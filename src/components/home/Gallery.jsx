@@ -16,7 +16,7 @@ function Gallery() {
         <section className="py-12 px-5 lg:px-12">
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Top Universities in INDIA</h1>
-                <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Discover the beauty and diversity of our global campuses through our gallery. Each image captures the essence of our vibrant academic communities.</p>
+                <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-900">Discover the beauty and diversity of our global campuses through our gallery. Each image captures the essence of our vibrant academic communities.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 mx-auto md:grid-cols-4">
                 <div data-aos="fade-up" className="relative group col-span-2 row-span-2 md:col-start-3 md:row-start-1">

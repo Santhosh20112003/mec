@@ -8,7 +8,7 @@ function ForeignStudents() {
     };
 
     return (
-        <section className="text-gray-600 body-font bg-white">
+        <section className="text-gray-900 body-font bg-white">
             <div className=" py-12 ">
                 <div className="flex flex-col text-center px-5 w-full mb-20">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#800000]">Guide for Foreign Students</h1>
@@ -114,7 +114,7 @@ function ForeignStudents() {
                                 <h3 className="text-lg font-semibold text-[#800000]">
                                     Step 1: Choose the university
                                 </h3>
-                                <p className="text-base font-normal break-words text-gray-500">
+                                <p className="text-base font-normal break-words text-gray-900">
                                     Select the university that best fits your academic and career goals.
                                 </p>
                             </div>
@@ -136,7 +136,7 @@ function ForeignStudents() {
                             </div>
                             <div className="mt-3 sm:pe-8">
                                 <h3 className="text-lg font-semibold text-[#800000]">Step 2: Submit application</h3>
-                                <p className="text-base font-normal text-gray-500">
+                                <p className="text-base font-normal text-gray-900">
                                     Complete and submit your application to the university.
                                 </p>
                             </div>
@@ -160,7 +160,7 @@ function ForeignStudents() {
                                 <h3 className="text-lg font-semibold text-[#800000]">
                                     Step 3: University interview
                                 </h3>
-                                <p className=" md:text-base font-normal text-gray-500">
+                                <p className=" md:text-base font-normal text-gray-900">
                                     Attend the university interview and entrance exam if required.
                                 </p>
                             </div>
@@ -184,7 +184,7 @@ function ForeignStudents() {
                                 <h3 className="text-lg font-semibold text-[#800000]">
                                     Step 4: College enrolment
                                 </h3>
-                                <p className=" md:text-base font-normal text-gray-500">
+                                <p className=" md:text-base font-normal text-gray-900">
                                     Complete the enrolment process and start your education journey.
                                 </p>
                             </div>

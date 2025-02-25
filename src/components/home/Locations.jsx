@@ -5,7 +5,7 @@ function Locations() {
         <div className="py-12 px-5 lg:px-12 bg-[#800000]/5">
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Prestigious Indian Universities</h1>
-                <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Discover the excellence and diversity of Indian universities. Each image captures the essence of our vibrant academic communities and the superiority of Indian engineers.</p>
+                <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-900">Discover the excellence and diversity of Indian universities. Each image captures the essence of our vibrant academic communities and the superiority of Indian engineers.</p>
             </div>
             <section className="bg-white rounded-md mb-6">
                 <div className="py-6 lg:py-12 px-5 lg:px-12">
@@ -17,9 +17,9 @@ function Locations() {
                                     <svg stroke="currentColor" className='size-6' fill="currentColor" stroke-width="0" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
                                 </span>
 
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize">World-Class Education</h1>
+                                <h1 className="text-xl font-semibold text-gray-900 capitalize">World-Class Education</h1>
 
-                                <p className="text-gray-500">
+                                <p className="text-gray-800">
                                     Indian universities offer world-class education with a focus on innovation and research. Our engineers are known for their problem-solving skills and technical expertise.
                                 </p>
                             </div>
@@ -31,9 +31,9 @@ function Locations() {
                                     <svg stroke="currentColor" className='size-6' fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg>
                                 </span>
 
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize">Innovative Research</h1>
+                                <h1 className="text-xl font-semibold text-gray-900 capitalize">Innovative Research</h1>
 
-                                <p className="text-gray-500">
+                                <p className="text-gray-800">
                                     Indian universities are at the forefront of innovative research, contributing to advancements in technology, medicine, and engineering. Join us to be a part of this exciting journey.
                                 </p>
                             </div>
@@ -58,9 +58,9 @@ function Locations() {
                                     </svg>
                                 </span>
 
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize">Global Recognition</h1>
+                                <h1 className="text-xl font-semibold text-gray-900 capitalize">Global Recognition</h1>
 
-                                <p className="text-gray-500">
+                                <p className="text-gray-800">
                                     Degrees from Indian universities are globally recognized, opening doors to opportunities worldwide. Our alumni are leaders in their fields, making significant contributions globally.
                                 </p>
                             </div>
@@ -70,9 +70,9 @@ function Locations() {
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='size-6' xmlns="http://www.w3.org/2000/svg"><path d="M.408 15.13a2 2 0 0 1 .59-2.642L17.038 1.33a1.999 1.999 0 0 1 2.85.602l2.828 4.644a2 2 0 0 1-.851 2.847l-17.762 8.43a2 2 0 0 1-2.59-.807Zm5.263-4.066 1.987 3.44 8.712-4.135-2.857-4.76Zm12.06-1.34.001-.001 3.49-1.656a.498.498 0 0 0 .212-.712l-2.826-4.644a.503.503 0 0 0-.713-.151l-3.148 2.19Zm-13.295 2.2L1.854 13.72a.5.5 0 0 0-.147.66l1.105 1.915a.5.5 0 0 0 .648.201l2.838-1.347ZM17.155 22.87a.75.75 0 0 0 .226-1.036l-4-6.239a.75.75 0 0 0-.941-.278l-2.75 1.25a.75.75 0 0 0-.318.274l-3.25 4.989a.75.75 0 0 0 1.256.819l3.131-4.806.51-.232v5.64a.75.75 0 1 0 1.5 0v-6.22l3.6 5.613a.75.75 0 0 0 1.036.226Z"></path></svg>
                                 </span>
 
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize">Practical Laboratories</h1>
+                                <h1 className="text-xl font-semibold text-gray-900 capitalize">Practical Laboratories</h1>
 
-                                <p className="text-gray-500">
+                                <p className="text-gray-800">
                                     Indian universities are equipped with cutting-edge facilities and state-of-the-art laboratories, providing students with the best environment to learn and innovate.
                                 </p>
                             </div>

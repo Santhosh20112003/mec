@@ -89,15 +89,15 @@ function Contact1({ id }) {
                         <form onSubmit={handleSubmit} action="https://formsubmit.co/0b4ee2cd42a0e78f61eb1715e33bb409" method="POST">
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">First Name</label>
+                                    <label className="block text-sm font-medium text-gray-900">First Name</label>
                                     <input type="text" placeholder="Enter your first name" name="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">Last Name</label>
+                                    <label className="block text-sm font-medium text-gray-900">Last Name</label>
                                     <input type="text" placeholder="Enter your last name" name="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">Country</label>
+                                    <label className="block text-sm font-medium text-gray-900">Country</label>
                                     <select
                                         name="country"
                                         className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]"
@@ -117,7 +117,7 @@ function Contact1({ id }) {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">State</label>
+                                    <label className="block text-sm font-medium text-gray-900">State</label>
                                     <select
                                         name="state"
                                         className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]"
@@ -137,7 +137,7 @@ function Contact1({ id }) {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700">City</label>
+                                    <label className="block text-sm font-medium text-gray-900">City</label>
                                     <select name="city" className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" value={formData.city} onChange={handleChange} required>
                                         <option value="">Select a city</option>
                                         {cities.map((city) => (
@@ -148,11 +148,11 @@ function Contact1({ id }) {
                                     </select>
                                 </div>
                                 <div className="">
-                                    <label className="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                                    <label className="block text-sm font-medium text-gray-900">Phone Number (Optional)</label>
                                     <input type="number" placeholder="Enter your phone number" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border border-gray-300 focus:border-[#800000] focus:ring-[#800000]" />
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label className="block text-sm font-medium text-gray-700">Councelling Context</label>
+                                    <label className="block text-sm font-medium text-gray-900">Councelling Context</label>
                                     <textarea name="message" placeholder="Enter your councelling context" value={formData.message} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" rows="3" required></textarea>
                                 </div>
                                 <div className="sm:col-span-2">
@@ -161,7 +161,7 @@ function Contact1({ id }) {
                                             <input id="consent" name="consent" type="checkbox" checked={formData.consent} onChange={handleChange} className="focus:ring-[#800000] h-4 w-4 text-[#800000] border-gray-300 rounded accent-[#800000]" required />
                                         </div>
                                         <div className="ml-3 text-sm">
-                                            <label htmlFor="consent" className="font-medium text-gray-700">I would like to receive updates and offers from MEC</label>
+                                            <label htmlFor="consent" className="font-medium text-gray-900">I would like to receive updates and offers from MEC</label>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@ function Contact1({ id }) {
                                             <input id="contactConsent" name="contactConsent" type="checkbox" checked={formData.contactConsent} onChange={handleChange} className="focus:ring-[#800000] h-4 w-4 text-[#800000] border-gray-300 rounded accent-[#800000]" required />
                                         </div>
                                         <div className="ml-3 text-sm">
-                                            <label htmlFor="contactConsent" className="font-medium text-gray-700">Please contact me by phone, email or SMS to assist with my enquiry</label>
+                                            <label htmlFor="contactConsent" className="font-medium text-gray-900">Please contact me by phone, email or SMS to assist with my enquiry</label>
                                         </div>
                                     </div>
                                 </div>

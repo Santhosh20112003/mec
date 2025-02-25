@@ -20,7 +20,7 @@ function Header() {
                 </Link>
                 <nav className="hidden md:flex md:items-center space-x-6">
                     {links.map((link) => (
-                        <Link key={link.name} to={link.link} className={`text-black font-semibold hover:text-gray-700 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
+                        <Link key={link.name} to={link.link} className={`text-black font-semibold hover:text-gray-900 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
                             {link.name}
                         </Link>
                     ))}
@@ -38,7 +38,7 @@ function Header() {
             {isOpen && (
                 <nav className="md:hidden bg-white flex  justify-center flex-col p-4 mt-2 space-y-2 rounded shadow-md">
                     {links.map((link) => (
-                        <Link key={link.name} to={link.link} onClick={() => { setIsOpen(false) }} className={`block text-black font-semibold hover:text-gray-700 py-2 px-4 rounded hover:bg-gray-100 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
+                        <Link key={link.name} to={link.link} onClick={() => { setIsOpen(false) }} className={`block text-black font-semibold hover:text-gray-800 py-2 px-4 rounded hover:bg-gray-100 ${isActive(link.link) ? 'underline underline-offset-2' : ''}`}>
                             {link.name}
                         </Link>
                     ))}

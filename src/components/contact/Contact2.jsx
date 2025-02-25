@@ -7,18 +7,18 @@ function Contact2() {
                 <div className="md:flex gap-x-24 clear-left md:mb-16 mb-10">
                     <div className="md:mb-0 mb-4">
                         <h2 className="text-[#800000] font-manrope text-4xl font-semibold leading-10 mb-5 md:text-left text-center">Get In Touch</h2>
-                        <p className="text-gray-700 text-lg font-normal leading-7 mb-7 md:text-left text-center">Whether you have a question, feedback, or just want to say hi, we're here to connect with you and assist in any way we can.</p>
+                        <p className="text-gray-900 text-lg font-normal leading-7 mb-7 md:text-left text-center">Whether you have a question, feedback, or just want to say hi, we're here to connect with you and assist in any way we can.</p>
                         <div className="flex md:items-center md:justify-start justify-center">
                             {/* <button className="w-36 h-12 rounded-full bg-[#800000] transition-all duration-700 hover:bg-[#600000] shadow text-white text-center text-base font-semibold leading-6">Contact Us</button> */}
                         </div>
                     </div>
                     <div className="border-l-2 lg:flex lg:items-center gap-12 md:border-[#800000] border-white px-10 py-6">
                         <div className="mb-8 lg:mb-0">
-                            <h6 className="text-gray-500 text-sm font-medium leading-5 pb-3 md:text-start text-center">Email Address</h6>
+                            <h6 className="text-gray-900 text-sm font-medium leading-5 pb-3 md:text-start text-center">Email Address</h6>
                             <h3 className="text-black text-xl font-semibold leading-8 md:text-start text-center">mec.2025@gmail.com</h3>
                         </div>
                         <div>
-                            <h6 className="text-gray-500 text-sm font-medium leading-5 pb-3 md:text-start text-center">Phone Number</h6>
+                            <h6 className="text-gray-900 text-sm font-medium leading-5 pb-3 md:text-start text-center">Phone Number</h6>
                             <h3 className="text-black text-xl font-semibold leading-8 md:text-start text-center">9866656566</h3>
                         </div>
                     </div>

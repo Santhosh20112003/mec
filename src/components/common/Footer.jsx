@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="text-gray-600 body-font">
+        <footer className="text-gray-900 body-font">
             <div className="px-5 py-8 bg-[#800000]/5 mx-auto">
                 <div className="flex flex-wrap md:text-left text-center">
                     <div className="lg:w-1/5  w-full px-4">
@@ -12,10 +12,14 @@ function Footer() {
                         </h2>
                         <nav className="list-none mb-5">
                             <li>
-                                <Link to="/home" className="text-[#800000]/80 hover:text-[#800000]">Home</Link>
+                                <Link onClick={() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }} to="/home" className="text-[#800000]/80 hover:text-[#800000]">Home</Link>
                             </li>
                             <li>
-                                <Link to="/list-of-degrees" className="text-[#800000]/80 hover:text-[#800000]">List of Degrees</Link>
+                                <Link onClick={() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }} to="/list-of-degrees" className="text-[#800000]/80 hover:text-[#800000]">List of Degrees</Link>
                             </li>
                         </nav>
                     </div>
@@ -25,10 +29,14 @@ function Footer() {
                         </h2>
                         <nav className="list-none mb-5 ">
                             <li>
-                                <Link to="/students" className="text-[#800000]/80 lg:hover:text-[#800000]">Students</Link>
+                                <Link onClick={() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }} to="/students" className="text-[#800000]/80 lg:hover:text-[#800000]">Students</Link>
                             </li>
                             <li>
-                                <Link to="/contact" className="text-[#800000]/80 hover:text-[#800000]">Contact</Link>
+                                <Link onClick={() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }} to="/contact" className="text-[#800000]/80 hover:text-[#800000]">Contact</Link>
                             </li>
                         </nav>
                     </div>
@@ -48,7 +56,7 @@ function Footer() {
                                 required
                                 autoComplete={"email"}
                                 placeholder="Your Email"
-                                className="w-full bg-[#800000]/5 bg-opacity-50 rounded border border-[#800000] focus:bg-transparent focus:ring-2 focus:ring-[#800000]/20 focus:border-[#800000]/80 text-base outline-none text-gray-700 placeholder:text-[#800000] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                className="w-full bg-[#800000]/5 bg-opacity-50 rounded border border-[#800000] focus:bg-transparent focus:ring-2 focus:ring-[#800000]/20 focus:border-[#800000]/80 text-base outline-none text-gray-900 placeholder:text-[#800000] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                             />
                             <button className="w-full sm:w-auto text-white bg-[#800000] border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-[#800000]/80 cursor-pointer rounded">
                                 Send&nbsp;Message
@@ -60,27 +68,42 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white">
-                <div className="px-5 py-6 mx-auto flex flex-col items-center sm:flex-row">
+            <footer class="text-gray-900 bg-white">
+                <div class="p-5 flex items-center sm:flex-row flex-col">
                     <span onClick={() => {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }} className="flex title-font cursor-pointer font-medium items-center justify-center text-[#800000]">
                         <img src="https://ik.imagekit.io/vituepzjm/MEC/MEC.png?updatedAt=1739385234767" alt="" className="w-fit h-12" />
                     </span>
-                    <p className="text-sm text-[#800000] mt-4 sm:ml-6 sm:mt-0 font-medium ">
-                        © 2024 Mayilon Educational Consultancy —
-                        <Link
-                            to='https://santechh.vercel.app'
-                            rel="noopener noreferrer"
-                            className="text-[#800000]/70 font-bold ml-1"
-                            target="_blank"
-                        >
-                            @SanTech
-                        </Link>
+                    <p class="text-sm text-[#800000] sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2024 Mayilon Educational Consultancy —
+                        <a href="https://santechh.online" class="font-medium ml-1" rel="noopener noreferrer" target="_blank">@SanTech</a>
                     </p>
-
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <Link to="" class="text-[#800000]">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </Link>
+                        <Link to="" class="ml-3 text-[#800000]">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </Link>
+                        <Link to="" class="ml-3 text-[#800000]">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </Link>
+                        <Link to="" class="ml-3 text-[#800000]">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </Link>
+                    </span>
                 </div>
-            </div>
+            </footer>
         </footer>
     )
 }

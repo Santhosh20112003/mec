@@ -10,7 +10,7 @@ function References() {
                             Read trusted reviews from our customers
                         </h2>
 
-                        <p className="mt-6 max-w-lg leading-relaxed text-gray-700">
+                        <p className="mt-6 max-w-lg leading-relaxed text-gray-900">
                             Our customers love us! Read what they have to say below. We strive to provide the best service and experience for all our clients.
                         </p>
                     </div>
@@ -60,13 +60,13 @@ function References() {
                             <div className="mt-4">
                                 <p className="text-2xl font-bold text-[#800000] sm:text-3xl">Excellent Service</p>
 
-                                <p className="mt-4 leading-relaxed text-gray-700">
+                                <p className="mt-4 leading-relaxed text-gray-900">
                                     The team was incredibly professional and attentive. They went above and beyond to ensure our satisfaction. Highly recommend!
                                 </p>
                             </div>
                         </div>
 
-                        <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                        <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
                             &mdash; John Doe
                         </footer>
                     </blockquote>
@@ -102,13 +102,13 @@ function References() {
                             <div className="mt-4">
                                 <p className="text-2xl font-bold text-[#800000] sm:text-3xl">Highly Recommend</p>
 
-                                <p className="mt-4 leading-relaxed text-gray-700">
+                                <p className="mt-4 leading-relaxed text-gray-900">
                                     Amazing experience from start to finish. The staff was friendly and the service was top-notch. Will definitely be back!
                                 </p>
                             </div>
                         </div>
 
-                        <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                        <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
                             &mdash; Jane Smith
                         </footer>
                     </blockquote>
@@ -134,13 +134,13 @@ function References() {
                             <div className="mt-4">
                                 <p className="text-2xl font-bold text-[#800000] sm:text-3xl">Outstanding Quality</p>
 
-                                <p className="mt-4 leading-relaxed text-gray-700">
+                                <p className="mt-4 leading-relaxed text-gray-900">
                                     The quality of service and attention to detail was outstanding. I felt valued and appreciated as a customer. Thank you!
                                 </p>
                             </div>
                         </div>
 
-                        <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                        <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
                             &mdash; Alex Johnson
                         </footer>
                     </blockquote>
