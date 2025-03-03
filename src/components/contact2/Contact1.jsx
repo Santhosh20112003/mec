@@ -90,7 +90,7 @@ function Contact1({ id }) {
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">First Name</label>
-                                    <input type="text" placeholder="Enter your first name" name="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
+                                    <input type="text" placeholder="Enter your first name" autoFocus name="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">Last Name</label>

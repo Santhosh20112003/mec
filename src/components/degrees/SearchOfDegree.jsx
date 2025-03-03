@@ -6,6 +6,7 @@ import { HiMiniXMark } from 'react-icons/hi2';
 import * as Dialog from "@radix-ui/react-dialog";
 import { Link } from 'react-router-dom';
 import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr';
+import { MdOutlinePermContactCalendar } from 'react-icons/md';
 
 function SearchOfDegree() {
     const { degreeType } = useParams();
@@ -204,7 +205,9 @@ function SearchOfDegree() {
                                     </p>
                                     <span className="flex items-center justify-center md:justify-start gap-5">
                                         <Link to={`/contact/${window.btoa(selectedDegree?.id)}`} onClick={() => { window.screenY(0); }} className="inline-flex active:scale-95 transition-all items-center px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-[#800000] focus:outline-none">
-                                            <i className="fa-arrow-up-right-from-square fas text-sm"></i>{" "}
+                                            {/* <i className="fa-arrow-up-right-from-square fas text-sm"></i>{" "} */}
+                                            <i className="fas fa-address-card text-base"></i>{" "}
+                                            {/* <MdOutlinePermContactCalendar size={"22px"} /> */}
                                             &nbsp; Consult Now
                                         </Link>
                                     </span>
