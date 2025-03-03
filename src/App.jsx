@@ -20,6 +20,7 @@ function App() {
       disable: 'mobile'
     });
   }, []);
+
   return (
     <Router>
       <div className="">
