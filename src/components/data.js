@@ -405,7 +405,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/What-is-the-future-for-civil-engineers-in-India.jpg?updatedAt=1742203031649",
     desc: "Civil Engineering deals with the planning, design, and construction of infrastructure projects such as bridges, roads, and buildings. Graduates can work in construction firms, government agencies, and urban development projects.",
   },
   {
@@ -415,7 +415,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/rE9oOfim-Elec-3-1384.jpg?updatedAt=1742203301415",
     desc: "This course covers electrical power systems, circuit analysis, and electronic devices. Graduates can pursue careers in power generation, automation, and renewable energy industries.",
   },
   {
@@ -425,7 +425,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Things-You-Need-to-Know-About-Automobile-Engineering.jpg?updatedAt=1742203465101",
     desc: "Automobile Engineering focuses on vehicle design, development, and manufacturing. It covers areas like engine technology, aerodynamics, and electric vehicles. Graduates can work in automotive and transportation industries.",
   },
   {
@@ -435,7 +435,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/ece-al-ml.png?updatedAt=1742205114512",
     desc: "This course covers AI concepts, machine learning algorithms, and data processing techniques. Graduates can work in AI development, robotics, and data analytics industries.",
   },
   {
@@ -445,7 +445,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/ece-al-ml.png?updatedAt=1742205114512",
     desc: "A program that integrates AI with data science, focusing on big data, predictive analytics, and neural networks. Graduates can work in data science, business analytics, and AI-driven enterprises.",
   },
   {
@@ -455,7 +455,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/bio_technology.jpg?updatedAt=1742204328028",
     desc: "Biomedical Engineering applies engineering principles to healthcare, covering medical imaging, prosthetics, and bioinformatics. Graduates can work in hospitals, research labs, and medical device industries.",
   },
   {
@@ -466,7 +466,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/how-to-become-a-cloud-engineer.jpg?updatedAt=1742204263151",
     desc: "This program focuses on cloud computing, mobile applications, and IT solutions. It prepares graduates for careers in cloud services, app development, and enterprise IT management.",
   },
   {
@@ -476,7 +476,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/marine-engineer.png?updatedAt=1742204518918",
     desc: "Naval Architecture and Offshore Engineering deals with the design and construction of ships, submarines, and offshore structures. Graduates can work in the maritime, oil and gas, and defense industries.",
   },
   {
@@ -486,7 +486,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/navbharat-times.jpg?updatedAt=1742204911825",
     desc: "Biotechnology applies biological sciences to industrial and medical fields. It covers genetic engineering, bioprocessing, and pharmaceuticals. Graduates can work in healthcare, agriculture, and research industries.",
   },
   {
@@ -496,7 +496,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/_url=http_3A_2F_2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com_2F05_2Faa_2F9f6b30f1408e9aa91007a61497e0_2F190314-electricalengineering-17.jpg?updatedAt=1742204639509",
     desc: "This course integrates electronics and computing, focusing on embedded systems, networking, and software development. Graduates can work in IT, electronics, and telecommunications industries.",
   },
   {
@@ -507,7 +507,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 4,
     field: "engineering",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/ece-al-ml.png?updatedAt=1742205114512",
     desc: "This course integrates electronics and computing, focusing on embedded systems, networking, and software development. Graduates can work in IT, electronics, and telecommunications industries.",
   },
   {
@@ -517,7 +517,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 3,
     field: "business",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Hero-Image.png?updatedAt=1742205355840",
     desc: "BBA provides foundational knowledge in business management, covering finance, marketing, human resources, and entrepreneurship. Graduates can pursue careers in corporate management, banking, and business consulting.",
   },
   {
@@ -527,7 +527,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 3,
     field: "business",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/aviation-and-airport-management-old-name-istock_000040985942_large.jpg?updatedAt=1742205537767",
     desc: "Aviation Management focuses on the business and operational aspects of the aviation industry. Graduates can work in airline operations, airport management, and aviation consultancy firms.",
   },
   {
@@ -537,7 +537,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 3,
     field: "business",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/4-emerging-shipping-management-trends-that-will-impact-the-global-logistics-industry.jpg?updatedAt=1742205874369",
     desc: "This program covers supply chain management, transportation logistics, and maritime shipping. Graduates can work in logistics firms, shipping companies, and international trade organizations.",
   },
   {
@@ -547,7 +547,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 3,
     field: "business",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Higher-Fintech-Presence-Causes-Heightened-Risk-Taking-Among-Banking-Incumbents.jpg?updatedAt=1742206166695",
     desc: "This course integrates finance with technology, focusing on digital payments, blockchain, and banking innovations. Graduates can work in fintech startups, digital banking, and financial consulting.",
   },
   {
@@ -557,7 +557,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 3,
     field: "business",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Bachelor-of-Science-in-Business-Administration-Digital-Marketing-and-Advertising.jpg?updatedAt=1742206389318",
     desc: "Digital Marketing focuses on online branding, social media marketing, SEO, and content strategy. Graduates can pursue careers in digital advertising, e-commerce, and brand management.",
   },
   {
@@ -567,7 +567,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "hospitality",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/bvochmct.jpg?updatedAt=1742206764287",
     desc: "This program provides advanced knowledge in hospitality and catering management, focusing on hotel operations, food service management, and event planning. Graduates can work in hospitality chains, tourism, and catering industries.",
   },
   {
@@ -577,7 +577,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/bioinformatics-careers-India.jpg?updatedAt=1742206895690",
     desc: "Bioinformatics integrates biology, computer science, and mathematics to analyze biological data. Graduates can work in research labs, pharmaceutical companies, and biotechnology firms.",
   },
   {
@@ -587,7 +587,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Chemistry-Hero-1600x900.jpg?updatedAt=1742206986925",
     desc: "This program covers organic, inorganic, and physical chemistry, focusing on research and industrial applications. Graduates can work in laboratories, pharmaceuticals, and chemical industries.",
   },
   {
@@ -597,7 +597,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/navbharat-times.jpg?updatedAt=1742204911825",
     desc: "Biotechnology involves genetic engineering, microbiology, and bioprocess technology. Graduates can work in pharmaceuticals, healthcare, agriculture, and research institutions.",
   },
   {
@@ -607,7 +607,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/microbiology-960.jpg?updatedAt=1742207250535",
     desc: "This course focuses on immune system functions, infectious diseases, and laboratory research techniques. Graduates can work in healthcare, diagnostics, and biomedical research.",
   },
   {
@@ -617,7 +617,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "technology",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/degrees/Information%20Technology.jpg?updatedAt=1740318144375",
     desc: "IT studies software development, networking, and data management. Graduates can pursue careers in IT consulting, software engineering, and cybersecurity.",
   },
   {
@@ -627,7 +627,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/what-is-biochemistry_850x567.jpg?updatedAt=1742207489421",
     desc: "Biochemistry explores molecular biology, enzymology, and metabolic pathways. Graduates can work in medical research, pharmaceuticals, and clinical diagnostics.",
   },
   {
@@ -637,7 +637,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Pharmaceutical-Industry-Seeks-Overhaul-of-Drug-Quality-Inspections.jpg?updatedAt=1742207641068",
     desc: "This program covers drug formulation, quality control, and analytical techniques. Graduates can work in pharmaceutical industries, research, and regulatory bodies.",
   },
   {
@@ -647,7 +647,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "health sciences",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Echocardiography_cardiac_ultraound_PR_20from_Epsilon_Echoinsight_cardio_oncology.jpg_itok=71bds4iz?updatedAt=1742207696537",
     desc: "This course focuses on advanced cardiovascular imaging and diagnostic techniques. Graduates can work in hospitals, diagnostic centers, and cardiology research.",
   },
   {
@@ -657,7 +657,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "health sciences",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/Admission-in-B.Sc_.-Imaging-Technology-B.Sc_.-Radiology.jpg?updatedAt=1742207761451",
     desc: "Radiology covers medical imaging techniques such as MRI, CT scans, and X-rays. Graduates can work in radiology departments, hospitals, and diagnostic labs.",
   },
   {
@@ -667,7 +667,7 @@ export const Degrees = [
     mode: "Full Time",
     duration: 2,
     field: "science",
-    image: "https://placehold.co/600x400",
+    image: "https://ik.imagekit.io/vituepzjm/MEC/certifications/WEB19-EEWeek-GreeningSTEM-Careers-3636x2046.jpg.webp_itok=b7GqSNhb?updatedAt=1742207927594",
     desc: "Environmental Science studies pollution control, sustainable development, and climate change. Graduates can work in environmental agencies, research, and consultancy firms.",
   },
   {

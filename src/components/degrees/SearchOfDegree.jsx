@@ -128,7 +128,7 @@ function SearchOfDegree() {
                     {currentDegrees.map((degree, index) => (
                         <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
                             <img onClick={() => handleDialogOpen(degree)} src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
-                            <h2 className="text-xl line-clamp-1 font-bold text-[#800000]">{degree.title}</h2>
+                            <h2 title={degree.title} className="text-xl line-clamp-1 font-bold text-[#800000]">{degree.title}</h2>
                             <p className="mt-1 text-sm font-semibold text-gray-900">{degree.type.charAt(0).toUpperCase() + degree.type.slice(1)}</p>
                             <p className="mt-1 break-all line-clamp-2 leading-5 text-gray-900 text-sm">{degree.desc}</p>
                             <span className="flex items-center mt-5 justify-start gap-3">
