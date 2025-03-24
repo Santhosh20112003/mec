@@ -1,0 +1,164 @@
+.container {
+    width: 90%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.home {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #800000;
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+    
+    
+}
+.stud{
+    display: flex;
+    color: #800000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: -20px;
+    text-decoration: underline;
+}
+.study {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #800000;
+}
+
+.image {
+    width: 100%;
+    max-width:1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+.content {
+    width: 100%;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: 30px auto 70px;
+    text-align: justify;
+    color: #390c0cdf;
+   
+}
+
+.section-title {
+    color: #800000;
+    font-size: 1.95rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.image-grid{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,400px);
+   justify-content: center;
+   gap: 15px;
+   margin-top: 50px;
+
+  
+}
+
+.image-grid img{
+
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    transition: 0.75s;
+    max-width: 400px;
+ 
+ 
+}
+.image-grid img:hover{
+    transform: scale(1.2);
+    z-index: 0.5;
+    border-radius: 10px;
+
+}
+#sector{
+    margin-right: 80px;
+}
+
+
+
+@media (max-width: 768px) {
+    .study {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        width: 90%;
+    }
+    .image-grid {
+        width:100%;
+        grid-template-columns: repeat(auto-fit,200px);
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        border-radius: 20px;
+        transition: 1s;
+       
+    }
+ 
+    
+}
+
+@media (max-width: 480px) {
+    .study {
+        font-size: 1.75rem;
+        font-weight:  600px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-left: 30px;
+        margin-top: -20px;
+    }
+    
+    h4{
+        font-size: 1rem;
+      
+     
+    }
+    #sector{
+        margin-top: -30px;
+    }
+    .image-grid {
+        width: 100%;
+        display:block;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        border-radius: 30px;
+        transition:0.75s;
+       
+    }
+    .image-grid img:hover{
+        transform: scale(1.2);
+        z-index: 1;
+        border-radius: 10px;
+        max-width: 500px;
+        
+    
+    }
+  .content{
+       font-size: 1rem;
+  }
+  
+
+   
+    
+}
