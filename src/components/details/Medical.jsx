@@ -73,7 +73,7 @@ function Medical() {
   const introImages = {
     main: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/DSC01505.jpeg?updatedAt=1741279310442",
     who: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
-    clinical: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/udhi-eye-hospitals-alwarpet-chennai-eye-hospitals-akkox2886a.avif?updatedAt=1741279322353", 
+    clinical: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/maxresdefault.jpg?updatedAt=1741279323640", 
     research: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/Wetlab-2.jpg?updatedAt=1741279316353"
   };
 
@@ -87,9 +87,9 @@ function Medical() {
 
   // Clinical training images
   const clinicalImages = {
-    rural: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1932",
-    patient: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2069",
-    skills: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
+    rural: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/udhi-eye-hospitals-alwarpet-chennai-eye-hospitals-akkox2886a.avif?updatedAt=1741279322353",
+    patient: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/IMG_1213.jpg?updatedAt=1741279309020",
+    skills: "https://ik.imagekit.io/vituepzjm/MEC/Streams/Medical%20/saveetha4141+(1).jpeg?updatedAt=1741279320713"
   };
 
   // Research images
@@ -107,22 +107,18 @@ function Medical() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section with Video Background */}
-      <div className="relative h-[80vh] overflow-hidden">
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#9f0712]/30 to-[#9f0712]/60"></div>
-        </div>
+      {/* Hero Section with Image Background */}
+        <div className="relative h-[80vh] overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+          src={heroImage}
+          alt="Medical education hero"
+          className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#9f0712]/30"></div>
+          </div>
 
-        {/* Hero Content */}
+          {/* Hero Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -151,9 +147,9 @@ function Medical() {
             <button className="px-8 py-3 bg-[#9f0712] text-white rounded-full hover:bg-[#9f0712]/90 transition-all shadow-lg hover:shadow-xl">
               Explore Programs
             </button>
-            <button className="px-8 py-3 bg-white text-[#9f0712] rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+            {/* <button className="px-8 py-3 bg-white text-[#9f0712] rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
               Watch Video
-            </button>
+            </button> */}
           </motion.div>
         </div>
 
@@ -173,7 +169,7 @@ function Medical() {
       {/* Stats Section */}
       <div className="relative z-20 -mt-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-xl shadow-2xl p-8">
+          <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -197,7 +193,7 @@ function Medical() {
           {/* Navigation Tabs */}
           <div className={`${
             isScrolled 
-              ? "sticky top-0 z-30 py-4 bg-white/95 shadow-md backdrop-blur-sm transition-all duration-300" 
+              ? "sticky top-0 z-30 py-4 backdrop-blur-sm transition-all duration-300" 
               : "relative z-20"
           }`}>
             <div className="flex overflow-x-auto hide-scrollbar">
@@ -322,21 +318,21 @@ function Medical() {
                     <div className="bg-red-50 rounded-lg p-6">
                       <h3 className="text-xl font-semibold text-[#9f0712] mb-4">Undergraduate Programs</h3>
                       <ul className="space-y-3">
-                        <li className="flex items-start">
+                        <li className="text-gray-800 flex items-start">
                           <span className="text-[#9f0712] mr-2">•</span>
                           <div>
                             <strong>MBBS (5.5 years)</strong>
                             <p className="text-sm text-gray-600">Bachelor of Medicine and Bachelor of Surgery</p>
                           </div>
                         </li>
-                        <li className="flex items-start">
+                        <li className="text-gray-800 flex items-start">
                           <span className="text-[#9f0712] mr-2">•</span>
                           <div>
                             <strong>BDS (5 years)</strong>
                             <p className="text-sm text-gray-600">Bachelor of Dental Surgery</p>
                           </div>
                         </li>
-                        <li className="flex items-start">
+                        <li className="text-gray-800 flex items-start">
                           <span className="text-[#9f0712] mr-2">•</span>
                           <div>
                             <strong>BAMS (5.5 years)</strong>
@@ -349,14 +345,14 @@ function Medical() {
                     <div className="bg-red-50 rounded-lg p-6">
                       <h3 className="text-xl font-semibold text-[#9f0712] mb-4">Postgraduate Programs</h3>
                       <ul className="space-y-3">
-                        <li className="flex items-start">
+                        <li className="text-gray-800 flex items-start">
                           <span className="text-[#9f0712] mr-2">•</span>
                           <div>
                             <strong>MD/MS (3 years)</strong>
                             <p className="text-sm text-gray-600">Specialization in various medical fields</p>
                           </div>
                         </li>
-                        <li className="flex items-start">
+                        <li className="text-gray-800 flex items-start">
                           <span className="text-[#9f0712] mr-2">•</span>
                           <div>
                             <strong>DM/MCh (3 years)</strong>
@@ -366,8 +362,6 @@ function Medical() {
                       </ul>
                     </div>
                   </div>
-
-                  {/* Additional program sections... */}
                 </div>
               </motion.div>
             )}
@@ -380,7 +374,7 @@ function Medical() {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                <div className="grid grid-cols-1 items-end md:grid-cols-2 gap-6 p-6">
                   <div className="space-y-6">
                     <h2 className="text-2xl font-bold text-[#9f0712]">World-Class Infrastructure</h2>
                     

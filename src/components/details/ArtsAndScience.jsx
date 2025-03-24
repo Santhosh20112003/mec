@@ -1458,10 +1458,10 @@ function ArtsAndScience() {
                           </div>
                           <div className="p-5">
                             <h3 className="text-xl font-bold text-[#9f0712] mb-3">
-                            Social Sciences
+                              Social Sciences
                             </h3>
                             <p className="text-gray-700 mb-4">
-                            Social Science programs cover disciplines like
+                              Social Science programs cover disciplines like
                               economics, political science, sociology,
                               psychology, and anthropology. These fields examine
                               human behavior, social structures, and
@@ -1631,109 +1631,6 @@ function ArtsAndScience() {
           </div>
         </div>
       </div>
-
-      <div className="bg-gradient-to-r from-[#9f0712] to-[#9f0712]/90 py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Explore Your Educational Journey?
-          </h2>
-          <p className="text-white/90 max-w-3xl mx-auto mb-8 text-lg">
-            Discover the right Arts and Science programs that match your
-            interests and career aspirations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-white text-[#9f0712] font-semibold rounded-lg hover:bg-gray-100 transition shadow-lg hover:shadow-xl">
-              Find Programs
-            </button>
-            <button className="px-8 py-3 bg-transparent text-white border-2 border-white font-semibold rounded-lg hover:bg-white/10 transition shadow-lg hover:shadow-xl">
-              Contact Admission
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <footer className="bg-gray-900 text-gray-300 py-10 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-white mb-4">
-              Arts & Science Education
-            </h3>
-            <p className="text-sm">
-              Providing comprehensive information about educational
-              opportunities in humanities, social sciences, and natural sciences
-              across India.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Top Colleges
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Admission Process
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Scholarships
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Career Guide
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Research Papers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Events Calendar
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline">
-                  Student Portal
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-2 text-sm">
-              <li>Email: info@education.org</li>
-              <li>Phone: +91 1234567890</li>
-              <li>Address: Education Tower, New Delhi</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-sm text-center">
-          <p>
-            © {new Date().getFullYear()} Arts & Science Education Portal. All
-            rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
