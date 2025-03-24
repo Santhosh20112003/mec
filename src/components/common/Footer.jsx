@@ -75,7 +75,7 @@ function Footer() {
                     }} className="flex title-font cursor-pointer font-medium items-center justify-center text-[#800000]">
                         <img src="https://ik.imagekit.io/vituepzjm/MEC/MEC.png?updatedAt=1739385234767" alt="" className="w-fit h-12" />
                     </span>
-                    <p class="text-sm text-[#800000] sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2024 Mayilon Educational Consultancy —
+                    <p class="text-sm text-[#800000] sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2024 Mayilon Educational Consultance —
                         <a href="https://santechh.online" class="font-medium ml-1" rel="noopener noreferrer" target="_blank">@SanTech</a>
                     </p>
                     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
