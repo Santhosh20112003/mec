@@ -67,7 +67,7 @@ function Medical() {
   ];
 
   // Hero video fallback image
-  const heroImage = "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2071";
+  const heroImage = "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   // Introduction section images
   const introImages = {

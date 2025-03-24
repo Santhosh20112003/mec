@@ -68,12 +68,12 @@ function ArtsAndScience() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
+      <div className="relative h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80')",
+              "url('https://images.unsplash.com/photo-1577985051167-0d49eec21977?q=80&w=2089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#9f0712]/40"></div>
@@ -103,7 +103,7 @@ function ArtsAndScience() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xs sm:text-sm md:text-base text-white/80 max-w-2xl text-center mt-2"
+            className="text-xs sm:text-sm md:text-base text-white/80 max-w-2xl text-center"
           >
             Join 50,000+ international students pursuing globally recognized
             degrees across premier Indian institutions
@@ -113,7 +113,7 @@ function ArtsAndScience() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-8"
+            className="mt-3"
           >
             <button
               onClick={() => {
