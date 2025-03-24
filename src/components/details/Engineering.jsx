@@ -11,7 +11,7 @@ function Engineering() {
           className="w-full h-[40vh] sm:h-[250px] md:h-[350px] object-cover brightness-75"
           alt="Engineering Education in India"
         />
-        <div className="absolute inset-0 flex items-center justify-center flex-col px-3 sm:px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#9f0712]/70 flex items-center justify-center flex-col px-3 sm:px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 text-center drop-shadow-lg">
             Engineering Education in India
           </h1>
@@ -29,8 +29,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "intro"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Introduction
@@ -40,8 +40,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "accreditation"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Accreditation
@@ -51,8 +51,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "market"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Market
@@ -62,8 +62,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "laboratory"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Labs
@@ -73,8 +73,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "experience"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Experience
@@ -84,8 +84,8 @@ function Engineering() {
             className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
               ${
                 activeTab === "skills"
-                  ? "bg-red-800 text-white shadow-md"
-                  : "bg-white text-red-800 border border-red-100 hover:bg-red-50"
+                  ? "bg-[#9f0712] text-white shadow-md"
+                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
               }`}
           >
             Skills
@@ -94,7 +94,7 @@ function Engineering() {
         <div className="bg-white rounded-xl md:border border-[#9f0712] p-3 sm:p-4 md:p-6">
           {activeTab === "intro" && (
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
                 Introduction
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-center text-gray-700 leading-relaxed mb-4 md:mb-6 p-4 ">
@@ -111,13 +111,13 @@ function Engineering() {
 
           {activeTab === "accreditation" && (
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
                 Accreditation
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-center text-gray-700 leading-relaxed mb-4 md:mb-6 ">
                 The quality of these institutions is ensured through rigorous
                 accreditation processes by bodies like the{" "}
-                <strong className="text-red-800">
+                <strong className="text-[#9f0712]">
                   National Assessment and Accreditation Council (NAAC) and the
                   All India Council for Technical Education (AICTE)
                 </strong>
@@ -133,7 +133,7 @@ function Engineering() {
 
           {activeTab === "market" && (
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
                 Market Position
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-center text-gray-700 leading-relaxed mb-4 md:mb-6 ">
@@ -157,7 +157,7 @@ function Engineering() {
 
           {activeTab === "laboratory" && (
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
                 Laboratory Facilities
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 auto-rows-[minmax(120px,auto)]">
@@ -428,12 +428,12 @@ function Engineering() {
 
           {activeTab === "experience" && (
             <div className="mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit md:mb-6 mb-6 mx-auto rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit md:mb-6 mb-6 mx-auto rounded-xl">
                 Experience
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-                <div className="bg-red-50 p-3 sm:p-4 md:p-5 rounded-lg border border-red-100">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                <div className="bg-[#9f0712]/5 p-3 sm:p-4 md:p-5 rounded-lg border border-[#9f0712]/20">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Academic Environment
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -447,8 +447,8 @@ function Engineering() {
                     with a strong focus on exams and grades.
                   </p>
                 </div>
-                <div className="bg-red-50 p-3 sm:p-4 md:p-5 rounded-lg border border-red-100">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                <div className="bg-[#9f0712]/5 p-3 sm:p-4 md:p-5 rounded-lg border border-[#9f0712]/20">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Personal Growth
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -458,8 +458,8 @@ function Engineering() {
                     contacts from India and other countries.
                   </p>
                 </div>
-                <div className="bg-red-50 p-3 sm:p-4 md:p-5 rounded-lg border border-red-100">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                <div className="bg-[#9f0712]/5 p-3 sm:p-4 md:p-5 rounded-lg border border-[#9f0712]/20">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Career Opportunities
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -475,12 +475,12 @@ function Engineering() {
 
           {activeTab === "skills" && (
             <div className="mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-red-800 bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
                 Engineering Disciplines
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
                 <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Aeronautical Engineering
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -492,7 +492,7 @@ function Engineering() {
                   </p>
                 </div>
                 <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Electronics and Communication Engineering (ECE)
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -503,7 +503,7 @@ function Engineering() {
                   </p>
                 </div>
                 <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Electrical and Electronics Engineering (EEE)
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -513,7 +513,7 @@ function Engineering() {
                   </p>
                 </div>
                 <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-red-800">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
                     Mechanical Engineering
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-700">

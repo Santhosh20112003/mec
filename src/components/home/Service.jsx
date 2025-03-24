@@ -33,7 +33,7 @@ function Service() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Arts and Science Stream</h2>
                         <p class="text-base leading-relaxed mt-2">Our Arts and Science stream offers a blend of creativity and analytical thinking. Explore various disciplines and develop a well-rounded skill set.</p>
-                        <Link to="/medical" class="text-[#800000] inline-flex items-center mt-3">Learn More
+                        <Link to="/arts-and-science" class="text-[#800000] inline-flex items-center mt-3">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
@@ -45,7 +45,7 @@ function Service() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-[#800000] mt-5">Medical Stream</h2>
                         <p class="text-base leading-relaxed mt-2">Embark on a journey in the Medical stream to make a difference in healthcare. Our programs offer in-depth knowledge and practical skills to prepare you for a rewarding career in the medical field.</p>
-                        <Link to="/arts-and-science" class="text-[#800000] inline-flex items-center mt-3">Learn More
+                        <Link to="/medical" class="text-[#800000] inline-flex items-center mt-3">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
