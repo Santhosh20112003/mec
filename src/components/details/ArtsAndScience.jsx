@@ -1424,8 +1424,7 @@ function ArtsAndScience() {
                               study of literature, history, philosophy,
                               languages, and cultural studies. These courses
                               develop critical thinking, analytical writing, and
-                              deep understanding of human experiences across
-                              cultures and time periods.
+                              deep understanding of human experiences.
                             </p>
                             <div className="flex flex-wrap gap-2">
                               {[
@@ -1453,16 +1452,16 @@ function ArtsAndScience() {
                           <div className="h-48 overflow-hidden">
                             <img
                               src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-4.0.3&auto=format&fit=crop&q=80"
-                              alt="Social Sciences"
+                              alt="Humanities"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           </div>
                           <div className="p-5">
                             <h3 className="text-xl font-bold text-[#9f0712] mb-3">
-                              Social Sciences
+                            Social Sciences
                             </h3>
                             <p className="text-gray-700 mb-4">
-                              Social Science programs cover disciplines like
+                            Social Science programs cover disciplines like
                               economics, political science, sociology,
                               psychology, and anthropology. These fields examine
                               human behavior, social structures, and

@@ -3,15 +3,18 @@ import React, { useState } from "react";
 function Engineering() {
   const [activeTab, setActiveTab] = useState("intro");
 
+  // Hero image
+  const heroImage = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070";
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="relative">
         <img
-          src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80"
+          src={heroImage}
           className="w-full h-[40vh] sm:h-[250px] md:h-[350px] object-cover brightness-75"
           alt="Engineering Education in India"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#9f0712]/70 flex items-center justify-center flex-col px-3 sm:px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#9f0712]/50 flex items-center justify-center flex-col px-3 sm:px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 text-center drop-shadow-lg">
             Engineering Education in India
           </h1>
@@ -163,7 +166,7 @@ function Engineering() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 auto-rows-[minmax(120px,auto)]">
                 <div className="sm:col-span-2 lg:col-span-3 lg:row-span-2 overflow-hidden rounded-lg border border-gray-100 group relative">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/lab-4.jpg?updatedAt=1740599308427"
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Advanced Computer Lab"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -181,7 +184,7 @@ function Engineering() {
                 {/* Regular items */}
                 <div className="sm:col-span-2 lg:col-span-3 overflow-hidden rounded-lg border border-gray-100 group relative">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/lab-10.jpg?updatedAt=1740599297168"
+                    src="https://images.unsplash.com/photo-1581092160607-ee22b4bd3300?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Physics Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -197,7 +200,7 @@ function Engineering() {
 
                 <div className="sm:col-span-2 lg:col-span-3 overflow-hidden rounded-lg border border-gray-100 group relative">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/Chem1.jpg?updatedAt=1740599276685"
+                    src="https://images.unsplash.com/photo-1581093450021-a7a0e8d677a1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Chemistry Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -214,7 +217,7 @@ function Engineering() {
                 {/* Medium item spanning 2 columns on larger screens */}
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/3-crore-worth-iMac-lab-opened-in-SRMIST-1.jpg?updatedAt=1740599292554"
+                    src="https://images.unsplash.com/photo-1581093577421-f561a654a353?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="iMac Design Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -230,7 +233,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/Lab-photo-1-resized-scaled.jpg?updatedAt=1740599311036"
+                    src="https://images.unsplash.com/photo-1581091215367-9b6c00b3035a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Biomedical Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -246,7 +249,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/3-crore-worth-iMac-lab-opened-in-SRMIST-4.jpg?updatedAt=1740599275817"
+                    src="https://images.unsplash.com/photo-1581092160607-ee22b4bd3300?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Apple Computing Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -262,7 +265,7 @@ function Engineering() {
 
                 <div className="sm:col-span-2 lg:col-span-4 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/research-center-header.webp?updatedAt=1740599313769"
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Research Center"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -279,7 +282,7 @@ function Engineering() {
                 {/* Tall item spanning 2 rows on larger screens */}
                 <div className="sm:col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/img-19.jpg?updatedAt=1740599305795"
+                    src="https://images.unsplash.com/photo-1581093450021-a7a0e8d677a1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Robotics Laboratory"
                     className="w-full h-full max-h-[470px] object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -295,7 +298,7 @@ function Engineering() {
 
                 <div className="sm:col-span-2 lg:col-span-4 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/Chem3.jpg?updatedAt=1740599279592"
+                    src="https://images.unsplash.com/photo-1581093577421-f561a654a353?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Chemical Engineering Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -312,7 +315,7 @@ function Engineering() {
                 {/* Full width item */}
                 <div className="sm:col-span-2 lg:col-span-6 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/Phy1.jpg?updatedAt=1740599311882"
+                    src="https://images.unsplash.com/photo-1581091215367-9b6c00b3035a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Physics Research Center"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -329,7 +332,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-3 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/ECE2.jpg?updatedAt=1740599301466"
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Electronics Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -345,7 +348,7 @@ function Engineering() {
 
                 <div className="sm:col-span-2 lg:col-span-3 lg:row-span-2 overflow-hidden rounded-lg border border-gray-100 group relative">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/srmist-lab-9.jpg?updatedAt=1740599316304"
+                    src="https://images.unsplash.com/photo-1581092160607-ee22b4bd3300?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Modern Computing Lab"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -361,7 +364,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-3 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/EEE4.jpg?updatedAt=1740599299352"
+                    src="https://images.unsplash.com/photo-1581093450021-a7a0e8d677a1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Electrical Engineering Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -377,7 +380,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/db6479551754db9b12e7c60975a94cfde15a60195894271dd39273c9466c544a_FABRICATION%20LAB_DAP_%2002.jpeg?updatedAt=1740599282165"
+                    src="https://images.unsplash.com/photo-1581093577421-f561a654a353?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Fabrication Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -393,7 +396,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/Ship-in-campus-1-1.jpg?updatedAt=1740599316011"
+                    src="https://images.unsplash.com/photo-1581091215367-9b6c00b3035a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Marine Engineering Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -409,7 +412,7 @@ function Engineering() {
 
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
-                    src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/lab-10.jpg?updatedAt=1740599297168"
+                    src="https://images.unsplash.com/photo-1581092160607-ee22b4bd3300?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070"
                     alt="Physics Measurement Lab"
                     className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
