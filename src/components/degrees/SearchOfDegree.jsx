@@ -25,59 +25,30 @@ function SearchOfDegree() {
 
     useEffect(() => {
         const filterDegrees = () => {
-            // Split search terms for semantic matching
             const searchTerms = searchTerm.toLowerCase().trim().split(/\s+/).filter(term => term.length > 0);
-            
-            // Filter and score degrees
-            const scoredDegrees = Degrees.map(degree => {
-                // Check if degree type matches selected filters
+            const filtered = Degrees.filter(degree => {
                 const matchesFilters = selectedFilters[degree.type];
                 if (!matchesFilters && Object.values(selectedFilters).some(value => value)) {
-                    return { degree, score: 0 }; // Exclude if filters don't match
+                    return false; 
                 }
-                
-                // If no search terms, include with base score
-                if (searchTerms.length === 0) return { degree, score: 1 };
-                
-                // Calculate relevance score based on matches
-                let score = 0;
+                if (searchTerms.length === 0) {
+                    return true;
+                }
                 const title = degree.title.toLowerCase();
                 const field = degree.field.toLowerCase();
                 const desc = degree.desc.toLowerCase();
                 const mode = degree.mode.toLowerCase();
                 
-                // Process each search term
-                searchTerms.forEach(term => {
-                    // Title matches (highest weight)
-                    if (title.includes(term)) score += 10;
-                    
-                    // Field matches (high weight)
-                    if (field.includes(term)) score += 8;
-                    
-                    // Mode matches (medium weight)
-                    if (mode.includes(term)) score += 5;
-                    
-                    // Description matches (lower weight)
-                    if (desc.includes(term)) score += 3;
-                    
-                    // Check for partial word matches in title (for better semantic matching)
-                    const titleWords = title.split(/\s+/);
-                    if (titleWords.some(word => word.startsWith(term) || word.endsWith(term))) {
-                        score += 2;
-                    }
-                });
-                
-                return { degree, score };
+                return searchTerms.some(term => 
+                    title.includes(term) || 
+                    field.includes(term) || 
+                    desc.includes(term) || 
+                    mode.includes(term)
+                );
             });
             
-            // Filter out non-matches and sort by score
-            const filtered = scoredDegrees
-                .filter(item => item.score > 0)
-                .sort((a, b) => b.score - a.score)
-                .map(item => item.degree);
-            
             setFilteredDegrees(filtered);
-            setCurrentPage(1); // Reset to first page when search/filter changes
+            setCurrentPage(1);
         };
 
         filterDegrees();
@@ -188,7 +159,7 @@ function SearchOfDegree() {
                                     <button type='button' onClick={() => handleDialogOpen(degree)} className="p-2 cursor-pointer active:scale-90 transition-all px-3 font-medium rounded-md shadow-sm text-xs bg-[#800000] text-white ">
                                         View Details
                                     </button>
-                                    <Link to={`/contact/${window.btoa(degree?.id)}`} onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
+                                    <Link to={`/contact/${window.btoa(degree?.title)}`} onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
                                         Consult now
                                     </Link>
                                 </span>
@@ -248,41 +219,96 @@ function SearchOfDegree() {
             {selectedDegree && (
                 <Dialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
                     <Dialog.Portal>
-                        <Dialog.Overlay className="bg-gray-900/10 bg-opacity-30 z-[100] data-[state=open]:animate-overlayShow fixed inset-0" />
-                        <Dialog.Content
-                            className="data-[state=open]:animate-contentShow flex items-center justify-center bg-transparent z-[1000] fixed top-[50%] left-[50%] max-h-[80vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] rounded-[6px] focus:outline-none"
-                        >
-                            <div className="relative md:border-l-8 md:border-[#800000] flex group p-5 bg-clip-border gap-5 md:rounded-r-xl rounded-xl md:rounded-l-md bg-white text-gray-900 shadow-md w-full max-w-[80vw] flex-col md:flex-row">
-                                <Dialog.Close asChild>
-                                    <button className="absolute top-3 active:scale-90 transition-all right-3 text-gray-900 hover:text-[#800000]/90 focus:outline-none">
-                                        <HiMiniXMark className="h-6 w-6" />
-                                    </button>
-                                </Dialog.Close>
-                                <div className="relative w-full p-2 md:p-4 md:w-2/5 m-0 overflow-hidden md:rounded-r-none rounded-b-none md:rounded-bl-xl bg-clip-border rounded-xl shrink-0">
-                                    <img
-                                        src={selectedDegree.image}
-                                        alt="card-image"
-                                        className="w-full max-w-[40vh] rounded-xl max-h-[40vh] h-full"
+                        <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]" />
+                        <Dialog.Content className="fixed z-[101] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-7xl max-h-[90vh] overflow-hidden rounded-xl shadow-2xl focus:outline-none">
+                            <div className="flex flex-col md:flex-row h-full bg-white">
+                                {/* Left side - Image */}
+                                <div className="relative md:w-2/5 bg-[#800000]">
+                                    <img 
+                                        src={selectedDegree.image} 
+                                        alt={selectedDegree.title}
+                                        className="w-full h-48 md:h-full object-cover md:object-center" 
                                     />
+                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:hidden">
+                                        <span className="inline-block px-2 py-1 bg-white text-xs font-bold text-[#800000] rounded-md mb-1">
+                                            {selectedDegree.type.charAt(0).toUpperCase() + selectedDegree.type.slice(1)}
+                                        </span>
+                                        <h2 className="text-lg font-bold text-white">{selectedDegree.title}</h2>
+                                    </div>
                                 </div>
-                                <div className="px-5 flex justify-center flex-col py-3 md:p-6">
-                                    <h4 className="block mb-1 text-lg md:text-xl text-center md:text-start antialiased font-bold leading-snug tracking-normal text-[#800000]">
-                                        {selectedDegree.title}
-                                    </h4>
-                                    <h2 className="block mb-3 text-lg text-center md:text-start antialiased font-semibold leading-snug tracking-normal text-[#800000]/80">
-                                        {selectedDegree.type.charAt(0).toUpperCase() + selectedDegree.type.slice(1)} - {selectedDegree.field}
-                                    </h2>
-                                    <p className="block mb-4 text-sm text-center md:text-start md:text-base antialiased font-normal leading-relaxed text-gray-900">
-                                        {selectedDegree.desc}
-                                    </p>
-                                    <span className="flex items-center justify-center md:justify-start gap-5">
-                                        <Link to={`/contact/${window.btoa(selectedDegree?.id)}`} onClick={() => { window.screenY(0); }} className="inline-flex active:scale-95 transition-all items-center px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-[#800000] focus:outline-none">
-                                            {/* <i className="fa-arrow-up-right-from-square fas text-sm"></i>{" "} */}
-                                            <i className="fas fa-address-card text-base"></i>{" "}
-                                            {/* <MdOutlinePermContactCalendar size={"22px"} /> */}
-                                            &nbsp; Consult Now
+                                
+                                {/* Right side - Content */}
+                                <div className="relative flex flex-col md:w-3/5 p-5 md:p-8 max-h-[60vh] md:max-h-[90vh] overflow-y-auto">
+                                    {/* Close button */}
+                                    <Dialog.Close asChild>
+                                        <button className="absolute top-4 right-4 p-1 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                                            <HiMiniXMark className="h-5 w-5 text-gray-600" />
+                                            <span className="sr-only">Close</span>
+                                        </button>
+                                    </Dialog.Close>
+                                    
+                                    {/* Title section - visible only on md screens */}
+                                    <div className="hidden md:block mb-6">
+                                        <div className="flex items-center space-x-2 mb-2">
+                                            <span className="px-2 py-1 bg-[#800000]/10 text-xs font-semibold text-[#800000] rounded-md">
+                                                {selectedDegree.type.charAt(0).toUpperCase() + selectedDegree.type.slice(1)}
+                                            </span>
+                                            <span className="px-2 py-1 bg-gray-100 text-xs font-medium text-gray-700 rounded-md">
+                                                {selectedDegree.field}
+                                            </span>
+                                        </div>
+                                        <h2 className="text-2xl font-bold text-gray-800">{selectedDegree.title}</h2>
+                                    </div>
+                                    
+                                    {/* Key details */}
+                                    <div className="flex flex-wrap gap-4 mb-6">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 rounded-full bg-[#800000]/10 flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#800000]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs text-gray-500">Duration</p>
+                                                <p className="font-medium text-sm">{selectedDegree.duration || "Varies"}</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 rounded-full bg-[#800000]/10 flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#800000]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs text-gray-500">Mode</p>
+                                                <p className="font-medium text-sm">{selectedDegree.mode || "Not specified"}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Description */}
+                                    <div className="mb-6">
+                                        <h3 className="text-[#800000] font-semibold mb-3 text-sm uppercase tracking-wider">About This Program</h3>
+                                        <div className="prose prose-sm max-w-none text-gray-600">
+                                            <p>{selectedDegree.desc}</p>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Actions */}
+                                    <div className="mt-auto pt-5">
+                                        <Link 
+                                            to={`/contact/${window.btoa(selectedDegree?.title)}`} 
+                                            onClick={() => window.scrollTo(0, 0)}
+                                            className="w-full py-3 px-4 bg-[#800000] text-white text-center font-medium rounded-lg hover:bg-[#700000] shadow-sm transition-all flex items-center justify-center"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                            </svg>
+                                            Get Consultation
                                         </Link>
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </Dialog.Content>
