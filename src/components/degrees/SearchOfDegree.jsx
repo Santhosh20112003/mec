@@ -6,7 +6,6 @@ import { HiMiniXMark } from 'react-icons/hi2';
 import * as Dialog from "@radix-ui/react-dialog";
 import { Link } from 'react-router-dom';
 import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr';
-import { MdOutlinePermContactCalendar } from 'react-icons/md';
 
 function SearchOfDegree() {
     const { degreeType } = useParams();
@@ -22,16 +21,63 @@ function SearchOfDegree() {
     const [filteredDegrees, setFilteredDegrees] = useState([]);
     const [dialogOpen, setDialogOpen] = useState(false);
     const [selectedDegree, setSelectedDegree] = useState(null);
-    const degreesPerPage = 6;
+    const degreesPerPage = 6; 
 
     useEffect(() => {
         const filterDegrees = () => {
-            const filtered = Degrees.filter(degree => {
-                const matchesSearchTerm = degree.title.toLowerCase().includes(searchTerm.toLowerCase());
-                const matchesFilters = Object.keys(selectedFilters).some(filter => selectedFilters[filter] && degree.type === filter);
-                return matchesSearchTerm && matchesFilters;
+            // Split search terms for semantic matching
+            const searchTerms = searchTerm.toLowerCase().trim().split(/\s+/).filter(term => term.length > 0);
+            
+            // Filter and score degrees
+            const scoredDegrees = Degrees.map(degree => {
+                // Check if degree type matches selected filters
+                const matchesFilters = selectedFilters[degree.type];
+                if (!matchesFilters && Object.values(selectedFilters).some(value => value)) {
+                    return { degree, score: 0 }; // Exclude if filters don't match
+                }
+                
+                // If no search terms, include with base score
+                if (searchTerms.length === 0) return { degree, score: 1 };
+                
+                // Calculate relevance score based on matches
+                let score = 0;
+                const title = degree.title.toLowerCase();
+                const field = degree.field.toLowerCase();
+                const desc = degree.desc.toLowerCase();
+                const mode = degree.mode.toLowerCase();
+                
+                // Process each search term
+                searchTerms.forEach(term => {
+                    // Title matches (highest weight)
+                    if (title.includes(term)) score += 10;
+                    
+                    // Field matches (high weight)
+                    if (field.includes(term)) score += 8;
+                    
+                    // Mode matches (medium weight)
+                    if (mode.includes(term)) score += 5;
+                    
+                    // Description matches (lower weight)
+                    if (desc.includes(term)) score += 3;
+                    
+                    // Check for partial word matches in title (for better semantic matching)
+                    const titleWords = title.split(/\s+/);
+                    if (titleWords.some(word => word.startsWith(term) || word.endsWith(term))) {
+                        score += 2;
+                    }
+                });
+                
+                return { degree, score };
             });
+            
+            // Filter out non-matches and sort by score
+            const filtered = scoredDegrees
+                .filter(item => item.score > 0)
+                .sort((a, b) => b.score - a.score)
+                .map(item => item.degree);
+            
             setFilteredDegrees(filtered);
+            setCurrentPage(1); // Reset to first page when search/filter changes
         };
 
         filterDegrees();
@@ -50,12 +96,18 @@ function SearchOfDegree() {
 
     const handleSearchChange = (e) => setSearchTerm(e.target.value);
 
+    // Make sure at least one filter is always selected
     const handleFilterChange = (e) => {
         const { name, checked } = e.target;
-        setSelectedFilters({
+        const newFilters = {
             ...selectedFilters,
             [name]: checked,
-        });
+        };
+        
+        // Only update if at least one filter remains selected or if we're adding a filter
+        if (checked || Object.values(newFilters).some(value => value)) {
+            setSelectedFilters(newFilters);
+        }
     };
 
     const handleSubmit = (e) => {
@@ -125,22 +177,42 @@ function SearchOfDegree() {
                     </div>
                 </form>
                 <div className="md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
-                    {currentDegrees.map((degree, index) => (
-                        <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
-                            <img onClick={() => handleDialogOpen(degree)} src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
-                            <h2 title={degree.title} className="text-xl line-clamp-1 font-bold text-[#800000]">{degree.title}</h2>
-                            <p className="mt-1 text-sm font-semibold text-gray-900">{degree.type.charAt(0).toUpperCase() + degree.type.slice(1)}</p>
-                            <p className="mt-1 break-all line-clamp-2 leading-5 text-gray-900 text-sm">{degree.desc}</p>
-                            <span className="flex items-center mt-5 justify-start gap-3">
-                                <button type='button' onClick={() => handleDialogOpen(degree)} className="p-2 cursor-pointer active:scale-90 transition-all px-3 font-medium rounded-md shadow-sm text-xs bg-[#800000] text-white ">
-                                    View Details
-                                </button>
-                                <Link to={`/contact/${window.btoa(degree?.id)}`} onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
-                                    Consult now
-                                </Link>
-                            </span>
+                    {currentDegrees.length > 0 ? (
+                        currentDegrees.map((degree, index) => (
+                            <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
+                                <img onClick={() => handleDialogOpen(degree)} src={degree.image} alt={degree.title} className="w-full h-40 object-cover rounded-md mb-4" />
+                                <h2 title={degree.title} className="text-xl line-clamp-1 font-bold text-[#800000]">{degree.title}</h2>
+                                <p className="mt-1 text-sm font-semibold text-gray-900">{degree.type.charAt(0).toUpperCase() + degree.type.slice(1)}</p>
+                                <p className="mt-1 break-all line-clamp-2 leading-5 text-gray-900 text-sm">{degree.desc}</p>
+                                <span className="flex items-center mt-5 justify-start gap-3">
+                                    <button type='button' onClick={() => handleDialogOpen(degree)} className="p-2 cursor-pointer active:scale-90 transition-all px-3 font-medium rounded-md shadow-sm text-xs bg-[#800000] text-white ">
+                                        View Details
+                                    </button>
+                                    <Link to={`/contact/${window.btoa(degree?.id)}`} onClick={() => { window.scrollY(0) }} type='button' className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none">
+                                        Consult now
+                                    </Link>
+                                </span>
+                            </div>
+                        ))
+                    ) : (
+                        <div className="col-span-full text-center py-8">
+                            <p className="text-lg text-gray-700">No degrees found matching your search criteria.</p>
+                            <button 
+                                onClick={() => {
+                                    setSearchTerm('');
+                                    setSelectedFilters({
+                                        bachelors: true,
+                                        masters: true,
+                                        diploma: true,
+                                        certification: true,
+                                    });
+                                }}
+                                className="mt-4 px-4 py-2 bg-[#800000] text-white rounded-md hover:bg-[#600000]"
+                            >
+                                Reset Filters
+                            </button>
                         </div>
-                    ))}
+                    )}
                 </div>
                 <div className="mt-8 flex justify-center">
                     <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
@@ -190,7 +262,7 @@ function SearchOfDegree() {
                                     <img
                                         src={selectedDegree.image}
                                         alt="card-image"
-                                        className="w-fit object-cover rounded-xl h-full"
+                                        className="w-full max-w-[40vh] rounded-xl max-h-[40vh] h-full"
                                     />
                                 </div>
                                 <div className="px-5 flex justify-center flex-col py-3 md:p-6">
