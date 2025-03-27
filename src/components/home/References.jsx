@@ -7,7 +7,7 @@ function References() {
                 <div className="md:flex md:items-end md:justify-between">
                     <div className="max-w-xl">
                         <h2 className="text-4xl font-bold tracking-tight text-[#800000] sm:text-5xl">
-                            Read trusted reviews from our customers
+                            Read reviews from Our Trusted Voices
                         </h2>
 
                         <p className="mt-6 max-w-lg leading-relaxed text-gray-900">

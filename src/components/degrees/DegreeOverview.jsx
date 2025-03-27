@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function DegreeOverview() {
   const categories = ["bachelors", "masters", "diploma", "certification"];
   const [allDegrees, setAllDegrees] = useState(Degrees);
-  
+
   // Ensure we have all degrees loaded
   useEffect(() => {
     // If Degrees is fetched asynchronously, this will ensure we have the latest data
@@ -25,9 +25,9 @@ function DegreeOverview() {
   const getFieldsForCategory = (category) => {
     return [
       ...new Set(
-        allDegrees.filter((degree) => degree.type === category).map(
-          (degree) => degree.field
-        )
+        allDegrees
+          .filter((degree) => degree.type === category)
+          .map((degree) => degree.field)
       ),
     ];
   };
@@ -47,6 +47,13 @@ function DegreeOverview() {
   const toggleField = (field) => {
     setExpandedField(expandedField === field ? null : field);
   };
+
+  const safeBase64Encode = (str) => {
+    // First encode the string as UTF-8, then convert to base64
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, 
+      (match, p1) => String.fromCharCode(parseInt(p1, 16))
+    ));
+  }
 
   return (
     <section className="bg-[#800000]/5 py-12">
@@ -103,26 +110,26 @@ function DegreeOverview() {
                           {expandedField === field && (
                             <div className="mt-2 ml-4">
                               <ul className="list-disc list-inside">
-                                {allDegrees.filter(
-                                  (degree) =>
-                                    degree.type === category &&
-                                    degree.field === field
-                                ).map((degree) => (
-                                  <li
-                                    key={degree.id}
-                                    className="text-gray-900 text-sm lg:text-base mb-1"
-                                  >
-                                    {degree.title} -{" "}
-                                    <Link
-                                      to={`/contact/${btoa(
-                                        allDegrees.indexOf(degree)
-                                      )}`}
-                                      className="hover:underline"
+                                {allDegrees
+                                  .filter(
+                                    (degree) =>
+                                      degree.type === category &&
+                                      degree.field === field
+                                  )
+                                  .map((degree) => (
+                                    <li
+                                      key={degree.id}
+                                      className="text-gray-900 text-sm lg:text-base mb-1"
                                     >
-                                      consult
-                                    </Link>
-                                  </li>
-                                ))}
+                                      {degree.title} -{" "}
+                                      <Link
+                                        to={`/contact/${safeBase64Encode(degree.title)}`}
+                                        className="hover:underline"
+                                      >
+                                        consult
+                                      </Link>
+                                    </li>
+                                  ))}
                               </ul>
                             </div>
                           )}
@@ -130,7 +137,9 @@ function DegreeOverview() {
                       ))
                     ) : (
                       <div className="col-span-2 text-center py-4">
-                        <p className="text-gray-700">No fields found for this category.</p>
+                        <p className="text-gray-700">
+                          No fields found for this category.
+                        </p>
                       </div>
                     )}
                   </div>

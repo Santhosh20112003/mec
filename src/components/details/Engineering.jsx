@@ -565,54 +565,213 @@ function Engineering() {
 
           {activeTab === "skills" && (
             <div className="mx-auto">
-              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit  md:mb-12 mx-auto mb-6 rounded-xl">
-                Engineering Disciplines
+              <h2 className="text-xl text-center -mt-11 uppercase px-2 sm:text-2xl md:text-3xl font-bold text-[#9f0712] bg-white w-fit md:mb-12 mx-auto mb-6 rounded-xl">
+                Key Skills Acquired
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
-                <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
-                    Aeronautical Engineering
-                  </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700">
-                    This dynamic field focuses on the design, development, and
-                    maintenance of aircraft and spacecraft. Students learn about
-                    aerodynamics, propulsion systems, flight mechanics, and
-                    avionics, gaining the skills to design cutting-edge
-                    aerospace technologies.
-                  </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Technical Skills Column */}
+                <div className="bg-white rounded-xl overflow-hidden border border-[#9f0712]/70">
+                  <div className="bg-[#9f0712] text-white py-3 px-4">
+                    <h3 className="text-lg md:text-xl font-semibold flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Technical Skills
+                    </h3>
+                  </div>
+                  <div className="p-4">
+                    <div className="mb-4">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-700">Programming & Coding</span>
+                        <span className="text-xs font-semibold text-[#9f0712]">95%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div className="bg-[#9f0712] h-2.5 rounded-full" style={{width: "95%"}}></div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">Python, Java, C++, MATLAB</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-700">CAD & Simulation</span>
+                        <span className="text-xs font-semibold text-[#9f0712]">90%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div className="bg-[#9f0712] h-2.5 rounded-full" style={{width: "90%"}}></div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">AutoCAD, SOLIDWORKS, ANSYS</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-700">Data Analysis</span>
+                        <span className="text-xs font-semibold text-[#9f0712]">85%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div className="bg-[#9f0712] h-2.5 rounded-full" style={{width: "85%"}}></div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">Big Data, Analytics, Machine Learning</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-700">Electronics & Prototyping</span>
+                        <span className="text-xs font-semibold text-[#9f0712]">88%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div className="bg-[#9f0712] h-2.5 rounded-full" style={{width: "88%"}}></div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">PCB Design, Arduino, IoT</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
-                    Electronics and Communication Engineering (ECE)
-                  </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700">
-                    This field drives advancements in communication systems,
-                    embedded technologies, and electronic devices. ECE graduates
-                    work in telecommunications, robotics, and consumer
-                    electronics.
-                  </p>
+                
+                {/* Soft Skills Column */}
+                <div className="bg-white rounded-xl overflow-hidden border border-[#9f0712]/70">
+                  <div className="bg-[#9f0712] text-white py-3 px-4">
+                    <h3 className="text-lg md:text-xl font-semibold flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      Soft Skills
+                    </h3>
+                  </div>
+                  <div className="p-4">
+                    <ul className="space-y-3">
+                      <li className="flex items-center">
+                        <span className="bg-[#9f0712]/10 text-[#9f0712] p-1 rounded-full mr-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium">Problem Solving</p>
+                          <p className="text-xs text-gray-500">Analytical thinking and solution design</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-center">
+                        <span className="bg-[#9f0712]/10 text-[#9f0712] p-1 rounded-full mr-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium">Teamwork</p>
+                          <p className="text-xs text-gray-500">Collaborative project execution</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-center">
+                        <span className="bg-[#9f0712]/10 text-[#9f0712] p-1 rounded-full mr-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium">Time Management</p>
+                          <p className="text-xs text-gray-500">Meeting deadlines and prioritization</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-center">
+                        <span className="bg-[#9f0712]/10 text-[#9f0712] p-1 rounded-full mr-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium">Communication</p>
+                          <p className="text-xs text-gray-500">Technical writing and presentation</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-center">
+                        <span className="bg-[#9f0712]/10 text-[#9f0712] p-1 rounded-full mr-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium">Leadership</p>
+                          <p className="text-xs text-gray-500">Project management and team coordination</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
-                    Electrical and Electronics Engineering (EEE)
-                  </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700">
-                    This discipline combines electrical systems and electronics
-                    to design, develop, and maintain power grids, renewable
-                    energy systems, and electronic devices.
-                  </p>
-                </div>
-                <div className="p-3 sm:p-4">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-[#9f0712]">
-                    Mechanical Engineering
-                  </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700">
-                    This broad field focuses on the design, analysis,
-                    manufacturing, and maintenance of mechanical systems.
-                    Mechanical engineers work on diverse projects, from
-                    energy-efficient HVAC systems to advanced automotive
-                    components.
-                  </p>
+                
+                {/* Industry-Ready Skills */}
+                <div className="bg-white rounded-xl overflow-hidden border border-[#9f0712]/70">
+                  <div className="bg-[#9f0712] text-white py-3 px-4">
+                    <h3 className="text-lg md:text-xl font-semibold flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Industry-Ready Skills
+                    </h3>
+                  </div>
+                  <div className="p-4">
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold mb-3 text-gray-700 flex items-center">
+                        <svg className="w-4 h-4 mr-1 text-[#9f0712]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path>
+                        </svg>
+                        Emerging Technologies
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-1 bg-[#9f0712]/10 text-[#9f0712] text-xs rounded-full">AI & Machine Learning</span>
+                        <span className="px-2 py-1 bg-[#9f0712]/10 text-[#9f0712] text-xs rounded-full">IoT</span>
+                        <span className="px-2 py-1 bg-[#9f0712]/10 text-[#9f0712] text-xs rounded-full">Cloud Computing</span>
+                        <span className="px-2 py-1 bg-[#9f0712]/10 text-[#9f0712] text-xs rounded-full">Robotics</span>
+                        <span className="px-2 py-1 bg-[#9f0712]/10 text-[#9f0712] text-xs rounded-full">Blockchain</span>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold mb-3 text-gray-700 flex items-center">
+                        <svg className="w-4 h-4 mr-1 text-[#9f0712]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd"></path>
+                        </svg>
+                        Career Outcomes
+                      </h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs font-medium text-gray-700">Global Employment Readiness</span>
+                          <div className="flex">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <svg key={star} className="w-4 h-4 text-[#9f0712]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                              </svg>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs font-medium text-gray-700">Research & Innovation</span>
+                          <div className="flex">
+                            {[1, 2, 3, 4, 5].map((star, idx) => (
+                              <svg key={star} className={`w-4 h-4 ${idx < 4 ? "text-[#9f0712]" : "text-gray-300"}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                              </svg>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs font-medium text-gray-700">Entrepreneurship</span>
+                          <div className="flex">
+                            {[1, 2, 3, 4, 5].map((star, idx) => (
+                              <svg key={star} className={`w-4 h-4 ${idx < 4 ? "text-[#9f0712]" : "text-gray-300"}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                              </svg>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
