@@ -46,7 +46,7 @@ function Intro({
         >
           <HashLink
             to="#search-degree"
-            className="px-8 py-3 bg-[#600000] text-white font-medium rounded-md shadow-lg inline-block"
+            className="px-8 py-3 bg-[#800000] text-white font-medium rounded-md shadow-lg inline-block"
           >
             Find Your Degree
           </HashLink>
