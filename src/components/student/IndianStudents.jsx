@@ -2,7 +2,7 @@ import React from 'react';
 
 function IndianStudents() {
     return (
-        <section className="text-gray-900 body-font">
+        <section className="text-gray-900 mx-auto max-w-7xl body-font">
             <div className="py-12 ">
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#800000]">Guide for Indian Students</h1>

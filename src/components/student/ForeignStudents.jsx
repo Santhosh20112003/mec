@@ -12,7 +12,7 @@ function ForeignStudents() {
   };
 
   return (
-    <section className="text-gray-900 body-font bg-white">
+    <section className="text-gray-900 mx-auto max-w-7xl body-font bg-white">
       <div className=" py-12 ">
         <div className="flex flex-col text-center px-5 w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#800000]">

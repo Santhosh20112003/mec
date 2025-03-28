@@ -13,7 +13,7 @@ function Gallery() {
     ];
 
     return (
-        <section className="py-12 px-5 lg:px-12">
+        <section className="py-12 mx-auto max-w-7xl px-5 lg:px-12">
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Top Universities in INDIA</h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-900">Discover the beauty and diversity of our global campuses through our gallery. Each image captures the essence of our vibrant academic communities.</p>

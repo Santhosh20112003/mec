@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
     return (
         <section className="text-gray-600 body-font bg-white">
-            <div className=" flex px-10 py-12 md:py-24 lg:py-12 md:flex-row flex-col items-center">
+            <div className=" flex px-10 max-w-7xl mx-auto py-12 md:py-24 lg:py-12 md:flex-row flex-col items-center">
                 <div data-aos="fade-right" className="lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-8 md:mb-0">
                     <img className="object-cover object-center rounded-lg" alt="about" src="https://ik.imagekit.io/vituepzjm/MEC/convocation?updatedAt=1740326225680" />
                 </div>

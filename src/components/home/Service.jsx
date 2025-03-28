@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Service() {
   return (
     <section class="text-gray-900 body-font">
-      <div class=" lg:px-12 px-5 lg:py-12 py-24 mx-auto">
+      <div class=" lg:px-12 px-5 mx-auto max-w-7xl lg:py-12 py-24 mx-auto">
         <div class="flex flex-col">
           <div class="h-1 bg-gray-200 rounded overflow-hidden">
             <div class="w-24 h-full bg-[#800000]/80"></div>

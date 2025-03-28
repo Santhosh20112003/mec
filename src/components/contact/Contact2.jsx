@@ -3,7 +3,7 @@ import React from 'react';
 function Contact2() {
     return (
         <section className="py-24 bg-gray-50">
-            <div className="max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="md:flex gap-x-24 clear-left md:mb-16 mb-10">
                     <div className="md:mb-0 mb-4">
                         <h2 className="text-[#800000] font-manrope text-4xl font-semibold leading-10 mb-5 md:text-left text-center">Get In Touch</h2>

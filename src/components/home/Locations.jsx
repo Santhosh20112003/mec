@@ -2,12 +2,12 @@ import React from 'react';
 
 function Locations() {
     return (
-        <div className="py-12 px-5 lg:px-12 bg-[#800000]/5">
+        <div className="py-12 px-5  lg:px-12 bg-[#800000]/5">
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold text-[#800000] mb-4">Explore and Study at Prestigious Indian Universities</h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-900">Discover the excellence and diversity of Indian universities. Each image captures the essence of our vibrant academic communities and the superiority of Indian engineers.</p>
             </div>
-            <section className="bg-white rounded-md mb-6">
+            <section className="bg-white mx-auto max-w-7xl rounded-md mb-6">
                 <div className="py-6 lg:py-12 px-5 lg:px-12">
                     <div className="lg:flex justify-between gap-6 lg:items-center">
                         <div className="grid w-full grid-cols-1 gap-6 lg:w-[70%] md:grid-cols-2">
@@ -44,7 +44,7 @@ function Locations() {
                     </div>
                 </div>
             </section>
-            <section className="bg-white rounded-md">
+            <section className="bg-white mx-auto max-w-7xl rounded-md">
                 <div className="py-6 lg:py-12 px-5 lg:px-12">
                     <div className="lg:flex justify-between gap-10 lg:items-center">
                         <div data-aos="fade-up" className="hidden lg:flex  lg:justify-start">

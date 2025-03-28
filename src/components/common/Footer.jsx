@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="text-gray-900 body-font">
             <div className="px-5 py-8 bg-[#800000]/5 mx-auto">
-                <div className="flex flex-wrap md:text-left text-center">
+                <div className="flex flex-wrap md:text-left mx-auto max-w-7xl text-center">
                     <div className="lg:w-1/5  w-full px-4">
                         <h2 className="title-font text-[#800000] tracking-widest text-sm font-bold mb-3">
                             LINKS
@@ -68,7 +68,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <footer class="text-gray-900 bg-white">
+            <footer class="text-gray-900 mx-auto max-w-7xl bg-white">
                 <div class="p-5 flex items-center sm:flex-row flex-col">
                     <span onClick={() => {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
