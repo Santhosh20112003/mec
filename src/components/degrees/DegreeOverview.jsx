@@ -57,7 +57,7 @@ function DegreeOverview() {
 
   return (
     <section className="bg-[#800000]/5 py-12">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto lg:px-8">
         <div className="lg:ps-6 text-center lg:text-left mb-6">
           <h1 className="text-4xl font-semibold lg:underline underline-offset-4 text-[#800000]">
             Courses Overview

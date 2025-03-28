@@ -184,7 +184,7 @@ function SearchOfDegree() {
             </div>
           </div>
         </form>
-        <div className="md:mt-8 mt-5 grid grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="md:mt-8 mt-5 grid max-w-7xl mx-auto grid-cols-1 gap-4 md:px-12 md:grid-cols-2 lg:grid-cols-3">
           {currentDegrees.length > 0 ? (
             currentDegrees.map((degree, index) => (
               <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
