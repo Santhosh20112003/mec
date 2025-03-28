@@ -151,14 +151,14 @@ const Carousel = () => {
               animate="visible"
             >
               <motion.h2 
-                className="text-3xl md:text-5xl font-bold"
+                className="text-2xl md:text-5xl font-bold"
                 variants={textItemVariants}
               >
                 {slides[currentIndex].heading}
               </motion.h2>
               
               <motion.p 
-                className="mt-4 text-lg md:text-xl text-center"
+                className="mt-4 text-base md:text-xl text-center"
                 variants={textItemVariants}
               >
                 {slides[currentIndex].paragraph}
