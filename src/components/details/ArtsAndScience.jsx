@@ -1189,7 +1189,7 @@ function ArtsAndScience() {
 
                     <div className="bg-red-50 rounded-xl p-6 mb-8">
                       <h3 className="text-xl font-semibold text-[#9f0712] mb-4 text-center">
-                        International Student Voices
+                        International Voices
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="bg-white p-4 rounded-lg shadow">
