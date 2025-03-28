@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 function ArtsAndScience() {
   const [activeSection, setActiveSection] = useState("intro");
@@ -68,6 +69,21 @@ function ArtsAndScience() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <Helmet>
+        <title>Arts and Science Education in India | MEC Education</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+          name="description"
+          content="Experience world-class Arts and Science education in India with rich cultural immersion at a fraction of Western costs. MEC Education guides international students to premier Indian institutions."
+        />
+        <link rel="canonical" href="http://mec.in/programs/arts-science" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Arts and Science Education in India | MEC Education" />
+        <meta property="og:description" content="Experience world-class Arts and Science education in India with rich cultural immersion at affordable costs." />
+        <meta property="og:type" content="article" />
+        <meta name="keywords" content="Arts education India, Science education India, study in India, international students, MEC education, humanities, social sciences" />
+      </Helmet>
       <div className="relative h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
@@ -145,7 +161,7 @@ function ArtsAndScience() {
 
       <div className="relative z-10 -mt-10 md:-mt-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
               <div className="p-6 text-center">
                 <p className="text-4xl font-bold text-[#9f0712]">8,000+</p>
@@ -233,7 +249,7 @@ function ArtsAndScience() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
                     <div className="p-6 sm:p-8 md:p-10">
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-                        Introduction to Arts & Science Education in INDIA
+                        Arts & Science Education in INDIA
                       </h2>
                     </div>
                   </div>
@@ -828,7 +844,7 @@ function ArtsAndScience() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
-                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9"
                               />
                             </svg>
                           </div>
@@ -1410,7 +1426,7 @@ function ArtsAndScience() {
                         <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
                           <div className="h-48 overflow-hidden">
                             <img
-                              src="https://images.unsplash.com/photo-1490633874781-1c63cc424610?ixlib=rb-4.0.3&auto=format&fit=crop&q=80"
+                              src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Arts/photo-1522543558187-768b6df7c25c_q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D?updatedAt=1743138433396"
                               alt="Humanities"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />

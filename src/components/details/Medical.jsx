@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 function Medical() {
   const [activeSection, setActiveSection] = useState("intro");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Navigation sections
   const sections = [
     {
       id: "intro",
@@ -49,7 +49,6 @@ function Medical() {
     },
   ];
 
-  // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 250);
@@ -123,7 +122,21 @@ function Medical() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section with Image Background */}
+      <Helmet>
+        <title>Medical Education in India | MBBS & Medical Programs | MEC Education</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+          name="description"
+          content="Discover world-class medical education in India through MEC Education. MBBS, BDS, and other medical programs combine ancient wisdom with modern healthcare excellence for international students."
+        />
+        <link rel="canonical" href="http://mec.in/programs/medical" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Medical Education in India | MBBS & Medical Programs | MEC Education" />
+        <meta property="og:description" content="Discover world-class medical education in India combining ancient wisdom with modern healthcare excellence." />
+        <meta property="og:type" content="article" />
+        <meta name="keywords" content="MBBS in India, medical education India, study medicine in India, international medical students, MEC education, medical programs" />
+      </Helmet>
       <div className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
