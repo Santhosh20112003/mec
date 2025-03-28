@@ -1,39 +1,91 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaArrowLeft, FaArrowRight, FaPause, FaPlay } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Carousel = () => {
   const slides = [
     {
-      image: "https://study-eu.s3.eu-west-1.amazonaws.com/uploads/image/path/283/wide_fullhd_webp_hungary-budapest.webp",
-      heading: "Explore Prestigious Universities",
-      paragraph: "Discover the best universities around the world and find the perfect fit for your education.",
+      image: "https://ik.imagekit.io/vituepzjm/MEC/photo-1523050854058-8df90110c9f1_ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&auto=format&fit=crop&w=1740&q=80?updatedAt=1743143209071",
+      heading: "Global Education Solutions",
+      buttonName:"Explore Degrees Offered",
+      paragraph: "Connect with top international universities and programs tailored to your career goals.",
       link: "/list-of-degrees"
     },
     {
-      image: "https://study-eu.s3.eu-west-1.amazonaws.com/uploads/image/path/355/wide_fullhd_cecilia_larsson_lantz-students-2622.jpg",
-      heading: "Personalized Guidance",
-      paragraph: "Get expert advice and personalized guidance to help you achieve your study abroad dreams.",
+      image: "https://ik.imagekit.io/vituepzjm/MEC/photo-1523240795612-9a054b0db644_ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&auto=format&fit=crop&w=1740&q=80?updatedAt=1743143247411",
+      heading: "Expert Academic Counseling",
+      buttonName:"Get Academic Assistance",
+      paragraph: "Our advisors provide step-by-step guidance through the entire application process.",
       link: "/contact"
     },
     {
-      image: "https://study-eu.s3.eu-west-1.amazonaws.com/uploads/image/path/304/wide_fullhd_united-kingdom.jpg",
-      heading: "Scholarship Opportunities",
-      paragraph: "Learn about various scholarship opportunities to fund your education abroad.",
+      image: "https://ik.imagekit.io/vituepzjm/MEC/photo-1554224155-6726b3ff858f_ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&auto=format&fit=crop&w=1742&q=80?updatedAt=1743143275336",
+      heading: "Financial Aid Resources",
+      buttonName:"Hear Students Stories",
+      paragraph: "Discover grants, scholarships and funding options to support your international education.",
       link: "/students"
     }
-  ];  
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('right');
   const [isPlaying, setIsPlaying] = useState(true);
   const slideRef = useRef();
+
+  // Animation variants for slides - pure sliding animation
+  const slideVariants = {
+    enter: (direction) => {
+      return {
+        x: direction === 'right' ? '100%' : '-100%',
+        zIndex: 0
+      };
+    },
+    center: {
+      x: 0,
+      zIndex: 1
+    },
+    exit: (direction) => {
+      return {
+        x: direction === 'right' ? '-100%' : '100%',
+        zIndex: 0
+      };
+    },
+  };
+
+  // Animation variants for content - adjusted for slide effect
+  const contentVariants = {
+    hidden: {
+      opacity: 0,
+      y: 15,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        staggerChildren: 0.1,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const textItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.3,
+      }
+    }
+  };
 
   useEffect(() => {
     if (isPlaying) {
       const slideInterval = setInterval(() => {
         setDirection('right');
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, 3000);
+      }, 5000);
       return () => clearInterval(slideInterval);
     }
   }, [isPlaying, slides.length]);
@@ -74,47 +126,89 @@ const Carousel = () => {
   return (
     <div className="relative w-full" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
       <div className="overflow-hidden relative h-[80vh] lg:h-[75vh] w-full">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-transform transform duration-700 ease-in-out ${
-              index === currentIndex ? 'translate-x-0' : direction === 'right' ? 'translate-x-full' : '-translate-x-full'
-            } ${index === (currentIndex - 1 + slides.length) % slides.length && direction === 'right' ? '-translate-x-full' : ''}`}
+        <AnimatePresence initial={false} custom={direction} mode="sync">
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { 
+                type: "tween", 
+                duration: 0.7, 
+                ease: "easeInOut"
+              }
+            }}
+            className="absolute inset-0"
           >
-            <img src={slide.image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 pt-12 bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
-              <h2 className="text-3xl md:text-5xl font-bold">{slide.heading}</h2>
-              <p className="mt-4 text-lg md:text-xl text-center">{slide.paragraph}</p>
-              <Link to={slide.link} className="mt-6 bg-[#800000] hover:bg-[#a00000] text-white font-semibold py-3 px-6 rounded-lg">
-                Learn More
-              </Link>
-            </div>
-          </div>
-        ))}
+            <img src={slides[currentIndex].image} alt={`Slide ${currentIndex}`} className="w-full h-full object-cover" />
+            <motion.div 
+              className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white p-4"
+              variants={contentVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.h2 
+                className="text-3xl md:text-5xl font-bold"
+                variants={textItemVariants}
+              >
+                {slides[currentIndex].heading}
+              </motion.h2>
+              
+              <motion.p 
+                className="mt-4 text-lg md:text-xl text-center"
+                variants={textItemVariants}
+              >
+                {slides[currentIndex].paragraph}
+              </motion.p>
+              
+              <motion.div
+                variants={textItemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Link to={slides[currentIndex].link} className="mt-6 inline-block bg-[#800000] hover:bg-[#a00000] text-white font-semibold py-3 px-6 rounded-xl">
+                  {slides[currentIndex].buttonName}
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </div>
+      
+      {/* Navigation Buttons */}
       <button
-        className="absolute top-1/2 hidden md:block cursor-pointer left-4 transform -translate-y-1/2 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute top-1/2 hidden md:flex cursor-pointer left-4 transform -translate-y-1/2 bg-[#212121]/80 hover:bg-[#212121]/90 active:scale-95 text-white p-3 rounded-full z-10"
         onClick={prevSlide}
       >
         <FaArrowLeft size={20} />
       </button>
+      
       <button
-        className="absolute top-1/2 hidden md:block cursor-pointer right-4 transform -translate-y-1/2 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute top-1/2 hidden md:flex cursor-pointer right-4 transform -translate-y-1/2 bg-[#212121]/80 hover:bg-[#212121]/90 active:scale-95 text-white p-3 rounded-full z-10"
         onClick={nextSlide}
       >
         <FaArrowRight size={20} />
       </button>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      
+      {/* Indicator Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-white/70' : 'bg-[#800000]/5'}`}
+            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              index === currentIndex ? 'bg-white scale-110' : 'bg-transparent'
+            }`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>
+      
+      {/* Play/Pause Button */}
       <button
-        className="absolute bottom-4 left-4 bg-[#212121]/80 active:scale-95 hover:bg-[#212121]/80 text-white p-3 rounded-full"
+        className="absolute bottom-4 left-4 bg-[#212121]/80 hover:bg-[#212121]/90 active:scale-95 text-white p-3 rounded-full z-10"
         onClick={togglePlayPause}
       >
         {isPlaying ? <FaPause size={16} /> : <FaPlay size={16} />}

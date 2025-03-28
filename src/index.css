@@ -8,6 +8,10 @@
     scroll-behavior: smooth !important;
 }
 
+button {
+    cursor: pointer;
+}
+
 ::selection {
     background-color: #800000;
     color: #fff;
