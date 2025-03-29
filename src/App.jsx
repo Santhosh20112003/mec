@@ -22,24 +22,24 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="">
-        <Banner />
-        <Header />
-        <Routes>
-          <Route path="" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/engineering" element={<Engineering />} />
-          <Route path="/medical" element={<Medical />} />
-          <Route path="/arts-and-science" element={<ArtsAndScience />} />
-          <Route path="/list-of-degrees" element={<ListOfDegrees />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/contact/:id" element={<Contact2 />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+      <Router>
+        <div className="">
+          <Banner />
+          <Header />
+          <Routes>
+            <Route path="" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/engineering" element={<Engineering />} />
+            <Route path="/medical" element={<Medical />} />
+            <Route path="/arts-and-science" element={<ArtsAndScience />} />
+            <Route path="/list-of-degrees" element={<ListOfDegrees />} />
+            <Route path="/students" element={<Students />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact/:id" element={<Contact2 />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
   );
 }
 
