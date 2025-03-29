@@ -4,7 +4,7 @@ import { FaSearch, FaPassport, FaGraduationCap, FaUserTie } from "react-icons/fa
 import { IoBookSharp, IoSchool } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
 import { MdOutlineOnlinePrediction } from "react-icons/md";
-import { BsPauseFill, BsPlayFill } from "react-icons/bs";
+// import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 
 function ForeignStudents() {
   const [activeStep, setActiveStep] = useState(1);
@@ -30,21 +30,21 @@ function ForeignStudents() {
     return () => clearInterval(interval);
   }, [isPlaying]);
 
-  const handleStepClick = (step) => {
-    setActiveStep(step);
-    // Reset auto-cycling when user manually selects a step
-    setIsPlaying(false);
-  };
+  // const handleStepClick = (step) => {
+  //   setActiveStep(step);
+  //   // Reset auto-cycling when user manually selects a step
+  //   setIsPlaying(false);
+  // };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  // const togglePlayPause = () => {
+  //   setIsPlaying(!isPlaying);
+  // };
 
   return (
     <section className="text-gray-900 body-font bg-white">
-      <div className="py-12"> 
+      <div className="pb-12"> 
         {/* Header with gradient background */}
-        <div className="flex flex-col text-center px-5 w-full mb-16 py-12 bg-gradient-to-r from-[#800000]/10 to-[#800000]/5 rounded-lg">
+        <div className="flex flex-col text-center px-5 w-full mb-16 py-16 bg-gradient-to-r from-[#800000]/10 to-[#800000]/5 rounded-lg">
           <h1 className="sm:text-4xl text-3xl font-bold title-font mb-6 text-[#800000]">
             Guide for Foreign Students
           </h1>
@@ -60,7 +60,7 @@ function ForeignStudents() {
           {/* Service Card 1 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <FaUserTie className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">
@@ -76,7 +76,7 @@ function ForeignStudents() {
           {/* Service Card 2 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <FaGraduationCap className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">
@@ -92,7 +92,7 @@ function ForeignStudents() {
           {/* Service Card 3 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <IoSchool className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">
@@ -108,7 +108,7 @@ function ForeignStudents() {
           {/* Service Card 4 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <FaPassport className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">
@@ -124,7 +124,7 @@ function ForeignStudents() {
           {/* Service Card 5 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <AiOutlineGlobal className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">
@@ -140,7 +140,7 @@ function ForeignStudents() {
           {/* Service Card 6 */}
           <div className="p-6 border border-[#800000]/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#800000]/60 bg-white">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] mb-4">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#800000]/10 text-[#800000] ">
                 <MdOutlineOnlinePrediction className="w-6 h-6" />
               </div>
               <h2 className="text-lg sm:text-xl text-[#800000] font-medium title-font ml-3">

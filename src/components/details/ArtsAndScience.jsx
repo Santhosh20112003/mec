@@ -84,7 +84,7 @@ function ArtsAndScience() {
         <meta property="og:type" content="article" />
         <meta name="keywords" content="Arts education India, Science education India, study in India, international students, MEC education, humanities, social sciences" />
       </Helmet>
-      <div className="relative h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden">
+      <div className="relative h-[60vh] lg:h-[75vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
           style={{
