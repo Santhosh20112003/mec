@@ -16,7 +16,7 @@ function Home() {
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="width=device-width"/>
                 <meta name="description" content="Study Abroad Consultants - MEC education is an Overseas Consultancy, we help students to study overseas in Australia, Germany, Canada, UK &amp; New Zealand."/>
-                <link rel="canonical" href="http://mec.in" />
+                <link rel="canonical" href="https://www.mayilon.org/home" />
             </Helmet>
             <Carousel />
             <About />
