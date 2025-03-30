@@ -47,6 +47,14 @@ function Medical() {
       textColor: "text-[#9f0712]",
       borderColor: "border-[#9f0712]",
     },
+    {
+      id: "skills",
+      title: "Skills",
+      icon: "🧠",
+      color: "bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80",
+      textColor: "text-[#9f0712]",
+      borderColor: "border-[#9f0712]",
+    }
   ];
 
   useEffect(() => {
@@ -123,7 +131,9 @@ function Medical() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
-        <title>Medical Education in India | MBBS & Medical Programs | MEC Education</title>
+        <title>
+          Medical Education in India | MBBS & Medical Programs | MEC Education
+        </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta
@@ -132,10 +142,19 @@ function Medical() {
         />
         <link rel="canonical" href="http://mec.in/programs/medical" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Medical Education in India | MBBS & Medical Programs | MEC Education" />
-        <meta property="og:description" content="Discover world-class medical education in India combining ancient wisdom with modern healthcare excellence." />
+        <meta
+          property="og:title"
+          content="Medical Education in India | MBBS & Medical Programs | MEC Education"
+        />
+        <meta
+          property="og:description"
+          content="Discover world-class medical education in India combining ancient wisdom with modern healthcare excellence."
+        />
         <meta property="og:type" content="article" />
-        <meta name="keywords" content="MBBS in India, medical education India, study medicine in India, international medical students, MEC education, medical programs" />
+        <meta
+          name="keywords"
+          content="MBBS in India, medical education India, study medicine in India, international medical students, MEC education, medical programs"
+        />
       </Helmet>
       <div className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
@@ -184,9 +203,6 @@ function Medical() {
             >
               Explore Programs
             </button>
-            {/* <button className="px-8 py-3 bg-white text-[#9f0712] rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
-              Watch Video
-            </button> */}
           </motion.div>
         </div>
 
@@ -627,6 +643,76 @@ function Medical() {
                         <li>• Clinical Trial Centers</li>
                         <li>• Global Health Initiatives</li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {activeSection === "skills" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              >
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-[#9f0712] mb-6">
+                    Medical Skills Development
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-red-50 rounded-lg p-6">
+                      <h3 className="text-xl font-semibold text-[#9f0712] mb-4">
+                        Clinical Competencies
+                      </h3>
+                      <ul className="space-y-2">
+                        <li>• Comprehensive patient examination techniques</li>
+                        <li>• Advanced diagnostic reasoning</li>
+                        <li>• Medical and surgical emergency management</li>
+                        <li>• Treatment planning and implementation</li>
+                        <li>• Critical care and life support expertise</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-red-50 rounded-lg p-6">
+                      <h3 className="text-xl font-semibold text-[#9f0712] mb-4">
+                        Professional Capabilities
+                      </h3>
+                      <ul className="space-y-2">
+                        <li>• Effective patient communication</li>
+                        <li>• Ethical decision making</li>
+                        <li>• Medical documentation and record keeping</li>
+                        <li>• Healthcare team collaboration</li>
+                        <li>• Cultural competence in patient care</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 bg-red-50 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-[#9f0712] mb-4">
+                      Additional Specialized Skills
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 className="font-medium text-[#9f0712]">Procedural Skills</h4>
+                        <p className="text-gray-700 text-sm mt-2">
+                          From basic procedures to complex surgeries with hands-on training in various specialties
+                        </p>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 className="font-medium text-[#9f0712]">Preventive Care</h4>
+                        <p className="text-gray-700 text-sm mt-2">
+                          Community health management, disease prevention, and public health initiatives
+                        </p>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 className="font-medium text-[#9f0712]">Research Methodology</h4>
+                        <p className="text-gray-700 text-sm mt-2">
+                          Evidence-based medicine, critical appraisal, and research participation abilities
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

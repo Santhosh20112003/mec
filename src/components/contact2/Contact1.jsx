@@ -99,7 +99,7 @@ function Contact1({ id }) {
             </h2>
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/0b4ee2cd42a0e78f61eb1715e33bb409"
+              action="https://formsubmit.co/ba503b75013e0767e550dfe09ef869be "
               method="POST"
             >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
