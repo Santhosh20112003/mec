@@ -11,6 +11,7 @@ function Contact1() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
+        email: '',
         country: '',
         state: '',
         city: '',
@@ -46,6 +47,7 @@ function Contact1() {
         e.preventDefault();
         const nameRegex = /^[A-Za-z]+$/;
         const phoneRegex = /^\d{10}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!nameRegex.test(formData.firstName)) {
             toast.error('First name can only contain letters.');
@@ -57,12 +59,17 @@ function Contact1() {
             return;
         }
 
+        if (!emailRegex.test(formData.email)) {
+            toast.error('Please enter a valid email address.');
+            return;
+        }
+
         if (formData.phone && !phoneRegex.test(formData.phone)) {
             toast.error('Phone number must be exactly 10 digits.');
             return;
         }
 
-        if (!formData.firstName || !formData.lastName || !formData.country || !formData.state || !formData.city || !formData.consent || !formData.contactConsent) {
+        if (!formData.firstName || !formData.lastName || !formData.email || !formData.country || !formData.state || !formData.city || !formData.consent || !formData.contactConsent) {
             toast.error('Please fill in all required fields.');
             return;
         }
@@ -85,6 +92,10 @@ function Contact1() {
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">Last Name</label>
                                     <input type="text" placeholder="Enter your last name" name="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
+                                </div>
+                                <div className="sm:col-span-2">
+                                    <label className="block text-sm font-medium text-gray-900">Email</label>
+                                    <input type="email" placeholder="Enter your email address" name="email" value={formData.email} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" required />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">Country</label>
