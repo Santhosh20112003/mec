@@ -26,7 +26,7 @@ function Contact1({ id }) {
     state: "",
     city: "",
     phone: "",
-    message: data ? `Hi, I'm consulting regarding ${data}` : "",
+    message: data ? `Hi, I need Consultation regarding ${data}` : "",
     consent: false,
     contactConsent: false,
   });
