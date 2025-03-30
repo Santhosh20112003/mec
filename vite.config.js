@@ -9,31 +9,30 @@ export default defineConfig({
     react(), 
     tailwindcss(),
     VitePWA({
-      // Use the existing manifest.json file
-      manifest: false,
+      manifest: {
+        name: 'My PWA App',
+        short_name: 'PWA App',
+        description: 'A Progressive Web App built with Vite',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
+        display: 'standalone',
+        start_url: '/',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
       registerType: 'autoUpdate',
-      // Reference to your manifest.json file
-      injectManifest: {
-        globDirectory: 'public',
-        globPatterns: ['**/*.{png,ico,svg}', 'manifest.json'],
-      },
       workbox: {
-        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,woff2}'],
-      },
-      // Include all icon assets referenced in manifest.json
-      includeAssets: [
-        'android/*.png',
-        'ios/*.png',
-        'windows11/*.png',
-        'favicon.ico',
-        'manifest.json'
-      ],
-      // Point directly to the manifest file
-      devOptions: {
-        enabled: true,
-        navigateFallback: 'index.html',
-        type: 'module',
       },
     }),
   ],

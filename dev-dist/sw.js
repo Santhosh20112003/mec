@@ -11,6 +11,11 @@
  * limitations under the License.
  */
 
+import { registerRoute } from 'workbox-routing';
+import { StaleWhileRevalidate } from 'workbox-strategies';
+import { CacheFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
+
 // If the loader is already loaded, just stop.
 if (!self.define) {
   let registry = {};
@@ -88,5 +93,27 @@ define(['./workbox-54d0af47'], (function (workbox) { 'use strict';
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {
     allowlist: [/^\/$/]
   }));
+
+  // Cache API requests
+  registerRoute(
+    ({ url }) => url.origin.includes('api'),
+    new StaleWhileRevalidate({
+      cacheName: 'api-cache',
+    })
+  );
+
+  // Cache static assets
+  registerRoute(
+    ({ request }) => request.destination === 'image',
+    new CacheFirst({
+      cacheName: 'image-cache',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 50,
+          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+        }),
+      ],
+    })
+  );
 
 }));
