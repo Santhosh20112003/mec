@@ -77,7 +77,7 @@ function ArtsAndScience() {
           name="description"
           content="Experience world-class Arts and Science education in India with rich cultural immersion at a fraction of Western costs. MEC Education guides international students to premier Indian institutions."
         />
-        <link rel="canonical" href="http://mec.in/programs/arts-science" />
+        <link rel="canonical" href="https://www.mayilon.org/arts-and-science" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Arts and Science Education in India | MEC Education" />
         <meta property="og:description" content="Experience world-class Arts and Science education in India with rich cultural immersion at affordable costs." />

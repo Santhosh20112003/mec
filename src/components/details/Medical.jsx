@@ -140,7 +140,7 @@ function Medical() {
           name="description"
           content="Discover world-class medical education in India through MEC Education. MBBS, BDS, and other medical programs combine ancient wisdom with modern healthcare excellence for international students."
         />
-        <link rel="canonical" href="http://mec.in/programs/medical" />
+        <link rel="canonical" href="https://www.mayilon.org/medical" />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"

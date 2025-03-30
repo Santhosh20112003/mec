@@ -16,7 +16,7 @@ function ListOfDegrees() {
           name="description"
           content="Discover comprehensive degree programs available for international students through MEC Education's overseas consultancy services for Australia, Germany, Canada, UK & New Zealand."
         />
-        <link rel="canonical" href="http://mec.in/degrees" />
+        <link rel="canonical" href="https://www.mayilon.org/list-of-degrees" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Explore Degree Programs for International Students | MEC Education" />
         <meta property="og:description" content="Discover comprehensive degree programs available for international students through MEC Education." />

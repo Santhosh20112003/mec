@@ -17,7 +17,7 @@ function Students() {
           name="description"
           content="Read inspiring success stories from foreign and Indian students who achieved their academic dreams through MEC Education's overseas consultancy services."
         />
-        <link rel="canonical" href="http://mec.in/students" />
+        <link rel="canonical" href="https://www.mayilon.org/students" />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"

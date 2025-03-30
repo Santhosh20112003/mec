@@ -15,7 +15,7 @@ function Engineering() {
           name="description"
           content="Explore top engineering and technical education in India with MEC Education. Discover world-class opportunities at a fraction of Western costs across 5,000+ institutions and 120+ engineering specializations."
         />
-        <link rel="canonical" href="http://mec.in/programs/engineering" />
+        <link rel="canonical" href="https://www.mayilon.org/engineering" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Engineering Education in India | Technical Programs | MEC Education" />
         <meta property="og:description" content="Explore top engineering and technical education in India with MEC Education at affordable costs." />

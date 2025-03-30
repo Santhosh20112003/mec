@@ -16,7 +16,7 @@ function ContactMain() {
           name="description"
           content="Get in touch with MEC education consultants for personalized counselling on studying abroad in Australia, Germany, Canada, UK & New Zealand."
         />
-        <link rel="canonical" href="http://mec.in/contact" />
+        <link rel="canonical" href="http://mayilon.org/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Contact Us | MEC Education Consultants" />
         <meta property="og:description" content="Get in touch with MEC education consultants for personalized counselling on studying abroad." />
