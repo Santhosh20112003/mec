@@ -48,7 +48,7 @@ function Header() {
                     <Link to="/contact" className='bg-[#800000] transition-all active:scale-90 cursor-pointer rounded-full inline-flex items-center justify-center py-1.5 px-5 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color '>
                         Get Counseling
                     </Link>
-                    <div className="relative">
+                    {/* <div className="relative">
                         <button 
                             onClick={toggleLangDropdown}
                             className=" p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-all flex items-center justify-center"
@@ -75,7 +75,7 @@ function Header() {
                                 </div>
                             </div>
                         )}
-                    </div>
+                    </div> */}
                 </nav>
                 <div className="md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-black cursor-pointer focus:outline-none">
