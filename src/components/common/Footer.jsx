@@ -45,7 +45,7 @@ function Footer() {
                             SUBSCRIBE
                         </h2>
                         <form
-                            action="https://formsubmit.co/mayiloneducation@gmail.com"
+                            action="https://formsubmit.co/ba503b75013e0767e550dfe09ef869be"
                             method="POST"
                             className="flex flex-col md:flex-row gap-3 justify-center items-center lg:items-end"
                         >
