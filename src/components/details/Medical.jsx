@@ -166,7 +166,6 @@ function Medical() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#9f0712]/30"></div>
         </div>
 
-        {/* Hero Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

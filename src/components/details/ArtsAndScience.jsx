@@ -58,13 +58,21 @@ function ArtsAndScience() {
       borderColor: "border-[#9f0712]",
     },
     {
+      id: "skills",
+      title: "Skills",
+      icon: "🛠️",
+      color: "bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80",
+      textColor: "text-[#9f0712]",
+      borderColor: "border-[#9f0712]",
+    },
+    {
       id: "disciplines",
       title: "Disciplines",
       icon: "🔍",
       color: "bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80",
       textColor: "text-[#9f0712]",
       borderColor: "border-[#9f0712]",
-    },
+    }
   ];
 
   return (
@@ -79,10 +87,19 @@ function ArtsAndScience() {
         />
         <link rel="canonical" href="https://www.mayilon.org/arts-and-science" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Arts and Science Education in India | MEC Education" />
-        <meta property="og:description" content="Experience world-class Arts and Science education in India with rich cultural immersion at affordable costs." />
+        <meta
+          property="og:title"
+          content="Arts and Science Education in India | MEC Education"
+        />
+        <meta
+          property="og:description"
+          content="Experience world-class Arts and Science education in India with rich cultural immersion at affordable costs."
+        />
         <meta property="og:type" content="article" />
-        <meta name="keywords" content="Arts education India, Science education India, study in India, international students, MEC education, humanities, social sciences" />
+        <meta
+          name="keywords"
+          content="Arts education India, Science education India, study in India, international students, MEC education, humanities, social sciences"
+        />
       </Helmet>
       <div className="relative h-[60vh] lg:h-[75vh] overflow-hidden">
         <div
@@ -844,7 +861,7 @@ function ArtsAndScience() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
-                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                               />
                             </svg>
                           </div>
@@ -1380,6 +1397,137 @@ function ArtsAndScience() {
                         ensuring access to quality healthcare throughout their
                         stay.
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {activeSection === "skills" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              >
+                <div className="relative h-56 sm:h-64 md:h-72">
+                  <img
+                    src="https://ik.imagekit.io/vituepzjm/MEC/photo-1628440501245-393606514a9e_q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D?updatedAt=1743412185948"
+                    className="w-full h-full object-cover"
+                    alt="Skills through Arts and Science Education"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
+                    <div className="p-6 sm:p-8 md:p-10">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+                        Skills Earned through Arts and Science Education
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-8">
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 mb-8">
+                      Arts and Science education in India equips students with a diverse set of skills that are highly valued across industries and professions. These skills foster intellectual growth, creativity, and practical expertise, preparing students for global opportunities.
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                      <div className="relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                        <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                          <div className="p-5">
+                            <h3 className="text-xl font-bold text-[#9f0712] mb-3">
+                              Critical Thinking
+                            </h3>
+                            <p className="text-gray-700 mb-4">
+                              Develop the ability to analyze complex problems, evaluate evidence, and make informed decisions through rigorous academic training.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                        <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                          <div className="p-5">
+                            <h3 className="text-xl font-bold text-[#9f0712] mb-3">
+                              Communication Skills
+                            </h3>
+                            <p className="text-gray-700 mb-4">
+                              Enhance written and verbal communication skills, enabling effective expression of ideas and collaboration in diverse settings.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                        <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                          <div className="p-5">
+                            <h3 className="text-xl font-bold text-[#9f0712] mb-3">
+                              Research and Analytical Skills
+                            </h3>
+                            <p className="text-gray-700 mb-4">
+                              Gain expertise in conducting research, analyzing data, and interpreting findings across various disciplines.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                        <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                          <div className="p-5">
+                            <h3 className="text-xl font-bold text-[#9f0712] mb-3">
+                              Creativity and Innovation
+                            </h3>
+                            <p className="text-gray-700 mb-4">
+                              Foster creativity and innovative thinking through exposure to diverse perspectives and problem-solving approaches.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-red-50 rounded-lg p-6">
+                      <h3 className="text-xl font-semibold text-[#9f0712] mb-4">
+                        Additional Skills
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="bg-white p-4 rounded shadow">
+                          <h4 className="font-medium text-[#9f0712] mb-2">
+                            Leadership
+                          </h4>
+                          <p className="text-sm text-gray-700">
+                            Build leadership qualities through group projects, extracurricular activities, and community engagement.
+                          </p>
+                        </div>
+                        <div className="bg-white p-4 rounded shadow">
+                          <h4 className="font-medium text-[#9f0712] mb-2">
+                            Cultural Competence
+                          </h4>
+                          <p className="text-sm text-gray-700">
+                            Develop an understanding of diverse cultures and global perspectives, enhancing adaptability in international environments.
+                          </p>
+                        </div>
+                        <div className="bg-white p-4 rounded shadow">
+                          <h4 className="font-medium text-[#9f0712] mb-2">
+                            Technical Proficiency
+                          </h4>
+                          <p className="text-sm text-gray-700">
+                            Acquire technical skills in specialized fields such as data analysis, laboratory techniques, and digital tools.
+                          </p>
+                        </div>
+                        <div className="bg-white p-4 rounded shadow">
+                          <h4 className="font-medium text-[#9f0712] mb-2">
+                            Ethical Awareness
+                          </h4>
+                          <p className="text-sm text-gray-700">
+                            Learn to approach challenges with integrity and ethical considerations, fostering responsible decision-making.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
