@@ -67,7 +67,7 @@ function References() {
                         </div>
 
                         <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
-                            &mdash; John Doe
+                            &mdash; Kumaresan Ramasamy
                         </footer>
                     </blockquote>
 
@@ -109,7 +109,7 @@ function References() {
                         </div>
 
                         <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
-                            &mdash; Jane Smith
+                            &mdash; Santhosh 
                         </footer>
                     </blockquote>
 
@@ -141,7 +141,7 @@ function References() {
                         </div>
 
                         <footer className="mt-4 text-sm font-medium text-gray-900 sm:mt-6">
-                            &mdash; Alex Johnson
+                            &mdash; Juhanitha Saaini
                         </footer>
                     </blockquote>
                 </div>

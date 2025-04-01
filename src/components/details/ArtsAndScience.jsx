@@ -72,7 +72,7 @@ function ArtsAndScience() {
       color: "bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80",
       textColor: "text-[#9f0712]",
       borderColor: "border-[#9f0712]",
-    }
+    },
   ];
 
   return (
@@ -1212,63 +1212,62 @@ function ArtsAndScience() {
                         <div className="bg-white p-4 rounded-lg shadow">
                           <div className="flex items-center mb-3">
                             <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#9f0712] mr-3 font-bold">
+                              K
+                            </div>
+                            <div>
+                              <p className="font-medium">Kumaresan Ramasamy</p>
+                              <p className="text-xs text-gray-500">
+                                Research scholar
+                              </p>
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-700 italic">
+                            "I joined my PhD through Mayilon consultants guide,
+                            They are professional in guiding and providing full
+                            support till University admission. I got through
+                            various stages of admission process and all taken
+                            with smooth guidance, Even efter a long , I could
+                            get guidance whenever needed."
+                          </p>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg shadow">
+                          <div className="flex items-center mb-3">
+                            <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#9f0712] mr-3 font-bold">
                               S
                             </div>
                             <div>
-                              <p className="font-medium">Sarah K.</p>
-                              <p className="text-xs text-gray-500">
-                                History Major from Canada, Delhi University
-                              </p>
+                              <p className="font-medium">Santhosh </p>
+                              <p className="text-xs text-gray-500">Student</p>
                             </div>
                           </div>
                           <p className="text-sm text-gray-700 italic">
-                            "Studying in India transformed my perspective on
-                            world history. The immersive cultural experience
-                            alongside rigorous academics gave me insights I
-                            couldn't have gained anywhere else—all at a fraction
-                            of North American tuition costs."
+                            "Mayilon educational consultants helped me to join
+                            my Part time Course in B.E Mechanical Engineering. I
+                            had varities of college options and claritz in
+                            choosing mz desired college. They are professionals
+                            in guiding based on our situation and needs."
                           </p>
                         </div>
                         <div className="bg-white p-4 rounded-lg shadow">
                           <div className="flex items-center mb-3">
                             <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#9f0712] mr-3 font-bold">
-                              M
+                              J
                             </div>
                             <div>
-                              <p className="font-medium">Michael T.</p>
+                              <p className="font-medium">Juhanitha Saaini</p>
                               <p className="text-xs text-gray-500">
-                                Physics Student from Germany, St. Xavier's
-                                College
+                                Bio tech student
                               </p>
                             </div>
                           </div>
                           <p className="text-sm text-gray-700 italic">
-                            "The laboratory facilities and research
-                            opportunities here are comparable to top European
-                            universities. My professors have international
-                            experience and connections that helped me secure a
-                            research internship at CERN."
-                          </p>
-                        </div>
-                        <div className="bg-white p-4 rounded-lg shadow">
-                          <div className="flex items-center mb-3">
-                            <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#9f0712] mr-3 font-bold">
-                              L
-                            </div>
-                            <div>
-                              <p className="font-medium">Lian W.</p>
-                              <p className="text-xs text-gray-500">
-                                Economics Student from Malaysia, Christ
-                                University
-                              </p>
-                            </div>
-                          </div>
-                          <p className="text-sm text-gray-700 italic">
-                            "The international student community is incredibly
-                            supportive. I've made friends from over 20 countries
-                            while gaining insights into one of the world's
-                            fastest-growing economies. This experience has been
-                            invaluable for my career in international business."
+                            "Myself and my friend together got admissions in
+                            same college, Mayilon keep their promises, We just
+                            got exam dates and all the admission dates as
+                            promised. Everytime we are getting direct
+                            information and clear guidance. No false promises
+                            and possibility scenarios are the speciality of
+                            these consultants. "
                           </p>
                         </div>
                       </div>
@@ -1429,7 +1428,11 @@ function ArtsAndScience() {
                 <div className="p-6 sm:p-8">
                   <div className="prose prose-lg max-w-none">
                     <p className="text-gray-700 mb-8">
-                      Arts and Science education in India equips students with a diverse set of skills that are highly valued across industries and professions. These skills foster intellectual growth, creativity, and practical expertise, preparing students for global opportunities.
+                      Arts and Science education in India equips students with a
+                      diverse set of skills that are highly valued across
+                      industries and professions. These skills foster
+                      intellectual growth, creativity, and practical expertise,
+                      preparing students for global opportunities.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -1441,7 +1444,9 @@ function ArtsAndScience() {
                               Critical Thinking
                             </h3>
                             <p className="text-gray-700 mb-4">
-                              Develop the ability to analyze complex problems, evaluate evidence, and make informed decisions through rigorous academic training.
+                              Develop the ability to analyze complex problems,
+                              evaluate evidence, and make informed decisions
+                              through rigorous academic training.
                             </p>
                           </div>
                         </div>
@@ -1455,7 +1460,9 @@ function ArtsAndScience() {
                               Communication Skills
                             </h3>
                             <p className="text-gray-700 mb-4">
-                              Enhance written and verbal communication skills, enabling effective expression of ideas and collaboration in diverse settings.
+                              Enhance written and verbal communication skills,
+                              enabling effective expression of ideas and
+                              collaboration in diverse settings.
                             </p>
                           </div>
                         </div>
@@ -1469,7 +1476,9 @@ function ArtsAndScience() {
                               Research and Analytical Skills
                             </h3>
                             <p className="text-gray-700 mb-4">
-                              Gain expertise in conducting research, analyzing data, and interpreting findings across various disciplines.
+                              Gain expertise in conducting research, analyzing
+                              data, and interpreting findings across various
+                              disciplines.
                             </p>
                           </div>
                         </div>
@@ -1483,7 +1492,9 @@ function ArtsAndScience() {
                               Creativity and Innovation
                             </h3>
                             <p className="text-gray-700 mb-4">
-                              Foster creativity and innovative thinking through exposure to diverse perspectives and problem-solving approaches.
+                              Foster creativity and innovative thinking through
+                              exposure to diverse perspectives and
+                              problem-solving approaches.
                             </p>
                           </div>
                         </div>
@@ -1500,7 +1511,9 @@ function ArtsAndScience() {
                             Leadership
                           </h4>
                           <p className="text-sm text-gray-700">
-                            Build leadership qualities through group projects, extracurricular activities, and community engagement.
+                            Build leadership qualities through group projects,
+                            extracurricular activities, and community
+                            engagement.
                           </p>
                         </div>
                         <div className="bg-white p-4 rounded shadow">
@@ -1508,7 +1521,9 @@ function ArtsAndScience() {
                             Cultural Competence
                           </h4>
                           <p className="text-sm text-gray-700">
-                            Develop an understanding of diverse cultures and global perspectives, enhancing adaptability in international environments.
+                            Develop an understanding of diverse cultures and
+                            global perspectives, enhancing adaptability in
+                            international environments.
                           </p>
                         </div>
                         <div className="bg-white p-4 rounded shadow">
@@ -1516,7 +1531,9 @@ function ArtsAndScience() {
                             Technical Proficiency
                           </h4>
                           <p className="text-sm text-gray-700">
-                            Acquire technical skills in specialized fields such as data analysis, laboratory techniques, and digital tools.
+                            Acquire technical skills in specialized fields such
+                            as data analysis, laboratory techniques, and digital
+                            tools.
                           </p>
                         </div>
                         <div className="bg-white p-4 rounded shadow">
@@ -1524,7 +1541,9 @@ function ArtsAndScience() {
                             Ethical Awareness
                           </h4>
                           <p className="text-sm text-gray-700">
-                            Learn to approach challenges with integrity and ethical considerations, fostering responsible decision-making.
+                            Learn to approach challenges with integrity and
+                            ethical considerations, fostering responsible
+                            decision-making.
                           </p>
                         </div>
                       </div>

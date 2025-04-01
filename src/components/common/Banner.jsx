@@ -15,9 +15,9 @@ function Banner() {
         }
     };
     return (
-        <motion.div onClick={() => { setClose(!close) }} animate={close ? hide : show} className="text-center block break-words cursor-pointer px-5 py-2 bg-[#800000] text-white ">
+        <motion.div className="text-center block break-words px-5 py-2 bg-[#800000] text-white ">
             <h1 className="text-sm">
-                🌐 Explore our educational services, connect with expert counselors, and stay updated with the latest trends in education asks, and schedule all in one place.
+            Join top Indian universities with expert faculty, advanced infrastructure, and career guidance. Explore courses and stay ahead in academics! 🚀📚
             </h1>
         </motion.div>
     );

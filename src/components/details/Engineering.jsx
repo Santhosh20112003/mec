@@ -132,73 +132,31 @@ function Engineering() {
         id="main-content"
         className="container mx-auto px-3 py-4 md:px-4 md:py-8"
       >
-        <div className="flex justify-start md:justify-center overflow-x-auto space-x-1 sm:space-x-2 md:space-x-4 mb-12 pb-2 scrollbar-hide">
-          <button
-            onClick={() => setActiveTab("intro")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "intro"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Introduction
-          </button>
-          <button
-            onClick={() => setActiveTab("accreditation")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "accreditation"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Accreditation
-          </button>
-          <button
-            onClick={() => setActiveTab("market")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "market"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Market
-          </button>
-          <button
-            onClick={() => setActiveTab("laboratory")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "laboratory"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Labs
-          </button>
-          <button
-            onClick={() => setActiveTab("experience")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "experience"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Experience
-          </button>
-          <button
-            onClick={() => setActiveTab("skills")}
-            className={`px-3 py-1.5 sm:px-4 md:px-5 sm:py-2 font-medium text-xs sm:text-sm md:text-base rounded-lg transition whitespace-nowrap
-              ${
-                activeTab === "skills"
-                  ? "bg-[#9f0712] text-white shadow-md"
-                  : "bg-white text-[#9f0712] border border-[#9f0712]/20 hover:bg-[#9f0712]/5"
-              }`}
-          >
-            Skills
-          </button>
+        <div className="flex overflow-x-auto hide-scrollbar py-2 my-8 mb-12">
+          <div className="flex space-x-1 hide-scrollbar sm:space-x-2 mx-auto ">
+            {[
+              { id: "intro", title: "Introduction" },
+              { id: "accreditation", title: "Accreditation" },
+              { id: "market", title: "Market" },
+              { id: "laboratory", title: "Laboratory" },
+              { id: "experience", title: "Experience" },
+              { id: "skills", title: "Skills" },
+            ].map((section) => (
+              <button
+                key={section.id}
+                onClick={() => setActiveTab(section.id)}
+                className={`px-3 sm:px-4 py-2 rounded-full flex items-center whitespace-nowrap transition-all ${
+                  activeTab === section.id
+                    ? "bg-[#9f0712] text-white"
+                    : "bg-white text-[#9f0712] hover:bg-gray-100 border border-[#9f0712]/20"
+                }`}
+              >
+                <span className="font-medium text-base sm:text-lg">
+                  {section.title}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
         <div className="bg-white rounded-xl md:border border-[#9f0712] p-3 sm:p-4 md:p-6">
           {activeTab === "intro" && (
@@ -320,7 +278,6 @@ function Engineering() {
                   </div>
                 </div>
 
-                {/* Medium item spanning 2 columns on larger screens */}
                 <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 overflow-hidden rounded-lg border border-gray-100 group">
                   <img
                     src="https://ik.imagekit.io/vituepzjm/MEC/Streams/Engineering%20/3-crore-worth-iMac-lab-opened-in-SRMIST-1.jpg?updatedAt=1740599292554"

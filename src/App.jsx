@@ -24,8 +24,10 @@ function App() {
   return (
       <Router>
         <div className="">
-          <Banner />
-          <Header />
+          <div style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+            <Banner />
+            <Header />
+          </div>
           <Routes>
             <Route path="" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
