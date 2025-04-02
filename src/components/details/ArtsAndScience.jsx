@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { HashLink } from "react-router-hash-link";
 
 function ArtsAndScience() {
   const [activeSection, setActiveSection] = useState("intro");
@@ -148,12 +149,8 @@ function ArtsAndScience() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-3"
           >
-            <button
-              onClick={() => {
-                document
-                  .getElementById("main-content")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
+            <HashLink
+              to="/list-of-degrees#search-degree"
               className="px-6 py-3 bg-[#9f0712] hover:bg-[#9f0712]/90 text-white rounded-full flex items-center font-medium transition-all shadow-lg hover:shadow-xl"
             >
               Discover Your Path
@@ -171,7 +168,7 @@ function ArtsAndScience() {
                   d="M19 14l-7 7m0 0l-7-7m7 7V3"
                 ></path>
               </svg>
-            </button>
+            </HashLink>
           </motion.div>
         </div>
       </div>

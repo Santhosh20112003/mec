@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { HashLink } from "react-router-hash-link";
 
 function Engineering() {
   const [activeTab, setActiveTab] = useState("intro");
@@ -8,7 +9,9 @@ function Engineering() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
-        <title>Engineering Education in India | Technical Programs | MEC Education</title>
+        <title>
+          Engineering Education in India | Technical Programs | MEC Education
+        </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta
@@ -17,10 +20,19 @@ function Engineering() {
         />
         <link rel="canonical" href="https://www.mayilon.org/engineering" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Engineering Education in India | Technical Programs | MEC Education" />
-        <meta property="og:description" content="Explore top engineering and technical education in India with MEC Education at affordable costs." />
+        <meta
+          property="og:title"
+          content="Engineering Education in India | Technical Programs | MEC Education"
+        />
+        <meta
+          property="og:description"
+          content="Explore top engineering and technical education in India with MEC Education at affordable costs."
+        />
         <meta property="og:type" content="article" />
-        <meta name="keywords" content="engineering in India, technical education, study engineering in India, international engineering students, MEC education, computer science, mechanical engineering" />
+        <meta
+          name="keywords"
+          content="engineering in India, technical education, study engineering in India, international engineering students, MEC education, computer science, mechanical engineering"
+        />
       </Helmet>
       <div className="relative h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden">
         <div
@@ -59,12 +71,8 @@ function Engineering() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-8"
           >
-            <button
-              onClick={() => {
-                document
-                  .getElementById("main-content")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
+            <HashLink
+              to="/list-of-degrees#search-degree"
               className="px-6 py-3 bg-[#9f0712] hover:bg-[#9f0712]/90 text-white rounded-full flex items-center font-medium transition-all shadow-lg hover:shadow-xl"
             >
               Explore Engineering Pathways
@@ -82,7 +90,7 @@ function Engineering() {
                   d="M19 14l-7 7m0 0l-7-7m7 7V3"
                 ></path>
               </svg>
-            </button>
+            </HashLink>
           </motion.div>
         </div>
       </div>

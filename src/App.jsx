@@ -87,8 +87,8 @@ function App() {
       window.removeEventListener("resize", checkMobile);
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [isMobile]); 
-  
+  }, [isMobile]);
+
   return (
     <Router>
       <div className="">
@@ -111,7 +111,7 @@ function App() {
           <Header />
         </div>
         <Routes>
-          <Route path="" element={<Navigate to="/home" />} />
+          <Route path="" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/medical" element={<Medical />} />
@@ -120,6 +120,7 @@ function App() {
           <Route path="/students" element={<Students />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/:id" element={<Contact2 />} />
+          <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
         <Footer />
       </div>

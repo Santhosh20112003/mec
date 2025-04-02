@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { HashLink } from "react-router-hash-link";
 
 function Medical() {
   const [activeSection, setActiveSection] = useState("intro");
@@ -54,7 +55,7 @@ function Medical() {
       color: "bg-gradient-to-r from-[#9f0712] to-[#9f0712]/80",
       textColor: "text-[#9f0712]",
       borderColor: "border-[#9f0712]",
-    }
+    },
   ];
 
   useEffect(() => {
@@ -192,16 +193,26 @@ function Medical() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex gap-4"
           >
-            <button
-              onClick={() => {
-                document
-                  .getElementById("main-content")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-              className="px-8 py-3 bg-[#9f0712] text-white rounded-full hover:bg-[#9f0712]/90 transition-all shadow-lg hover:shadow-xl"
+            <HashLink
+              to="/list-of-degrees#search-degree"
+              className="px-6 py-3 bg-[#9f0712] hover:bg-[#9f0712]/90 text-white rounded-full flex items-center font-medium transition-all shadow-lg hover:shadow-xl"
             >
               Explore Programs
-            </button>
+              <svg
+                className="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                ></path>
+              </svg>
+            </HashLink>
           </motion.div>
         </div>
 
@@ -695,21 +706,30 @@ function Medical() {
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                        <h4 className="font-medium text-[#9f0712]">Procedural Skills</h4>
+                        <h4 className="font-medium text-[#9f0712]">
+                          Procedural Skills
+                        </h4>
                         <p className="text-gray-700 text-sm mt-2">
-                          From basic procedures to complex surgeries with hands-on training in various specialties
+                          From basic procedures to complex surgeries with
+                          hands-on training in various specialties
                         </p>
                       </div>
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                        <h4 className="font-medium text-[#9f0712]">Preventive Care</h4>
+                        <h4 className="font-medium text-[#9f0712]">
+                          Preventive Care
+                        </h4>
                         <p className="text-gray-700 text-sm mt-2">
-                          Community health management, disease prevention, and public health initiatives
+                          Community health management, disease prevention, and
+                          public health initiatives
                         </p>
                       </div>
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                        <h4 className="font-medium text-[#9f0712]">Research Methodology</h4>
+                        <h4 className="font-medium text-[#9f0712]">
+                          Research Methodology
+                        </h4>
                         <p className="text-gray-700 text-sm mt-2">
-                          Evidence-based medicine, critical appraisal, and research participation abilities
+                          Evidence-based medicine, critical appraisal, and
+                          research participation abilities
                         </p>
                       </div>
                     </div>
