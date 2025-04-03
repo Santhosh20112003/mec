@@ -120,7 +120,7 @@ function App() {
           <Route path="/students" element={<Students />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/:id" element={<Contact2 />} />
-          <Route path="*" element={<Navigate to="/home" />} />
+          {/* <Route path="*" element={<Navigate to="/home" />} /> */}
         </Routes>
         <Footer />
       </div>
