@@ -28,10 +28,11 @@ function Engineering() {
           property="og:description"
           content="Explore top engineering and technical education in India with MEC Education at affordable costs."
         />
+         <meta property="og:image" content="https://mayilon.org/og/5.png" />
         <meta property="og:type" content="article" />
         <meta
           name="keywords"
-          content="engineering in India, technical education, study engineering in India, international engineering students, MEC education, computer science, mechanical engineering"
+          content="engineering in India, technical education, study engineering in India, international engineering students, MEC education, computer science, mechanical engineering,scholarship opportunities	,study abroad opportunities	,student exchange program	,student loans for international students"
         />
       </Helmet>
       <div className="relative h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden">

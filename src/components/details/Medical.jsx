@@ -151,10 +151,11 @@ function Medical() {
           property="og:description"
           content="Discover world-class medical education in India combining ancient wisdom with modern healthcare excellence."
         />
+         <meta property="og:image" content="https://mayilon.org/og/7.png" />
         <meta property="og:type" content="article" />
         <meta
           name="keywords"
-          content="MBBS in India, medical education India, study medicine in India, international medical students, MEC education, medical programs"
+          content="MBBS in India, medical education India, international student,education consultants,academic programs international, study medicine in India, international medical students, MEC education, medical programs"
         />
       </Helmet>
       <div className="relative h-[80vh] overflow-hidden">

@@ -92,6 +92,7 @@ function ArtsAndScience() {
           property="og:title"
           content="Arts and Science Education in India | MEC Education"
         />
+         <meta property="og:image" content="https://mayilon.org/og/6.png" />
         <meta
           property="og:description"
           content="Experience world-class Arts and Science education in India with rich cultural immersion at affordable costs."
@@ -99,7 +100,7 @@ function ArtsAndScience() {
         <meta property="og:type" content="article" />
         <meta
           name="keywords"
-          content="Arts education India, Science education India, study in India, international students, MEC education, humanities, social sciences"
+          content="Arts education India, Science education India,programs abroad, mec,scholarships for universities, study in India, international students, MEC education, humanities, social sciences"
         />
       </Helmet>
       <div className="relative h-[60vh] lg:h-[75vh] overflow-hidden">

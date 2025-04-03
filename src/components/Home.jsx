@@ -24,7 +24,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="study abroad, education consultancy, overseas education, learn abroad, Mayilon Education Consultancy"
+          content="study abroad,study abroad programs,student abroad programs,scholarships for foreign students,international scholarships for international students	,scholarship for masters,travel abroad scholarships,foreign exchange student,foreign exchange student programs, education consultancy, overseas education, learn abroad, Mayilon Education Consultancy"
         />
         <link rel="canonical" href="https://www.mayilon.org/home" />
       </Helmet>
