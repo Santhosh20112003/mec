@@ -111,7 +111,7 @@ function App() {
           <Header />
         </div>
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/medical" element={<Medical />} />
