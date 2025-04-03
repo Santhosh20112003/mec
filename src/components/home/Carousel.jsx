@@ -155,7 +155,7 @@ const Carousel = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <div className="overflow-hidden relative h-[75vh] w-full">
+      <div className="overflow-hidden relative h-[50vh] md:h-[75vh] w-full">
         <AnimatePresence initial={false} custom={direction} mode="sync">
           <motion.div
             key={currentIndex}

@@ -3,3 +3,6 @@ disallow:
 
 user-agent: magicsearchbot
 disallow: 
+
+Allow: /
+Sitemap: https://mayilon.org/assets/sitemap.xml
