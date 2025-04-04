@@ -55,10 +55,10 @@ function Contact2() {
                 Email Address
               </h6>
               <a
-                href="mailto:mayiloneducation@gmail.com"
+                href="mailto:support@mayilon.org"
                 className="text-black text-xl font-semibold leading-8 md:text-start text-center"
               >
-                mayiloneducation@gmail.com
+                support@mayilon.org
               </a>
             </div>
             <div>
@@ -69,7 +69,7 @@ function Contact2() {
                 href="tel:9884666652"
                 className="text-black text-xl font-semibold leading-8 md:text-start text-center"
               >
-                9884666652
+                +91&nbsp;9884666652
               </a>
             </div>
           </div>

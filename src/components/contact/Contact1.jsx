@@ -83,7 +83,7 @@ function Contact1() {
                 <div className="grid grid-cols-1 place-content-center gap-12">
                     <div className="bg-white p-10 shadow rounded-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-[#800000] mb-6">Get Counselling Today!</h2>
-                        <form onSubmit={handleSubmit} action="https://formsubmit.co/ba503b75013e0767e550dfe09ef869be" method="POST">
+                        <form onSubmit={handleSubmit} action="https://formsubmit.co/support@mayilon.org" method="POST">
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">First Name</label>
