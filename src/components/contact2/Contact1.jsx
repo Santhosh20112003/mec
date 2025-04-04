@@ -107,7 +107,7 @@ function Contact1({ id }) {
             </h2>
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/support@mayilon.org"
+              action="https://formsubmit.co/30f486bf619cbff7a82c8cb2155ed865 "
               method="POST"
             >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
