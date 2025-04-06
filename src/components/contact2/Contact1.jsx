@@ -56,12 +56,12 @@ function Contact1({ id }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const nameRegex = /^[A-Za-z]+$/;
+    const nameRegex = /^[A-Za-z\s]+$/; // Allow letters and spaces
     const phoneRegex = /^\d{10}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!nameRegex.test(formData.firstName)) {
-      toast.error("First name can only contain letters.");
+      toast.error("First name can only contain letters and spaces.");
       return;
     }
 

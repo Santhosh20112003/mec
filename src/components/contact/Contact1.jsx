@@ -45,7 +45,7 @@ function Contact1() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const nameRegex = /^[A-Za-z]+$/;
+        const nameRegex = /^[A-Za-z\s]+$/; // Allow letters and spaces
         const phoneRegex = /^\d{10}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
