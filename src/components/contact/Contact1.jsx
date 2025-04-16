@@ -8,6 +8,7 @@ function Contact1() {
     const [states, setStates] = useState([]);
     const [selectedState, setSelectedState] = useState('');
     const [cities, setCities] = useState([]);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -43,7 +44,7 @@ function Contact1() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const nameRegex = /^[A-Za-z\s]+$/; // Allow letters and spaces
         const phoneRegex = /^\d{10}$/;
@@ -74,7 +75,79 @@ function Contact1() {
             return;
         }
 
-        e.target.submit();
+        setIsSubmitting(true);
+        const webhookUrl = "https://n8n.mayilon.org/webhook/80a4c020-9515-4a6f-8133-b44415761f22"; 
+        const formSubmitUrl = "https://formsubmit.co/30f486bf619cbff7a82c8cb2155ed865";
+        
+        // Create a loading toast that we'll update based on results
+        const loadingToast = toast.loading('Submitting your request...');
+        
+        try {
+            // First submit to FormSubmit.co
+            const formSubmitResponse = await fetch(formSubmitUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            
+            // Track results separately
+            let formSubmitSuccess = formSubmitResponse.ok;
+            let webhookSuccess = false;
+            
+            try {
+                // Then submit to your webhook
+                const webhookResponse = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+                
+                webhookSuccess = webhookResponse.ok;
+                
+                // Show specific alert for webhook status
+                if (webhookSuccess) {
+                    toast.success('Webhook submission successful!', { id: 'webhook-status' });
+                } else {
+                    toast.error(`Webhook submission failed: ${webhookResponse.status}`, { id: 'webhook-status' });
+                }
+            } catch (webhookError) {
+                console.error('Webhook error:', webhookError);
+                toast.error('Webhook connection failed. Please try again later.', { id: 'webhook-status' });
+            }
+            
+            // Handle overall form submission status
+            if (formSubmitSuccess) {
+                toast.success('Form submitted successfully!', { id: loadingToast });
+                
+                // Reset form after successful submission
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    country: '',
+                    state: '',
+                    city: '',
+                    phone: '',
+                    message: '',
+                    consent: false,
+                    contactConsent: false,
+                });
+                setSelectedCountry('');
+                setSelectedState('');
+                setCities([]);
+            } else {
+                toast.error('Form submission failed. Please try again.', { id: loadingToast });
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            toast.error('Connection error. Please check your internet connection and try again.', { id: loadingToast });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -83,7 +156,7 @@ function Contact1() {
                 <div className="grid grid-cols-1 place-content-center gap-12">
                     <div className="bg-white p-10 shadow rounded-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-[#800000] mb-6">Get Counselling Today!</h2>
-                        <form onSubmit={handleSubmit} action="https://formsubmit.co/30f486bf619cbff7a82c8cb2155ed865 " method="POST">
+                        <form onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">First Name</label>
@@ -105,7 +178,7 @@ function Contact1() {
                                         value={selectedCountry}
                                         onChange={(e) => {
                                             setSelectedCountry(e.target.value);
-                                            handleChange(e);
+                                            handleChange({ target: { name: 'country', value: e.target.value, type: 'select' } });
                                         }}
                                         required
                                     >
@@ -125,7 +198,7 @@ function Contact1() {
                                         value={selectedState}
                                         onChange={(e) => {
                                             setSelectedState(e.target.value);
-                                            handleChange(e);
+                                            handleChange({ target: { name: 'state', value: e.target.value, type: 'select' } });
                                         }}
                                         required
                                     >
@@ -153,8 +226,8 @@ function Contact1() {
                                     <input type="number" placeholder="Enter your phone number" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border border-gray-300 focus:border-[#800000] focus:ring-[#800000]" />
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label className="block text-sm font-medium text-gray-900">Councelling Context</label>
-                                    <textarea name="message" placeholder="Enter your councelling context" value={formData.message} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" rows="3" required></textarea>
+                                    <label className="block text-sm font-medium text-gray-900">Counselling Context</label>
+                                    <textarea name="message" placeholder="Enter your counselling context" value={formData.message} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border-gray-300 border focus:border-[#800000] focus:ring-[#800000]" rows="3" required></textarea>
                                 </div>
                                 <div className="sm:col-span-2">
                                     <div className="flex items-start">
@@ -178,8 +251,12 @@ function Contact1() {
                                 </div>
                             </div>
                             <div className="mt-6 text-left">
-                                <button type="submit" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#800000] hover:bg-[#600000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]">
-                                    Avail Your Counselling
+                                <button 
+                                    type="submit" 
+                                    disabled={isSubmitting}
+                                    className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${isSubmitting ? 'bg-gray-400' : 'bg-[#800000] hover:bg-[#600000]'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#800000]`}
+                                >
+                                    {isSubmitting ? 'Submitting...' : 'Avail Your Counselling'}
                                 </button>
                             </div>
                         </form>
