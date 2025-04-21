@@ -216,10 +216,7 @@ function SearchOfDegree() {
                   </button>
                   <Link
                     to={`/contact/${safeBase64Encode(degree?.title)}`}
-                    onClick={() => {
-                      window.scrollY(0);
-                    }}
-                    type="button"
+                    onClick={() => window.scrollTo(0, 0)}
                     className="p-2 cursor-pointer active:scale-90 transition-all border font-medium rounded-md shadow-sm text-xs text-[#800000] border-[#800000] focus:outline-none"
                   >
                     Consult now

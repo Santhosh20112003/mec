@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Country, State, City } from "country-state-city";
 import toast, { Toaster } from "react-hot-toast";
-import { Degrees } from "../data";
 
 function Contact1({ id }) {
   let data = {};

@@ -94,15 +94,15 @@ function App() {
       <div className="">
         <div
           style={{
-            position: "sticky",
+            position: isMobile ? "static" : "sticky",
             top: 0,
             zIndex: 1000,
             // On mobile devices, always keep header visible
             transform: isMobile
               ? "translateY(0)"
               : showHeader
-              ? "translateY(0)"
-              : "translateY(-100%)",
+                ? "translateY(0)"
+                : "translateY(-100%)",
             transition: "transform 0.3s ease-in-out",
             backgroundColor: isAtTop ? "transparent" : "white", // Optional: Change background when scrolling
           }}
