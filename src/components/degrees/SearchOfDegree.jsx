@@ -117,7 +117,9 @@ function SearchOfDegree() {
   const safeBase64Encode = (str) => {
     // First encode the string as UTF-8, then convert to base64
     return btoa(
-      str
+      encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) =>
+        String.fromCharCode(parseInt(p1, 16))
+      )
     );
   };
 
