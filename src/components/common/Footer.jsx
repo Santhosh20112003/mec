@@ -21,6 +21,11 @@ function Footer() {
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                 }} to="/list-of-degrees" className="text-[#800000]/80 hover:text-[#800000]">List of Degrees</Link>
                             </li>
+                            <li>
+                                <Link onClick={() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }} to="/terms" className="text-[#800000]/80 hover:text-[#800000]"> Terms and Conditions </Link>
+                            </li>
                         </nav>
                     </div>
                     <div className="lg:w-1/5  w-full px-4">
