@@ -22,10 +22,8 @@ const TermsAndConditions = () => {
         <li><strong>Company</strong> refers to Mayilon Educational Consultant</li>
         <li><strong>Device</strong> means any device that can access the Service</li>
         <li><strong>Service</strong> refers to the Website.</li>
-        <li><strong>Terms and Conditions</strong> ... <a className="text-blue-600 underline" href="https://www.freeprivacypolicy.com/free-terms-and-conditions-generator/" target="_blank" rel="noopener noreferrer">Free Terms and Conditions Generator</a></li>
         <li><strong>Third-party Social Media Service</strong> ...</li>
         <li><strong>Website</strong> ... <a className="text-blue-600 underline" href="https://www.mayilon.org" target="_blank" rel="noopener noreferrer">https://www.mayilon.org</a></li>
-        <li><strong>You</strong> ...</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-3">Acknowledgment</h2>
