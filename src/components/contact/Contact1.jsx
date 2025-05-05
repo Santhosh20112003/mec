@@ -56,7 +56,7 @@ function Contact1() {
         }
 
         setIsSubmitting(true);
-        const formSubmitUrl = "https://formsubmit.co/support@mayilon.org";
+        const formSubmitUrl = "https://formsubmit.co/mayiloneducation@gmail.com";
         const loadingToast = toast.loading('Submitting your request...');
 
         try {
