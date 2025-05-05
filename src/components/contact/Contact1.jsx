@@ -27,7 +27,6 @@ function Contact1() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const nameRegex = /^[A-Za-z\s]+$/;
-        const phoneRegex = /^\d{10}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!nameRegex.test(formData.firstName)) {
@@ -42,11 +41,6 @@ function Contact1() {
 
         if (!emailRegex.test(formData.email)) {
             toast.error('Please enter a valid email address.');
-            return;
-        }
-
-        if (formData.phone && !phoneRegex.test(formData.phone)) {
-            toast.error('Phone number must be exactly 10 digits.');
             return;
         }
 
