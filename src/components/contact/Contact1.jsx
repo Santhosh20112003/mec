@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
 function Contact1() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,35 +26,67 @@ function Contact1() {
     };
 
     const handleSubmit = (e) => {
+        e.preventDefault();
+
         const nameRegex = /^[A-Za-z\s]+$/;
-  
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!nameRegex.test(formData.firstName)) {
-            e.preventDefault();
             toast.error('First name can only contain letters.');
             return;
         }
 
         if (!nameRegex.test(formData.lastName)) {
-            e.preventDefault();
             toast.error('Last name can only contain letters.');
             return;
         }
 
         if (!emailRegex.test(formData.email)) {
-            e.preventDefault();
             toast.error('Please enter a valid email address.');
             return;
         }
 
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.country || !formData.state || !formData.city || !formData.consent || !formData.contactConsent) {
-            e.preventDefault();
             toast.error('Please fill in all required fields.');
             return;
         }
 
         setIsSubmitting(true);
+
+        emailjs.send(
+            'service_7z59hsj',        // Replace with your actual service ID
+            'template_6m10nbh',       // Replace with your actual template ID
+            {
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                country: formData.country,
+                state: formData.state,
+                city: formData.city,
+                phone: formData.phone,
+                message: formData.message,
+            },
+            'jMhiislr3unfEl2gg'         // Replace with your actual public key
+        ).then(() => {
+            toast.success('Form submitted successfully!');
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                country: '',
+                state: '',
+                city: '',
+                phone: '',
+                message: '',
+                consent: false,
+                contactConsent: false,
+            });
+        }).catch((error) => {
+            console.error(error);
+            toast.error('Something went wrong. Please try again.');
+        }).finally(() => {
+            setIsSubmitting(false);
+        });
     };
 
     return (
@@ -63,16 +96,7 @@ function Contact1() {
                     <div className="bg-white p-10 shadow rounded-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-[#800000] mb-6">Get Counselling Today!</h2>
 
-                        <form
-                            onSubmit={handleSubmit}
-                            action="https://formsubmit.co/support@mayilon.org"
-                            method="POST"
-                        >
-                            {/* Hidden input to disable FormSubmit captcha */}
-                            <input type="hidden" name="_captcha" value="false" />
-                            {/* Optional redirect URL after success */}
-                            <input type="hidden" name="_next" value="https://mayilon.org/thank-you" />
-
+                        <form onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900">First Name</label>
@@ -133,7 +157,6 @@ function Contact1() {
                     </div>
                 </div>
             </div>
-
             <Toaster position="top-center" reverseOrder={false} />
         </section>
     );
