@@ -80,6 +80,7 @@ function Contact1() {
                 message: '',
                 consent: false,
                 contactConsent: false,
+                
             });
         }).catch((error) => {
             console.error(error);
