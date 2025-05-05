@@ -46,7 +46,7 @@ function Contact1() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const nameRegex = /^[A-Za-z\s]+$/; // Allow letters and spaces
+        const nameRegex = /^[A-Za-z\s]+$/;
         const phoneRegex = /^\d{10}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -76,54 +76,20 @@ function Contact1() {
         }
 
         setIsSubmitting(true);
-        const webhookUrl = "https://n8n.mayilon.org/webhook/80a4c020-9515-4a6f-8133-b44415761f22"; 
-        const formSubmitUrl = "https://formsubmit.co/30f486bf619cbff7a82c8cb2155ed865";
-        
-        // Create a loading toast that we'll update based on results
+        const formSubmitUrl = "https://formsubmit.co/support@mayilon.org";
         const loadingToast = toast.loading('Submitting your request...');
-        
+
         try {
-            // First submit to FormSubmit.co
-            const formSubmitResponse = await fetch(formSubmitUrl, {
+            const response = await fetch(formSubmitUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             });
-            
-            // Track results separately
-            let formSubmitSuccess = formSubmitResponse.ok;
-            let webhookSuccess = false;
-            
-            try {
-                // Then submit to your webhook
-                const webhookResponse = await fetch(webhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
-                
-                webhookSuccess = webhookResponse.ok;
-                
-                // Show specific alert for webhook status
-                if (webhookSuccess) {
-                    toast.success('Webhook submission successful!', { id: 'webhook-status' });
-                } else {
-                    toast.error(`Webhook submission failed: ${webhookResponse.status}`, { id: 'webhook-status' });
-                }
-            } catch (webhookError) {
-                console.error('Webhook error:', webhookError);
-                toast.error('Webhook connection failed. Please try again later.', { id: 'webhook-status' });
-            }
-            
-            // Handle overall form submission status
-            if (formSubmitSuccess) {
+
+            if (response.ok) {
                 toast.success('Form submitted successfully!', { id: loadingToast });
-                
-                // Reset form after successful submission
                 setFormData({
                     firstName: '',
                     lastName: '',
@@ -221,7 +187,7 @@ function Contact1() {
                                         ))}
                                     </select>
                                 </div>
-                                <div className="">
+                                <div>
                                     <label className="block text-sm font-medium text-gray-900">Phone Number (Optional)</label>
                                     <input type="number" placeholder="Enter your phone number" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 p-1.5 block w-full rounded-md border border-gray-300 focus:border-[#800000] focus:ring-[#800000]" />
                                 </div>
@@ -263,7 +229,6 @@ function Contact1() {
                     </div>
                 </div>
             </div>
-
             <Toaster position="top-center" reverseOrder={false} />
         </section>
     );
