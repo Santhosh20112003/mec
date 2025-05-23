@@ -19,6 +19,7 @@ import Engineering from "./components/details/Engineering";
 import Medical from "./components/details/Medical";
 import ArtsAndScience from "./components/details/ArtsAndScience";
 import TermsAndConditions from "./components/Terms/Termsandcon";
+import Download from "./components/Download/Download";
 
 function App() {
   const [showHeader, setShowHeader] = useState(true); // Initially visible
@@ -122,6 +123,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/:id" element={<Contact2 />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/download" element={<Download />} />
+
 
           {/* <Route path="*" element={<Navigate to="/home" />} /> */}
         </Routes>
