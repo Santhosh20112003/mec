@@ -52,6 +52,14 @@ function Contact2() {
           <div className="border-l-2 lg:flex lg:items-center gap-12 md:border-[#800000] border-white px-10 py-6">
             <div className="mb-8 lg:mb-0">
               <h6 className="text-gray-900 text-sm font-medium leading-5 pb-3 md:text-start text-center">
+                Address
+              </h6>
+              <p className="text-black text-xl font-semibold leading-8 md:text-start text-center">
+                Block 27 A Kumaran Nagar, Varadharajapuram, Chennai 600048, Tamilnadu, India.
+              </p>
+            </div>
+            <div className="mb-8 lg:mb-0 text-center sm:text-start">
+              <h6 className="text-gray-900 text-sm font-medium leading-5 pb-3 md:text-start text-center">
                 Email Address
               </h6>
               <a
@@ -60,9 +68,8 @@ function Contact2() {
               >
                 support@mayilon.org
               </a>
-            </div>
-            <div>
-              <h6 className="text-gray-900 text-sm font-medium leading-5 pb-3 md:text-start text-center">
+                <div>
+              <h6 className="text-gray-900 text-sm mt-5 font-medium leading-5 pb-3 md:text-start text-center">
                 Phone Number
               </h6>
               <a
@@ -72,6 +79,8 @@ function Contact2() {
                 +91&nbsp;9884666652
               </a>
             </div>
+            </div>
+          
           </div>
         </div>
         <div className="grid grid-cols-1 gap-8">
