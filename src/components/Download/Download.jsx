@@ -6,6 +6,7 @@ function Download() {
   return (
     <div className="text-center py-10">
       <h1 className="text-2xl font-bold mb-4">Download our Flyer</h1>
+
        <a
             href="https://drive.google.com/uc?export=download&id=1tZfqqkHcNAEbFnGp7-c6-x5-sCs632LP"
             download
@@ -14,6 +15,7 @@ function Download() {
           >
             Download
           </a>
+          
     </div>
   );
 }
